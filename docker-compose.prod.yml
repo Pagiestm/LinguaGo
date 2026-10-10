@@ -21,13 +21,14 @@ services:
       context: .
       dockerfile: server/Dockerfile.prod
     restart: unless-stopped
-    command: sh -c "npx prisma migrate deploy && npm run seed:prod && node dist/src/main"
     environment:
       NODE_ENV: production
       PORT: 3000
       DATABASE_URL: postgresql://${DB_USERNAME:?}:${DB_PASSWORD:?}@db:5432/${DB_DATABASE:?}
       CLIENT_URL: ${CLIENT_URL:?}
       JWT_SECRET: ${JWT_SECRET:?}
+      ADMIN_EMAIL: ${ADMIN_EMAIL:-}
+      ADMIN_PASSWORD: ${ADMIN_PASSWORD:-}
       COOKIE_DOMAIN: ${COOKIE_DOMAIN:-}
       VAPID_PUBLIC_KEY: ${VAPID_PUBLIC_KEY:-}
       VAPID_PRIVATE_KEY: ${VAPID_PRIVATE_KEY:-}

@@ -167,6 +167,10 @@ async function completeCatalogue(catalogue: Catalogue): Promise<number> {
 }
 
 async function seedAccounts() {
+  if (process.env.NODE_ENV === 'production' && !demo) {
+    await seedAdmin();
+    return;
+  }
   const avatars = await prisma.avatar.findMany({ select: { id: true } });
   const password = await bcrypt.hash(DEMO_PASSWORD, 12);
   for (const [index, account] of DEMO_ACCOUNTS.entries()) {
@@ -185,6 +189,32 @@ async function seedAccounts() {
   console.log(
     `Comptes de démonstration : ${DEMO_ACCOUNTS.map((a) => a.email).join(', ')} (mot de passe ${DEMO_PASSWORD}).`,
   );
+}
+
+async function seedAdmin() {
+  const email = process.env.ADMIN_EMAIL?.trim().toLowerCase();
+  const password = process.env.ADMIN_PASSWORD;
+  if (!email || !password) {
+    console.log(
+      'Aucun compte créé : définissez ADMIN_EMAIL et ADMIN_PASSWORD pour obtenir un administrateur.',
+    );
+    return;
+  }
+  const avatar = await prisma.avatar.findFirst({ select: { id: true } });
+  await prisma.user.upsert({
+    where: { email },
+    create: {
+      email,
+      pseudo: 'Admin',
+      role: 'ADMIN',
+      password: await bcrypt.hash(password, 12),
+      firstLogin: false,
+      avatarId: avatar?.id,
+      stats: { create: {} },
+    },
+    update: { role: 'ADMIN' },
+  });
+  console.log(`Compte administrateur : ${email}.`);
 }
 
 async function seedDemoActivity() {

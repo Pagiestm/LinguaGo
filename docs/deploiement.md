@@ -10,12 +10,13 @@ Après le premier déploiement, reportez l'adresse attribuée par Render dans `v
 
 Variables à renseigner dans le tableau de bord :
 
-| Variable                                                 | Où la trouver                                     |
-| -------------------------------------------------------- | ------------------------------------------------- |
-| `DATABASE_URL`                                           | chaîne de connexion Neon, avec `?sslmode=require` |
-| `VAPID_PUBLIC_KEY`, `VAPID_PRIVATE_KEY`, `VAPID_SUBJECT` | `npx web-push generate-vapid-keys`, facultatif    |
+| Variable                                                 | Où la trouver                                      |
+| -------------------------------------------------------- | -------------------------------------------------- |
+| `DATABASE_URL`                                           | chaîne de connexion Neon, avec `?sslmode=require`  |
+| `VAPID_PUBLIC_KEY`, `VAPID_PRIVATE_KEY`, `VAPID_SUBJECT` | `npx web-push generate-vapid-keys`, facultatif     |
+| `ADMIN_EMAIL`, `ADMIN_PASSWORD`                          | le compte administrateur créé au premier démarrage |
 
-`JWT_SECRET` est généré par Render. Le seed se lance une fois depuis un poste avec `DATABASE_URL` pointant sur Neon : `npm run seed -w server`.
+`JWT_SECRET` est généré par Render. Au démarrage, après les migrations, le seed charge le catalogue s’il est absent et crée l’administrateur défini par `ADMIN_EMAIL` et `ADMIN_PASSWORD` ; aucun compte de démonstration n’est créé en production.
 
 L'offre gratuite de Render endort le service après quinze minutes sans trafic : une sonde externe sur `/health` toutes les dix minutes l'évite.
 

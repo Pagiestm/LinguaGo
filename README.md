@@ -55,7 +55,7 @@ docker compose up -d
 
 Au démarrage, le conteneur `server` applique les migrations et le seed puis lance l'API en mode watch ; `client` sert Vite. Le code est monté dans les conteneurs : le rechargement à chaud fonctionne. Après un changement de dépendances, `docker compose up -d --build`. `PORT` et `CLIENT_PORT` dans le `.env` changent les ports publiés. Sans Docker pour les apps : `docker compose up -d db pgadmin`, puis `npm run db:migrate`, `npm run db:seed` et `npm run dev`.
 
-Le seed charge le catalogue (niveaux, séries, exercices, avatars) et deux comptes : `demo@linguago.fr` et `admin@linguago.fr`, mot de passe `Linguago1!`. `npm run seed:demo -w server` ajoute douze apprenants fictifs avec de l'activité récente pour peupler le classement. `npm run seed:reset -w server` vide la base avant de la remplir.
+Le seed charge le catalogue (niveaux, séries, exercices, avatars) et, hors production, deux comptes : `demo@linguago.fr` et `admin@linguago.fr`, mot de passe `Linguago1!`. En production, il ne crée que l’administrateur défini par `ADMIN_EMAIL` et `ADMIN_PASSWORD`. Il est idempotent et tourne à chaque démarrage après les migrations.
 
 Le `.env` à la racine sert aux deux applications. Les variables facultatives :
 
