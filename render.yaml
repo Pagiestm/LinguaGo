@@ -17,6 +17,8 @@ services:
     envVars:
       - key: NODE_ENV
         value: production
+      - key: PRISMA_SCHEMA_DISABLE_ADVISORY_LOCK
+        value: '1'
       - key: CLIENT_URL
         value: https://linguago.theotimepagies.com
       - key: DATABASE_URL
