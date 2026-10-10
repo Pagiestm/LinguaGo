@@ -1,3 +1,10 @@
+## [1.1.2](https://github.com/Pagiestm/LinguaGo/compare/v1.1.1...v1.1.2) (2026-10-10)
+
+
+### Bug Fixes
+
+* **render:** migrer sans verrou consultatif ([71fbdc1](https://github.com/Pagiestm/LinguaGo/commit/71fbdc10a7c735a8888cba33f241a2e4db781fdc))
+
 ## [1.1.1](https://github.com/Pagiestm/LinguaGo/compare/v1.1.0...v1.1.1) (2026-10-10)
 
 
