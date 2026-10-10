@@ -10,12 +10,11 @@ Après le premier déploiement, reportez l'adresse attribuée par Render dans `v
 
 Variables à renseigner dans le tableau de bord :
 
-| Variable                                                 | Où la trouver                                                                                         |
-| -------------------------------------------------------- | ----------------------------------------------------------------------------------------------------- |
-| `DATABASE_URL`                                           | chaîne de connexion Neon « pooled », avec `?sslmode=require`, utilisée par l’API                      |
-| `DIRECT_URL`                                             | la même chaîne sans `-pooler` : les migrations posent un verrou de session que le pooler ne tient pas |
-| `VAPID_PUBLIC_KEY`, `VAPID_PRIVATE_KEY`, `VAPID_SUBJECT` | `npx web-push generate-vapid-keys`, facultatif                                                        |
-| `ADMIN_EMAIL`, `ADMIN_PASSWORD`                          | le compte administrateur créé au premier démarrage                                                    |
+| Variable                                                 | Où la trouver                                                                                                                                                                                                  |
+| -------------------------------------------------------- | -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| `DATABASE_URL`                                           | chaîne de connexion Neon avec `?sslmode=require`. L’API passe par le pooler ; pour les migrations, Prisma retire `-pooler` de l’hôte et se connecte en direct, car le pooler ne tient pas le verrou de session |
+| `VAPID_PUBLIC_KEY`, `VAPID_PRIVATE_KEY`, `VAPID_SUBJECT` | `npx web-push generate-vapid-keys`, facultatif                                                                                                                                                                 |
+| `ADMIN_EMAIL`, `ADMIN_PASSWORD`                          | le compte administrateur créé au premier démarrage                                                                                                                                                             |
 
 `JWT_SECRET` est généré par Render. Au démarrage, après les migrations, le seed charge le catalogue s’il est absent et crée l’administrateur défini par `ADMIN_EMAIL` et `ADMIN_PASSWORD` ; aucun compte de démonstration n’est créé en production.
 
