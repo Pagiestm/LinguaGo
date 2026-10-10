@@ -1,3 +1,10 @@
+## [1.0.1](https://github.com/Pagiestm/LinguaGo/compare/v1.0.0...v1.0.1) (2026-10-10)
+
+
+### Bug Fixes
+
+* **render:** retirer COOKIE_DOMAIN du Blueprint ([77aa69b](https://github.com/Pagiestm/LinguaGo/commit/77aa69b6058e9aae6f3fbb9ff05d1e58998f5e5f))
+
 # 1.0.0 (2026-10-10)
 
 
