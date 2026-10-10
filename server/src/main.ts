@@ -1,4 +1,3 @@
-import * as Sentry from '@sentry/nestjs';
 import { Logger, ValidationPipe } from '@nestjs/common';
 import { NestFactory } from '@nestjs/core';
 import type { NestExpressApplication } from '@nestjs/platform-express';
@@ -7,10 +6,6 @@ import cookieParser from 'cookie-parser';
 import helmet from 'helmet';
 import { AppModule } from './app.module';
 import { env, isProduction } from './config/env';
-
-if (env.SENTRY_DSN) {
-  Sentry.init({ dsn: env.SENTRY_DSN, environment: env.NODE_ENV });
-}
 
 async function bootstrap() {
   const app = await NestFactory.create<NestExpressApplication>(AppModule, {

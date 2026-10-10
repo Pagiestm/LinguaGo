@@ -64,7 +64,6 @@ Le `.env` à la racine sert aux deux applications. Les variables facultatives :
 | `VAPID_PUBLIC_KEY`, `VAPID_PRIVATE_KEY`    | les rappels push sont activés (`npx web-push generate-vapid-keys`) |
 | `GOOGLE_CLIENT_ID`, `GOOGLE_CLIENT_SECRET` | le bouton « Continuer avec Google » apparaît sur la connexion      |
 | `SMTP_HOST`                                | les emails de mot de passe oublié partent (Mailpit en local)       |
-| `SENTRY_DSN`, `VITE_SENTRY_DSN`            | les erreurs de l'API et du client remontent dans Sentry            |
 | `SWAGGER=true`                             | expose la documentation en production                              |
 
 ## Scripts

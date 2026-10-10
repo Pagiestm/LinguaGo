@@ -59,7 +59,6 @@ const schema = z.object({
   SMTP_USER: optional,
   SMTP_PASSWORD: optional,
   MAIL_FROM: z.string().default('LinguaGo <no-reply@linguago.test>'),
-  SENTRY_DSN: optional,
   SWAGGER: z
     .string()
     .optional()

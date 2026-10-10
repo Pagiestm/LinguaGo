@@ -33,6 +33,6 @@ Le service worker est servi avec `Cache-Control: no-cache` pour que les mises à
 
 `docker compose -f docker-compose.prod.yml up -d --build` construit les images de production : `server/Dockerfile.prod` (la même que sur Render, utilisateur non root, dépendances de production seules) et `client/Dockerfile.prod` (build Vite avec `VITE_API_URL=/api`, servi par nginx). nginx réécrit `/api/*` vers `server:3000`, ce qui reproduit la réécriture Vercel : une seule origine, pas de CORS. Le service worker et le manifeste sont servis sans cache, les fichiers de `assets/` avec un cache d'un an. Le serveur applique les migrations et le seed au démarrage. La base n'est pas exposée sur l'hôte ; seul le client l'est, sur le port `WEB_PORT` (8080 par défaut).
 
-Variables obligatoires, le démarrage échoue sans elles : `DB_USERNAME`, `DB_PASSWORD`, `DB_DATABASE`, `JWT_SECRET`, `CLIENT_URL` (l'adresse publique du client). Les facultatives sont les mêmes qu'ailleurs : `COOKIE_DOMAIN`, `SMTP_*`, `VAPID_*`.
+Variables obligatoires, le démarrage échoue sans elles : `DB_USERNAME`, `DB_PASSWORD`, `DB_DATABASE`, `JWT_SECRET`, `CLIENT_URL` (l'adresse publique du client). Les facultatives sont les mêmes qu'ailleurs : `COOKIE_DOMAIN`, `SMTP_*`, `VAPID_*`, `GOOGLE_*`.
 
 L'intégration continue construit les deux images de production à chaque poussée.

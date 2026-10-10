@@ -18,7 +18,6 @@
     "@iconify-json/lucide": "^1.2.141",
     "@nuxt/ui": "^4.11.3",
     "@pinia/colada": "^1.4.8",
-    "@sentry/vue": "^11.6.0",
     "@vueuse/core": "^15.0.0",
     "canvas-confetti": "^1.9.4",
     "chart.js": "^4.5.1",

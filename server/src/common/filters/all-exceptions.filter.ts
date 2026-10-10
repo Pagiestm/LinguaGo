@@ -7,8 +7,7 @@ import {
   Logger,
 } from '@nestjs/common';
 import type { Request, Response } from 'express';
-import * as Sentry from '@sentry/nestjs';
-import { env, isProduction } from '../../config/env';
+import { isProduction } from '../../config/env';
 
 @Catch()
 export class AllExceptionsFilter implements ExceptionFilter {
@@ -30,7 +29,6 @@ export class AllExceptionsFilter implements ExceptionFilter {
     const stack =
       exception instanceof Error ? exception.stack : String(exception);
     this.logger.error(`${request.method} ${request.url}`, stack);
-    if (env.SENTRY_DSN) Sentry.captureException(exception);
     response.status(HttpStatus.INTERNAL_SERVER_ERROR).json({
       statusCode: HttpStatus.INTERNAL_SERVER_ERROR,
       message: isProduction ? 'Erreur interne' : String(exception),

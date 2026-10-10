@@ -7,7 +7,6 @@ import { router } from './app/router';
 import './assets/css/main.css';
 import { setupInstallPrompt } from './pwa/install';
 import { registerServiceWorker } from './pwa/register';
-import { setupSentry } from './shared/lib/sentry';
 import { startOfflineSync } from './shared/offline/sync';
 import { useSessionStore } from './shared/stores/session';
 
@@ -24,7 +23,6 @@ const session = useSessionStore(pinia);
 await session.bootstrap();
 
 app.use(router);
-void setupSentry(app, router);
 
 app.mount('#app');
 
