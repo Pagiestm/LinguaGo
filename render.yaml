@@ -23,9 +23,6 @@ services:
         sync: false
       - key: JWT_SECRET
         generateValue: true
-      - key: COOKIE_DOMAIN
-        value: ''
-        sync: false
       - key: VAPID_PUBLIC_KEY
         sync: false
       - key: VAPID_PRIVATE_KEY
