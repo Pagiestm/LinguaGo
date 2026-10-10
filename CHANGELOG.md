@@ -1,3 +1,10 @@
+## [1.1.1](https://github.com/Pagiestm/LinguaGo/compare/v1.1.0...v1.1.1) (2026-10-10)
+
+
+### Bug Fixes
+
+* **api:** migrer par la connexion directe de Neon ([256d908](https://github.com/Pagiestm/LinguaGo/commit/256d908935df6566de208b7e0f76553682c3a2c4))
+
 # [1.1.0](https://github.com/Pagiestm/LinguaGo/compare/v1.0.1...v1.1.0) (2026-10-10)
 
 
