@@ -1,0 +1,148 @@
+<mjml lang="fr">
+  <mj-head>
+    <mj-title>Bienvenue sur LinguaGo</mj-title>
+    <mj-preview>Lingo vous attend pour votre première série.</mj-preview>
+    <mj-font
+      name="Nunito"
+      href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;600;700;800&display=swap"
+    />
+    <mj-attributes>
+      <mj-all font-family="Nunito, Helvetica, Arial, sans-serif" />
+      <mj-text color="#334155" font-size="16px" line-height="1.6" padding="0" />
+      <mj-section padding="0" />
+      <mj-column padding="0" />
+      <mj-button
+        background-color="#3b82f6"
+        color="#ffffff"
+        font-weight="800"
+        font-size="16px"
+        border-radius="999px"
+        border-bottom="4px solid #1d4ed8"
+        inner-padding="14px 32px"
+        padding="0"
+      />
+    </mj-attributes>
+    <mj-style>
+      a {
+        color: #2563eb;
+      }
+      .pill {
+        display: inline-block;
+        background: #fde047;
+        color: #0f172a;
+        font-weight: 800;
+        font-size: 13px;
+        border-radius: 999px;
+        padding: 2px 10px;
+        margin-right: 8px;
+      }
+      .level {
+        display: inline-block;
+        background: #dcfce7;
+        color: #15803d;
+        font-weight: 800;
+        font-size: 12px;
+        letter-spacing: 0.08em;
+        text-transform: uppercase;
+        border-radius: 999px;
+        padding: 4px 12px;
+      }
+    </mj-style>
+  </mj-head>
+  <mj-body background-color="#eff6ff" width="560px">
+    <mj-section padding="32px 24px 16px">
+      <mj-column>
+        <mj-text
+          align="center"
+          font-size="22px"
+          font-weight="800"
+          color="#0f172a"
+        >
+          Lingua<span style="color: #f59e0b">Go</span>
+        </mj-text>
+      </mj-column>
+    </mj-section>
+
+    <mj-section padding="0 24px 16px">
+      <mj-column width="24%" vertical-align="middle">
+        <mj-image src="{{ logoUrl }}" alt="Lingo" width="96px" padding="0" />
+      </mj-column>
+      <mj-column
+        width="76%"
+        vertical-align="middle"
+        background-color="#ffffff"
+        border="2px solid #e2e8f0"
+        border-radius="20px"
+        padding="14px 18px"
+      >
+        <mj-text font-weight="700" font-size="15px" color="#0f172a">
+          Moi c'est Lingo ! Ravi de vous avoir avec nous, {{ pseudo }}. On
+          commence doucement et on ne lâche rien.
+        </mj-text>
+      </mj-column>
+    </mj-section>
+
+    <mj-wrapper padding="0 24px">
+      <mj-section
+        background-color="#ffffff"
+        border="2px solid #e2e8f0"
+        border-bottom="6px solid #e2e8f0"
+        border-radius="24px"
+        padding="32px 28px"
+      >
+        <mj-column>
+          <mj-text padding="0 0 12px"
+            ><span class="level">Niveau A1 · Débutant</span></mj-text
+          >
+          <mj-text
+            font-size="26px"
+            font-weight="800"
+            color="#0f172a"
+            line-height="1.2"
+          >
+            Bienvenue sur LinguaGo !
+          </mj-text>
+          <mj-text padding="12px 0 0">
+            Des séries courtes, des points à chaque bonne réponse et une série
+            de jours à entretenir. Dix minutes suffisent, même sans réseau.
+          </mj-text>
+
+          <mj-text padding="24px 0 8px" font-weight="800" color="#0f172a">
+            Trois conseils pour bien démarrer
+          </mj-text>
+          <mj-text padding="6px 0">
+            <span class="pill">1</span>Fixez votre objectif quotidien dans Mon
+            compte.
+          </mj-text>
+          <mj-text padding="6px 0">
+            <span class="pill">2</span>Mettez vos séries préférées en favoris :
+            elles restent jouables hors ligne.
+          </mj-text>
+          <mj-text padding="6px 0">
+            <span class="pill">3</span>Activez un rappel pour ne pas casser
+            votre série de jours.
+          </mj-text>
+
+          <mj-button href="{{ link }}" align="left" padding="28px 0 0">
+            Faire ma première série
+          </mj-button>
+        </mj-column>
+      </mj-section>
+    </mj-wrapper>
+
+    <mj-section padding="24px 24px 32px">
+      <mj-column>
+        <mj-text
+          align="center"
+          font-size="12px"
+          color="#64748b"
+          line-height="1.6"
+        >
+          LinguaGo · Apprendre l'anglais quelques minutes par jour<br />
+          Vous recevez cet email parce qu'un compte vient d'être créé avec cette
+          adresse.
+        </mj-text>
+      </mj-column>
+    </mj-section>
+  </mj-body>
+</mjml>

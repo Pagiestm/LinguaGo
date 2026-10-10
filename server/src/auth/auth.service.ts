@@ -1,159 +1,117 @@
-import { Injectable, UnauthorizedException, Res } from '@nestjs/common';
-import { UserService } from 'src/user/user.service';
-import { JwtService } from '@nestjs/jwt';
-import * as bcrypt from 'bcrypt';
-import { PrismaService } from 'src/utils/prisma.service';
-import AuthPayload from 'src/interface/auth-payload.interface';
-import { User } from '@prisma/client';
-import { Response } from 'express';
-import { CryptoService } from './crypto/crypto.service';
-import { ConfigService } from '@nestjs/config';
+import {
+  ConflictException,
+  Injectable,
+  Logger,
+  UnauthorizedException,
+} from '@nestjs/common';
+import bcrypt from 'bcrypt';
+import { env } from '../config/env';
+import { MailService } from '../mail/mail.service';
+import { PrismaService } from '../prisma/prisma.service';
+import {
+  toPublicUser,
+  type PublicUser,
+  userWithAvatar,
+} from '../users/user.mapper';
+import { LoginDto } from './dto/login.dto';
+import { RegisterDto } from './dto/register.dto';
+import { TokensService } from './tokens.service';
+
+const BCRYPT_ROUNDS = 12;
+
+export interface Session {
+  user: PublicUser;
+  accessToken: string;
+  refreshToken: string;
+}
 
 @Injectable()
 export class AuthService {
-  private readonly cookieSecure: boolean;
-  private readonly cookieDomain: string;
-  private readonly cookieSameSite: 'lax' | 'strict' | 'none';
-  private readonly ACCESS_TOKEN_EXPIRATION = 2 * 60 * 60 * 1000;
+  private readonly logger = new Logger(AuthService.name);
 
   constructor(
-    private userService: UserService,
-    private jwtService: JwtService,
-    private prisma: PrismaService,
-    private cryptoService: CryptoService,
-    private configService: ConfigService
-  ) {
-    this.cookieSecure = this.configService.get('COOKIE_SECURE') === 'true';
-    this.cookieDomain = this.configService.get('COOKIE_DOMAIN') || '';
-    this.cookieSameSite = this.configService.get('COOKIE_SAME_SITE') as 'lax' | 'strict' | 'none';
+    private readonly prisma: PrismaService,
+    private readonly tokens: TokensService,
+    private readonly mail: MailService,
+  ) {}
+
+  async register(dto: RegisterDto): Promise<Session> {
+    const email = dto.email.trim().toLowerCase();
+    const existing = await this.prisma.user.findUnique({ where: { email } });
+    if (existing)
+      throw new ConflictException('Un compte existe déjà avec cet email');
+
+    const avatars = await this.prisma.avatar.findMany({ select: { id: true } });
+    const avatar = avatars[Math.floor(Math.random() * avatars.length)];
+
+    const user = await this.prisma.user.create({
+      data: {
+        pseudo: dto.pseudo.trim(),
+        email,
+        password: await bcrypt.hash(dto.password, BCRYPT_ROUNDS),
+        avatarId: avatar?.id,
+        stats: { create: {} },
+      },
+      ...userWithAvatar,
+    });
+
+    this.mail
+      .sendWelcome(user.email, user.pseudo, env.CLIENT_URL)
+      .catch((error: unknown) =>
+        this.logger.warn(`Email de bienvenue non envoyé : ${String(error)}`),
+      );
+
+    return this.openSession(user);
   }
 
-  private setCookieOptions(httpOnly = false) {
+  async login(dto: LoginDto): Promise<Session> {
+    const user = await this.prisma.user.findUnique({
+      where: { email: dto.email.trim().toLowerCase() },
+      ...userWithAvatar,
+    });
+    const valid = user
+      ? await bcrypt.compare(dto.password, user.password)
+      : false;
+    if (!user || !valid)
+      throw new UnauthorizedException('Email ou mot de passe incorrect');
+
+    return this.openSession(user);
+  }
+
+  async refresh(refreshToken: string): Promise<Session> {
+    const rotated = await this.tokens.rotateRefreshToken(refreshToken);
+    if (!rotated) throw new UnauthorizedException('Session expirée');
+
+    const user = await this.prisma.user.findUnique({
+      where: { id: rotated.userId },
+      ...userWithAvatar,
+    });
+    if (!user) throw new UnauthorizedException('Session expirée');
+
     return {
-      httpOnly,
-      secure: this.cookieSecure,
-      sameSite: this.cookieSameSite,
-      domain: this.cookieDomain,
-      maxAge: this.ACCESS_TOKEN_EXPIRATION,
-      path: '/'
-    };
-  }
-
-  async signIn(email: string, pass: string, @Res() res: Response): Promise<void> {
-    const user = await this.userService.findOneForAuth({ email });
-    if (!user) {
-      throw new UnauthorizedException('Adresse email ou mot de passe incorrect.');
-    }
-
-    const isMatch = await bcrypt.compare(pass, user.password);
-    if (!isMatch) {
-      throw new UnauthorizedException('Adresse email ou mot de passe incorrect.');
-    }
-
-    const payload: AuthPayload = {
-      id: user.id,
-      email: user.email,
-      role: user.role,
-      pseudo: user.pseudo,
-      firstTimeConnection: user.firstTimeConnection,
-      avatarId: user.avatarId || undefined
-    };
-
-    // Utilise le CryptoService pour chiffrer le payload
-    const { encryptedData, iv } = this.cryptoService.encryptPayload(payload);
-    const tokenPayload = { data: encryptedData, iv };
-
-    const [access_token, refresh_token] = await Promise.all([
-      this.jwtService.signAsync(tokenPayload, {
-        algorithm: 'HS512',
-        issuer: 'LinguaGo',
-        audience: 'LinguaGo-client',
+      user: toPublicUser(user),
+      accessToken: this.tokens.signAccessToken({
+        sub: user.id,
+        role: user.role,
       }),
-      this.jwtService.signAsync(payload, {
-        expiresIn: '1d',
-        algorithm: 'HS512'
-      })
-    ]);
-
-    await this.prisma.refreshToken.create({
-      data: {
-        token: refresh_token,
-        userId: user.id,
-        expiresAt: new Date(Date.now() + 24 * 60 * 60 * 1000),
-      },
-    });
-
-    await this.cleanUpOldSessions(user.id);
-
-    res.cookie('access_token', access_token, this.setCookieOptions(true));
-    res.cookie('user', JSON.stringify(payload), this.setCookieOptions());
-
-    res.send({ message: 'User successfully logged in.', payload });
-  }
-
-  async refreshToken(userId: string, @Res() res: Response): Promise<void> {
-    const user = await this.userService.findOne({ id: userId });
-    if (!user) {
-      throw new UnauthorizedException('User not found');
-    }
-
-    const payload = {
-      id: user.id,
-      email: user.email,
-      role: user.role,
-      pseudo: user.pseudo,
-      firstTimeConnection: user.firstTimeConnection,
-      avatarId: user.avatarId || undefined
+      refreshToken: rotated.token,
     };
-
-    const { encryptedData, iv } = this.cryptoService.encryptPayload(payload);
-    const tokenPayload = { data: encryptedData, iv };
-
-    const access_token = await this.jwtService.signAsync(tokenPayload, {
-      algorithm: 'HS512',
-      issuer: 'LinguaGo',
-      audience: 'LinguaGo-client',
-    });
-
-    res.cookie('access_token', access_token, this.setCookieOptions(true));
-    res.cookie('user', JSON.stringify(payload), this.setCookieOptions());
   }
 
-  async firstTimeConnected(userId: string): Promise<User> {
-    return await this.prisma.user.update({
-      where: {
-        id: userId
-      },
-      data: {
-        firstTimeConnection: false
-      }
-    })
+  async logout(refreshToken: string | undefined): Promise<void> {
+    if (refreshToken) await this.tokens.revoke(refreshToken);
   }
 
-  async logout(userId: string, @Res() res: Response): Promise<void> {
-    await this.prisma.refreshToken.deleteMany({
-      where: { userId },
-    });
-
-    res.clearCookie('access_token', this.setCookieOptions(true));
-    res.clearCookie('user', this.setCookieOptions());
-
-    res.send({ message: 'Déconnexion réussie' });
-  }
-
-  private async cleanUpOldSessions(userId: string): Promise<void> {
-    const sessions = await this.prisma.refreshToken.findMany({
-      where: { userId },
-      orderBy: { createdAt: 'asc' },
-    });
-
-    if (sessions.length > 1) {
-      const sessionsToDelete = sessions.slice(0, -1); // Garde la session la plus récente
-      const sessionIdsToDelete = sessionsToDelete.map(session => session.id);
-
-      await this.prisma.refreshToken.deleteMany({
-        where: { id: { in: sessionIdsToDelete } },
-      });
-    }
+  async openSession(
+    user: Parameters<typeof toPublicUser>[0],
+  ): Promise<Session> {
+    return {
+      user: toPublicUser(user),
+      accessToken: this.tokens.signAccessToken({
+        sub: user.id,
+        role: user.role,
+      }),
+      refreshToken: await this.tokens.issueRefreshToken(user.id),
+    };
   }
 }

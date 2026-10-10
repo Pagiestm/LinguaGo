@@ -1,33 +1,17 @@
-import { Module, forwardRef } from '@nestjs/common';
+import { Global, Module } from '@nestjs/common';
 import { JwtModule } from '@nestjs/jwt';
-import { AuthService } from './auth.service';
+import { UsersModule } from '../users/users.module';
 import { AuthController } from './auth.controller';
-import { ConfigModule, ConfigService } from '@nestjs/config';
-import { UserModule } from 'src/user/user.module';
-import { AuthGuard } from './auth.guard';
-import { PrismaModule } from 'src/utils/prisma.module';
+import { AuthService } from './auth.service';
+import { GoogleService } from './google.service';
+import { PasswordResetService } from './password-reset.service';
+import { TokensService } from './tokens.service';
 
+@Global()
 @Module({
-  imports: [
-    ConfigModule,
-    forwardRef(() => UserModule),
-    JwtModule.registerAsync({
-      imports: [ConfigModule],
-      inject: [ConfigService],
-      useFactory: async (configService: ConfigService) => ({
-        secret: configService.get<string>('JWT_SECRET'),
-        signOptions: {
-          expiresIn: '2h',
-          algorithm: 'HS512',
-          issuer: 'LinguaGo',
-          audience: 'LinguaGo-client',
-        },
-      }),
-    }),
-    PrismaModule,
-  ],
-  providers: [AuthService, AuthGuard],
+  imports: [JwtModule.register({}), UsersModule],
   controllers: [AuthController],
-  exports: [AuthService, JwtModule, AuthGuard],
+  providers: [AuthService, TokensService, GoogleService, PasswordResetService],
+  exports: [TokensService],
 })
-export class AuthModule { }
+export class AuthModule {}

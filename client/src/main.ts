@@ -1,18 +1,33 @@
+import ui from '@nuxt/ui/vue-plugin';
+import { PiniaColada } from '@pinia/colada';
+import { createPinia } from 'pinia';
 import { createApp } from 'vue';
-import './style.css';
-import App from './App.vue';
-import store from './store';
-import router from './routes/index.js';
-import Toast from 'vue-toastification';
-import 'vue-toastification/dist/index.css';
-import VueApexCharts from 'vue3-apexcharts';
-import { serviceWorkerManager } from './services/service-worker-manager.js';
-import { networkObserver } from './services/network-observer.js';
+import App from './app/App.vue';
+import { router } from './app/router';
+import './assets/css/main.css';
+import { setupInstallPrompt } from './pwa/install';
+import { registerServiceWorker } from './pwa/register';
+import { setupSentry } from './shared/lib/sentry';
+import { startOfflineSync } from './shared/offline/sync';
+import { useSessionStore } from './shared/stores/session';
 
-serviceWorkerManager.register();
-networkObserver.observe();
+setupInstallPrompt();
+
 const app = createApp(App);
+const pinia = createPinia();
 
-store.dispatch('initLogin').then(() => {
-  app.use(router).use(store).use(Toast).use(VueApexCharts).mount('#app');
-});
+app.use(pinia);
+app.use(PiniaColada);
+app.use(ui);
+
+const session = useSessionStore(pinia);
+await session.bootstrap();
+
+app.use(router);
+void setupSentry(app, router);
+
+app.mount('#app');
+
+registerServiceWorker();
+startOfflineSync();
+void navigator.storage?.persist?.();

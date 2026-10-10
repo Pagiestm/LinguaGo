@@ -1,235 +1,128 @@
-# LinguaGo - Guide d'installation et d'utilisation
+<div align="center">
+  <img src="client/public/logo.svg" alt="LinguaGo" width="96" height="96" />
+  <h1>LinguaGo</h1>
+  <p>Apprendre l'anglais quelques minutes par jour : une PWA installable, utilisable hors connexion, avec des rappels.</p>
 
-LinguaGo est une application PWA d'apprentissage des langues développée avec Vue.js et NestJS.
+![Vue](https://img.shields.io/badge/Vue-3.5-42b883?logo=vue.js&logoColor=white)
+![NestJS](https://img.shields.io/badge/NestJS-12-e0234e?logo=nestjs&logoColor=white)
+![Prisma](https://img.shields.io/badge/Prisma-7-2d3748?logo=prisma&logoColor=white)
+![PostgreSQL](https://img.shields.io/badge/PostgreSQL-17-4169e1?logo=postgresql&logoColor=white)
+![PWA](https://img.shields.io/badge/PWA-installable-5a0fc8)
 
-## Prérequis
-
-- Node.js 20.x ou plus récent
-- npm 8.x ou plus récent
-- PostgreSQL 16+
-- Git
-
-## Installation côté client
-
-Le frontend est développé avec Vue 3, TypeScript et Vite.
-
-```
-# Se positionner dans le répertoire client
-cd client
-
-# Installer les dépendances
-npm install
-
-# Créer un fichier d'environnement
-cp .env.example .env
-```
-
-Configurez les variables d'environnement dans le fichier .env. Vous pouvez retrouver les différentes variables nécessaires dans le fichier .env.example.
-
-Pour démarrer en mode développement :
-
-```
-npm run dev
-```
-Pour déployer l'application PWA :
-
-```
-# Construction de l'application
-npm run build
-
-# Prévisualisation du build
-npm run preview
-```
-
-> **Note** : Pour tester les fonctionnalités PWA (mise en cache, notifications), utilisez la version de production (build + preview).
-
-## Installation côté server
-
-Le backend est développé avec NestJS et Prisma ORM.
-
-```
-# Se positionner dans le répertoire serveur
-cd server
-
-# Installer les dépendances
-npm install
-
-# Créer un fichier d'environnement
-cp .env.example .env
-```
-
-Configurez les variables d'environnement dans le fichier .env. Vous pouvez retrouver les différentes variables nécessaires dans le fichier .env.example.
-
-### Configuration de la base de données
-
-Utiliser le dump SQL :
-
-```
-# D'abord, créez une base de données PostgreSQL vide
-createdb linguago
-# ou via psql
-psql -U votre_utilisateur -c "CREATE DATABASE linguago;"
-
-# Importez le dump SQL (situé dans le dossier database à la racine du projet)
-psql -U votre_utilisateur -d linguago -f database/dump.sql
-```
-
-Le fichier dump.sql contient toutes les tables, contraintes, triggers et données initiales nécessaires au bon fonctionnement de l'application.
-
-> **Astuce** : Pour une installation plus simple, vous pouvez utiliser un SGBD graphique comme pgAdmin ou DBeaver, créer manuellement une base de données et y importer le script SQL directement depuis l'interface.
-
-### Démarrage du serveur
-
-Pour le développement :
-
-```
-npm run start:dev
-```
-
-Pour la production :
-
-```
-# Compilation des fichiers TypeScript
-npm run build
-
-# Démarrage du serveur
-npm run start:prod
-```
+</div>
 
 ## Fonctionnalités
 
-### Installation PWA
+- **Cinq niveaux** du cadre européen (A1 à C1), 66 séries et 418 exercices : QCM, vrai ou faux, traduction libre, texte à trous, remise dans l'ordre, dictée et prononciation
+- **Validation côté serveur** : les réponses ne quittent jamais l'API ; une traduction peut déclarer plusieurs formulations acceptées, les contractions anglaises sont comprises et une erreur montre mot à mot ce qui diffère de la réponse attendue
+- **Révision espacée** : les exercices ratés reviennent à 1, 3, 7, 14, 30 puis 60 jours ; la session « Cinq minutes » mêle révisions dues et nouveautés du niveau
+- **Objectif quotidien** réglable (5 à 40 points), série de jours fondée dessus, onze succès à débloquer, ligues hebdomadaires Bronze, Argent, Or et Diamant avec montée et descente le lundi
+- **Administration** : écrans de gestion des séries et des exercices avec les réponses et leurs formulations alternatives
+- **Compte** : connexion avec Google, mot de passe oublié par email, export de toutes ses données en JSON, suppression
+- **Prononciation** : reconnaissance vocale du navigateur, les nombres dictés en chiffres sont compris (« 7:00 » vaut « seven o'clock »)
+- **Progression** : points, niveau, exercices réussis par jour, séries terminées par niveau, temps passé, classement de la semaine
+- **Hors connexion** : les séries favorites et les niveaux téléchargés sont conservés sur l'appareil, les réponses sont vérifiées localement puis synchronisées au retour du réseau, même application fermée (Background Sync)
+- **Série de jours** : jours consécutifs avec au moins un exercice, record, badge sur l'icône quand la série est en danger
+- **Rappels** : notification push à l'heure et à la fréquence choisies, dans le fuseau horaire de l'utilisateur, avec le texte adapté à la série en cours et deux actions (« Commencer », « Dans 1 h »)
+- **Installable** : manifeste complet (raccourcis, captures, catégories), invitation à installer au bon moment et guide iOS, mise à jour proposée dans l'application, favoris rafraîchis en arrière-plan, interface sombre
+- **Et aussi** : lecture à voix haute des phrases à prononcer, partage du score après une série, mascotte Lingo qui commente chaque étape
 
-LinguaGo peut être installé comme une application native sur :
+## Stack
 
-- Ordinateur : Cliquez sur l'icône d'installation dans la barre d'adresse du navigateur
-- Mobile : Utilisez l'option "Ajouter à l'écran d'accueil" dans le menu de votre navigateur
+| Couche    | Technologies                                                                            |
+| --------- | --------------------------------------------------------------------------------------- |
+| Client    | Vue 3, Vite, vue-router, Pinia et Pinia Colada, Nuxt UI, Tailwind CSS, Workbox          |
+| API       | NestJS, Prisma, PostgreSQL, class-validator, Swagger, web-push, MJML                    |
+| Tests     | Jest et Supertest (API), Vitest (client), Playwright (parcours navigateur)              |
+| Outillage | npm workspaces, ESLint, Prettier, Husky, Commitlint, semantic-release, Renovate, Docker |
 
-Une fois installée, l'application fonctionne hors ligne et propose une expérience similaire à une application native.
+## Démarrage
 
-### Mode hors-ligne et cache
+**Prérequis** : Node.js 24.9 ou plus, Docker.
 
-L'application fonctionne en mode hors-ligne avec certaines limitations :
-
-- Page d'accueil : Les statistiques ne sont pas disponibles sans connexion
-- Exercices :
-    - Les exercices standards ne sont pas accessibles hors-ligne
-    - Les exercices de prononciation nécessitent également une connexion
-- Favoris : Les exercices ajoutés en favoris sont stockés dans le cache et restent disponibles hors-ligne !
-- Sauvegarde des progrès :
-    - Les réponses sont stockées temporairement en localStorage
-    - Elles sont synchronisées avec la base de données dès que la connexion est rétablie
-
-Pour tester le mode hors-ligne, ajoutez d'abord des exercices à vos favoris en étant connecté, puis désactivez votre connexion internet.
-
-### Apprentissage
-
-- Exercices progressifs : Différents niveaux de difficulté adaptés à votre progression
-- Variété d'exercices : QCM, traduction et vrai ou faux
-- Validation intelligente des traductions : Les exercices de traduction libre sont validés à l'aide de Gemini 1.5 Fast (permettant une certaine flexibilité dans vos réponses plutôt qu'une correspondance exacte)
-- Entraînement à la prononciation : Parlez et améliorez votre accent grâce à la reconnaissance vocale
-
-### Gestion du profil
-
-- Personnalisation : Modifiez vos informations et préférences via la modal profil
-- Avatars : Choisissez parmi une collection d'avatars
-- Favoris : Ajoutez les séries d'exercices à vos favoris pour y accéder rapidement depuis la page mes favoris
-
-### Notifications
-
-Pour activer et configurer les notifications :
-
-1. Cliquez sur l'icône de cloche dans le coin supérieur droit
-2. Autorisez les notifications lorsque le navigateur vous le demande
-3. Paramétrez l'heure de notification (par exemple : 17h00)
-4. Sélectionnez la fréquence (quotidienne, tous les 3 jours, hebdomadaire...)
-
-Pour tester les notifications : Nous avons ajouté une option spéciale qui vous permet de recevoir une notification test immédiatement. Sélectionnez l'heure actuelle + 1 minute (par exemple : si l'heure actuelle est 17h05, configurez pour 17h06) pour vérifier que le système fonctionne correctement. Le système utilise une tâche cron côté backend qui s'exécute toutes les minutes pour vérifier et envoyer les notifications aux utilisateurs concernés.
-
-### Suivi des progrès
-
-- Tableau de bord : Vue d'ensemble de votre progression
-- Niveaux et points : Suivez votre avancement global
-- Statistiques détaillées : Visualisez vos exercices réussis/échoués et le temps passé à apprendre
-- Historique d'activité : Consultez votre activité récente et vos performances
-
-### Visualisation des données
-
-- Graphiques interactifs : Visualisez vos progrès avec des graphiques dynamiques
-    - Exercices réussis par jour (vue hebdomadaire)
-    - Répartition des séries complétées par niveau de difficulté
-- Classement : Comparez vos performances à celles des autres utilisateurs dans le classement hebdomadaire
-
-## Logging
-
-Le système de logging capture automatiquement les erreurs dans le dossier logs/. Les logs sont automatiquement :
-
-- Classés par date
-- Rotés quotidiennement
-- Compressés après rotation
-- Supprimés après 14 jours
-
-## Documentation API
-
-La documentation Swagger est disponible à l'URL :
-
-```
-http://localhost:3000/api
+```sh
+git clone https://github.com/Pagiestm/LinguaGo.git
+cd LinguaGo && npm install && cp .env.example .env
+docker compose up -d
 ```
 
-### Dépendances techniques
+| Service       | Adresse                                                 |
+| ------------- | ------------------------------------------------------- |
+| Application   | http://localhost:5173                                   |
+| API / Swagger | http://localhost:3000/docs                              |
+| pgAdmin       | http://localhost:5051 (`admin@linguago.dev` / `admin`)  |
+| PostgreSQL    | `localhost:5435`, base `linguago` (`postgres` / `root`) |
 
-Voici les principales technologies et bibliothèques utilisées dans ce projet :
+Au démarrage, le conteneur `server` applique les migrations et le seed puis lance l'API en mode watch ; `client` sert Vite. Le code est monté dans les conteneurs : le rechargement à chaud fonctionne. Après un changement de dépendances, `docker compose up -d --build`. `PORT` et `CLIENT_PORT` dans le `.env` changent les ports publiés. Sans Docker pour les apps : `docker compose up -d db pgadmin`, puis `npm run db:migrate`, `npm run db:seed` et `npm run dev`.
 
-#### Backend (NestJS)
+Le seed charge le catalogue (niveaux, séries, exercices, avatars) et deux comptes : `demo@linguago.fr` et `admin@linguago.fr`, mot de passe `Linguago1!`. `npm run seed:demo -w server` ajoute douze apprenants fictifs avec de l'activité récente pour peupler le classement. `npm run seed:reset -w server` vide la base avant de la remplir.
 
-| Catégorie | Dépendances | Version |
-|-----------|------------|---------|
-| **Framework** | `@nestjs/common` | ^11.0.1 |
-| | `@nestjs/core` | ^11.0.1 |
-| | `@nestjs/platform-express` | ^11.0.1 |
-| **Base de données** | `@prisma/client` | ^6.3.1 |
-| | `prisma` (dev) | ^6.3.1 |
-| **Authentification** | `@nestjs/jwt` | ^11.0.0 |
-| | `bcrypt` | ^5.1.1 |
-| **Validation** | `class-validator` | ^0.14.1 |
-| | `class-transformer` | ^0.5.1 |
-| **Documentation API** | `@nestjs/swagger` | ^11.0.3 |
-| **Configuration** | `@nestjs/config` | ^4.0.0 |
-| **Planification** | `@nestjs/schedule` | ^5.0.1 |
-| **Notifications** | `web-push` | ^3.6.7 |
-| **Logging** | `winston` | ^3.17.0 |
-| | `winston-daily-rotate-file` | ^5.0.0 |
-| **Outils** | `cookie-parser` | ^1.4.7 |
-| | `reflect-metadata` | ^0.2.2 |
+Le `.env` à la racine sert aux deux applications. Les variables facultatives :
 
-#### Frontend (Vue.js)
+| Variable                                   | Effet quand elle est renseignée                                    |
+| ------------------------------------------ | ------------------------------------------------------------------ |
+| `VAPID_PUBLIC_KEY`, `VAPID_PRIVATE_KEY`    | les rappels push sont activés (`npx web-push generate-vapid-keys`) |
+| `GOOGLE_CLIENT_ID`, `GOOGLE_CLIENT_SECRET` | le bouton « Continuer avec Google » apparaît sur la connexion      |
+| `SMTP_HOST`                                | les emails de mot de passe oublié partent (Mailpit en local)       |
+| `SENTRY_DSN`, `VITE_SENTRY_DSN`            | les erreurs de l'API et du client remontent dans Sentry            |
+| `SWAGGER=true`                             | expose la documentation en production                              |
 
-| Catégorie | Dépendances | Version |
-|-----------|------------|---------|
-| **Framework** | `vue` | ^3.5.13 |
-| **Routage** | `vue-router` | ^4.5.0 |
-| **État global** | `vuex` | ^4.0.2 |
-| **UI/UX** | `tailwindcss` | ^4.0.6 |
-| | `vue3-carousel` | ^0.14.0 |
-| | `vue3-popper` | ^1.5.0 |
-| | `@vuepic/vue-datepicker` | ^11.0.1 |
-| | `canvas-confetti` | ^1.9.3 |
-| | `vue-toastification` | ^2.0.0-rc.5 |
-| **HTTP Client** | `axios` | ^1.7.9 |
-| **PWA** | `vite-plugin-pwa` | ^0.21.1 |
-| | `workbox-window` | ^7.3.0 |
-| | `@vite-pwa/assets-generator` | ^0.2.6 |
-| **Sécurité** | `dompurify` | ^3.2.4 |
-| | `jwt-decode` | ^3.0.0 |
-| | `js-cookie` | ^3.0.5 |
-| **Visualisation** | `vue3-apexcharts` | ^1.8.0 |
-| | `apexcharts` | ^4.5.0 |
-| **IA** | `@google/generative-ai` | ^0.23.0 |
-| **Outils** | `num-words` | ^1.2.3 |
-| **Analytics** | `@microsoft/clarity` | ^1.0.0 |
-| **Build** | `vite` | ^6.0.11 |
-| | `typescript` | ~5.7.2 |
-| | `@vitejs/plugin-vue` | ^5.2.1 |
+## Scripts
 
-© 2025 LinguaGo. Tous droits réservés.
+| Commande (depuis la racine)  | Effet                                                       |
+| ---------------------------- | ----------------------------------------------------------- |
+| `npm run dev`                | API et client en rechargement à chaud                       |
+| `npm run build`              | build des deux applications                                 |
+| `npm run lint` / `format`    | ESLint et Prettier sur tout le dépôt                        |
+| `npm run typecheck`          | TypeScript sur le client et l'API                           |
+| `npm test`                   | tests unitaires de l'API                                    |
+| `npm run test:e2e -w server` | tests de l'API contre une base dédiée (`DATABASE_URL_TEST`) |
+| `npm run test:unit`          | tests unitaires du client                                   |
+| `npm run test:e2e`           | parcours Playwright contre le build de production           |
+
+## Architecture
+
+```
+LinguaGo/
+├── client/                   Vue 3 + Vite, PWA
+│   ├── src/app/              App.vue, routeur, mises en page
+│   ├── src/features/         home, auth, dashboard, learn, favorites, account
+│   ├── src/shared/           api, stores, composables, offline, lib, ui
+│   ├── src/pwa/              service worker (injectManifest) et enregistrement
+│   ├── tests/                parcours Playwright avec une API simulée
+│   ├── Dockerfile            image de développement (Vite)
+│   └── Dockerfile.prod       build Vite puis nginx, qui réécrit /api vers l'API
+├── server/                   NestJS + Prisma
+│   ├── src/auth/             sessions par cookies, jeton de rafraîchissement tourné
+│   ├── src/users/            profil, mot de passe, suppression de compte
+│   ├── src/catalog/          niveaux, séries, exercices, progression par niveau
+│   ├── src/progress/         réponses, temps passé, favoris
+│   ├── src/reviews/          révision espacée, session du jour
+│   ├── src/stats/            statistiques, classements, ligues
+│   ├── src/achievements/     succès
+│   ├── src/admin/            gestion des séries et des exercices
+│   ├── src/mail/             gabarits MJML et envoi SMTP
+│   ├── src/notifications/    abonnements push, planification, cron
+│   ├── prisma/               schéma, migrations, seed et catalogue
+│   ├── test/                 tests de bout en bout
+│   ├── Dockerfile            image de développement (nest --watch)
+│   └── Dockerfile.prod       image de production, utilisée par Render
+├── docker-compose.yml        développement : PostgreSQL, pgAdmin, API et client en watch
+├── docker-compose.prod.yml   auto-hébergement : images compilées, nginx devant le client
+├── render.yaml               déploiement de l'API sur Render
+└── vercel.json               déploiement du client sur Vercel
+```
+
+Le détail est dans [docs/architecture.md](docs/architecture.md) et le déploiement dans [docs/deploiement.md](docs/deploiement.md).
+
+## Sécurité
+
+- Jeton d'accès de 15 minutes et jeton de rafraîchissement de 30 jours, tous deux en cookies `httpOnly` ; le jeton de rafraîchissement est haché en base et tourné à chaque usage, un rejeu révoque toute la famille
+- Mots de passe hachés avec bcrypt, règle de complexité vérifiée des deux côtés, même message d'erreur pour un email inconnu et un mauvais mot de passe
+- Limitation de débit globale et renforcée sur la connexion et l'inscription, en-têtes `helmet`, CORS restreint au client
+- Les réponses des exercices ne sont jamais envoyées au navigateur : seule une empreinte sert à la vérification hors connexion, et les points sont attribués par le serveur à la synchronisation
+- Toutes les routes de progression travaillent avec l'utilisateur du jeton, jamais avec un identifiant fourni par le client
+
+## Licence
+
+[MIT](LICENSE)

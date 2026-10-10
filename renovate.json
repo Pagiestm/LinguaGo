@@ -1,0 +1,54 @@
+{
+  "$schema": "https://docs.renovatebot.com/renovate-schema.json",
+  "extends": [
+    "config:recommended",
+    ":dependencyDashboard",
+    "group:allNonMajor",
+    "group:monorepos",
+    ":maintainLockFilesWeekly",
+    ":automergeMinor",
+    ":prConcurrentLimitNone",
+    ":prHourlyLimitNone"
+  ],
+  "baseBranches": ["main"],
+  "timezone": "Europe/Paris",
+  "minimumReleaseAge": "3 days",
+  "vulnerabilityAlerts": {
+    "minimumReleaseAge": null
+  },
+  "packageRules": [
+    {
+      "description": "Avant la 1.0, une mineure peut casser comme une majeure. Relecture avant fusion.",
+      "matchCurrentVersion": "<1.0.0",
+      "matchUpdateTypes": ["minor"],
+      "groupName": "paquets 0.x",
+      "automerge": false
+    },
+    {
+      "description": "Prisma et son client générateur avancent ensemble : une version différente entre le CLI et le client casse la génération.",
+      "matchPackageNames": ["prisma", "@prisma/client", "@prisma/adapter-pg", "@prisma/config"],
+      "groupName": "prisma"
+    },
+    {
+      "description": "TypeScript tenu en 6.0 par le tilde du package.json : au-delà, vue-tsc et typescript-eslint doivent être vérifiés à la main.",
+      "matchPackageNames": ["typescript"],
+      "matchUpdateTypes": ["major", "minor"],
+      "enabled": false
+    },
+    {
+      "description": "semantic-release et ses greffons sont épinglés ensemble : une majeure change le format du changelog ou le writer attendu.",
+      "matchPackageNames": [
+        "semantic-release",
+        "@semantic-release/changelog",
+        "@semantic-release/git"
+      ],
+      "groupName": "semantic-release",
+      "automerge": false
+    },
+    {
+      "description": "Les images Docker (Node, PostgreSQL, Mailpit, pgAdmin, nginx) passent en relecture : une majeure de PostgreSQL impose une migration du volume.",
+      "matchDatasources": ["docker"],
+      "automerge": false
+    }
+  ]
+}

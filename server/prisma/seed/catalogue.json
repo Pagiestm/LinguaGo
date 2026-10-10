@@ -1,0 +1,3922 @@
+{
+  "levels": [
+    {
+      "code": "A1",
+      "title": "Débutant",
+      "description": "Ce niveau est destiné aux personnes qui commencent tout juste à apprendre l’anglais. L’accent est mis sur le vocabulaire de base, la grammaire élémentaire et la compréhension de phrases simples. L’objectif est de pouvoir se présenter, poser des questions courantes et comprendre des conversations très basiques.",
+      "pointsPerExercise": 1
+    },
+    {
+      "code": "A2",
+      "title": "Élémentaire",
+      "description": "À ce niveau, les apprenants peuvent déjà comprendre et utiliser des expressions courantes de la vie quotidienne. Les exercices aident à construire des phrases plus complexes, à parler de ses expériences et à interagir dans des situations courantes (restaurant, voyages, achats).",
+      "pointsPerExercise": 2
+    },
+    {
+      "code": "B1",
+      "title": "Intermédiaire",
+      "description": "Ce niveau permet de s’exprimer avec plus d’aisance sur des sujets variés. On y apprend à raconter des événements passés, exprimer son opinion et comprendre des textes et des dialogues plus élaborés. Idéal pour ceux qui veulent devenir autonomes dans des conversations du quotidien.",
+      "pointsPerExercise": 3
+    },
+    {
+      "code": "B2",
+      "title": "Avancé",
+      "description": "Les apprenants à ce niveau peuvent comprendre et produire des textes et discours plus complexes. On travaille ici sur l’argumentation, les idiomes, l’anglais des médias et les discussions approfondies. L’objectif est d’avoir une communication fluide et nuancée.",
+      "pointsPerExercise": 4
+    },
+    {
+      "code": "C1",
+      "title": "Autonome",
+      "description": "Ce niveau s’adresse aux personnes qui maîtrisent déjà bien l’anglais et souhaitent affiner leur compréhension et leur expression. On y travaille la subtilité de la langue, l’anglais académique et professionnel, ainsi que l’analyse de contenus authentiques comme des conférences ou des articles spécialisés.",
+      "pointsPerExercise": 5
+    }
+  ],
+  "series": [
+    {
+      "key": 96,
+      "title": "Premiers mots en anglais",
+      "description": "Apprends le vocabulaire de base pour te présenter et parler de ton quotidien.",
+      "levelCode": "A1",
+      "type": "DEFAULT"
+    },
+    {
+      "key": 97,
+      "title": "Les chiffres et les dates",
+      "description": "Maîtrise les nombres, les heures et les dates en anglais pour parler du temps.",
+      "levelCode": "A1",
+      "type": "DEFAULT"
+    },
+    {
+      "key": 98,
+      "title": "Les couleurs et les objets",
+      "description": "Identifie et nomme les couleurs et objets courants de ton environnement.",
+      "levelCode": "A1",
+      "type": "DEFAULT"
+    },
+    {
+      "key": 99,
+      "title": "Les verbes essentiels",
+      "description": "Apprends les verbes de base pour exprimer des actions simples.",
+      "levelCode": "A1",
+      "type": "DEFAULT"
+    },
+    {
+      "key": 100,
+      "title": "Se présenter en anglais",
+      "description": "Savoir dire son nom, son âge, et parler de soi-même.",
+      "levelCode": "A1",
+      "type": "DEFAULT"
+    },
+    {
+      "key": 101,
+      "title": "Les salutations et formules de politesse",
+      "description": "Savoir dire bonjour, merci, et formuler des demandes polies.",
+      "levelCode": "A1",
+      "type": "DEFAULT"
+    },
+    {
+      "key": 102,
+      "title": "Les membres de la famille",
+      "description": "Apprends à parler de ta famille et des liens de parenté.",
+      "levelCode": "A1",
+      "type": "DEFAULT"
+    },
+    {
+      "key": 103,
+      "title": "Les animaux courants",
+      "description": "Apprends à nommer les animaux domestiques et sauvages.",
+      "levelCode": "A1",
+      "type": "DEFAULT"
+    },
+    {
+      "key": 104,
+      "title": "La nourriture et les boissons",
+      "description": "Découvre le vocabulaire des aliments et comment commander au restaurant.",
+      "levelCode": "A1",
+      "type": "DEFAULT"
+    },
+    {
+      "key": 105,
+      "title": "Les lieux de la ville",
+      "description": "Apprends à demander ton chemin et à nommer les endroits courants.",
+      "levelCode": "A1",
+      "type": "DEFAULT"
+    },
+    {
+      "key": 106,
+      "title": "La vie quotidienne",
+      "description": "Décris ta routine et tes activités habituelles.",
+      "levelCode": "A2",
+      "type": "DEFAULT"
+    },
+    {
+      "key": 107,
+      "title": "Faire des achats",
+      "description": "Savoir demander des prix, comparer des produits et acheter des objets.",
+      "levelCode": "A2",
+      "type": "DEFAULT"
+    },
+    {
+      "key": 108,
+      "title": "Voyager à l’étranger",
+      "description": "Apprends les phrases essentielles pour l’aéroport, l’hôtel et les transports.",
+      "levelCode": "A2",
+      "type": "DEFAULT"
+    },
+    {
+      "key": 109,
+      "title": "Les loisirs et passe-temps",
+      "description": "Parle de ce que tu aimes faire pendant ton temps libre.",
+      "levelCode": "A2",
+      "type": "DEFAULT"
+    },
+    {
+      "key": 110,
+      "title": "La météo et les saisons",
+      "description": "Décris le temps qu’il fait et les changements de saison.",
+      "levelCode": "A2",
+      "type": "DEFAULT"
+    },
+    {
+      "key": 111,
+      "title": "Les descriptions physiques et vestimentaires",
+      "description": "Apprends à décrire une personne et ses vêtements.",
+      "levelCode": "A2",
+      "type": "DEFAULT"
+    },
+    {
+      "key": 112,
+      "title": "Les émotions et sentiments",
+      "description": "Exprime comment tu te sens et décris les émotions des autres.",
+      "levelCode": "A2",
+      "type": "DEFAULT"
+    },
+    {
+      "key": 113,
+      "title": "Commander au restaurant",
+      "description": "Apprends à lire un menu, commander et payer l’addition.",
+      "levelCode": "A2",
+      "type": "DEFAULT"
+    },
+    {
+      "key": 114,
+      "title": "Les transports et déplacements",
+      "description": "Savoir demander son chemin et utiliser les transports en commun.",
+      "levelCode": "A2",
+      "type": "DEFAULT"
+    },
+    {
+      "key": 115,
+      "title": "Les verbes au passé simple",
+      "description": "Apprends à raconter ce que tu as fait hier ou la semaine dernière.",
+      "levelCode": "A2",
+      "type": "DEFAULT"
+    },
+    {
+      "key": 116,
+      "title": "Raconter un souvenir ou une expérience",
+      "description": "Apprends à parler d’un événement passé en détail.",
+      "levelCode": "B1",
+      "type": "DEFAULT"
+    },
+    {
+      "key": 117,
+      "title": "Exprimer son opinion",
+      "description": "Apprends à donner ton avis sur des sujets variés.",
+      "levelCode": "B1",
+      "type": "DEFAULT"
+    },
+    {
+      "key": 118,
+      "title": "Comprendre et écrire un email formel",
+      "description": "Apprends les bases des courriers professionnels et académiques.",
+      "levelCode": "B1",
+      "type": "DEFAULT"
+    },
+    {
+      "key": 119,
+      "title": "Les expressions idiomatiques courantes",
+      "description": "Découvre des expressions anglaises utilisées au quotidien.",
+      "levelCode": "B1",
+      "type": "DEFAULT"
+    },
+    {
+      "key": 120,
+      "title": "Les différences culturelles",
+      "description": "Parle des habitudes et traditions des pays anglophones.",
+      "levelCode": "B1",
+      "type": "DEFAULT"
+    },
+    {
+      "key": 121,
+      "title": "Le travail et les métiers",
+      "description": "Apprends à parler de ton emploi et du monde professionnel.",
+      "levelCode": "B1",
+      "type": "DEFAULT"
+    },
+    {
+      "key": 122,
+      "title": "Les médias et les nouvelles",
+      "description": "Apprends à comprendre et discuter des actualités.",
+      "levelCode": "B1",
+      "type": "DEFAULT"
+    },
+    {
+      "key": 123,
+      "title": "Les conversations téléphoniques",
+      "description": "Entraîne-toi à répondre et passer des appels en anglais.",
+      "levelCode": "B1",
+      "type": "DEFAULT"
+    },
+    {
+      "key": 124,
+      "title": "Les voyages et aventures",
+      "description": "Décris un voyage que tu as fait ou que tu aimerais faire.",
+      "levelCode": "B1",
+      "type": "DEFAULT"
+    },
+    {
+      "key": 125,
+      "title": "Débats et argumentation",
+      "description": "Apprends à défendre une opinion et contre-argumenter.",
+      "levelCode": "B2",
+      "type": "DEFAULT"
+    },
+    {
+      "key": 126,
+      "title": "L’anglais dans le monde professionnel",
+      "description": "Utilise l’anglais dans des situations de bureau et d’affaires.",
+      "levelCode": "B2",
+      "type": "DEFAULT"
+    },
+    {
+      "key": 127,
+      "title": "Comprendre les discours et conférences",
+      "description": "Analyse des vidéos et discours en anglais.",
+      "levelCode": "B2",
+      "type": "DEFAULT"
+    },
+    {
+      "key": 128,
+      "title": "Les faux amis et pièges du vocabulaire",
+      "description": "Identifie et évite les erreurs fréquentes en anglais.",
+      "levelCode": "B2",
+      "type": "DEFAULT"
+    },
+    {
+      "key": 129,
+      "title": "Écrire un essai structuré",
+      "description": "Apprends à rédiger un texte argumentatif bien organisé.",
+      "levelCode": "B2",
+      "type": "DEFAULT"
+    },
+    {
+      "key": 130,
+      "title": "Analyser un article de presse",
+      "description": "Comprends et résume un article complexe en anglais.",
+      "levelCode": "B2",
+      "type": "DEFAULT"
+    },
+    {
+      "key": 131,
+      "title": "Les subtilités grammaticales avancées",
+      "description": "Travaille sur les temps et structures grammaticales avancées.",
+      "levelCode": "B2",
+      "type": "DEFAULT"
+    },
+    {
+      "key": 132,
+      "title": "Comprendre l’humour et les jeux de mots",
+      "description": "Découvre l’humour anglais et ses subtilités.",
+      "levelCode": "B2",
+      "type": "DEFAULT"
+    },
+    {
+      "key": 133,
+      "title": "Analyse de textes littéraires",
+      "description": "Étudie des extraits d’œuvres en anglais.",
+      "levelCode": "C1",
+      "type": "DEFAULT"
+    },
+    {
+      "key": 134,
+      "title": "L’anglais académique",
+      "description": "Apprends le vocabulaire et les structures utilisées dans les études supérieures.",
+      "levelCode": "C1",
+      "type": "DEFAULT"
+    },
+    {
+      "key": 135,
+      "title": "Rédaction et argumentation avancées",
+      "description": "Maîtrise les nuances de la rédaction d’essais et de rapports.",
+      "levelCode": "C1",
+      "type": "DEFAULT"
+    },
+    {
+      "key": 136,
+      "title": "Discours et présentations en anglais",
+      "description": "Développe tes compétences en prise de parole.",
+      "levelCode": "C1",
+      "type": "DEFAULT"
+    },
+    {
+      "key": 137,
+      "title": "Comprendre et utiliser le sarcasme",
+      "description": "Découvre les nuances de l’humour et du ton en anglais.",
+      "levelCode": "C1",
+      "type": "DEFAULT"
+    },
+    {
+      "key": 138,
+      "title": "L’anglais des affaires et de la finance",
+      "description": "Apprends le vocabulaire de l’économie et des entreprises.",
+      "levelCode": "C1",
+      "type": "DEFAULT"
+    },
+    {
+      "key": 139,
+      "title": "Traduction et interprétation",
+      "description": "Exerce-toi à traduire des textes et à interpréter des discours.",
+      "levelCode": "C1",
+      "type": "DEFAULT"
+    },
+    {
+      "key": 140,
+      "title": "Les registres de langue",
+      "description": "Adapte ton langage en fonction du contexte (familier, formel, soutenu).",
+      "levelCode": "C1",
+      "type": "DEFAULT"
+    },
+    {
+      "key": 141,
+      "title": "Analyse de films et séries en anglais",
+      "description": "Étudie des dialogues et leur sous-texte culturel.",
+      "levelCode": "C1",
+      "type": "DEFAULT"
+    },
+    {
+      "key": 142,
+      "title": "Comprendre un débat télévisé ou politique",
+      "description": "Analyse des discussions complexes et des arguments avancés.",
+      "levelCode": "C1",
+      "type": "DEFAULT"
+    },
+    {
+      "key": 143,
+      "title": "Vocabulaire de base",
+      "description": "Entraînez-vous à répéter des mots de vocabulaire courants en anglais.",
+      "levelCode": "A1",
+      "type": "TALK"
+    },
+    {
+      "key": 144,
+      "title": "Se présenter",
+      "description": "Répétez des phrases simples pour vous présenter en anglais.",
+      "levelCode": "A1",
+      "type": "TALK"
+    },
+    {
+      "key": 145,
+      "title": "Salutations et formules de politesse",
+      "description": "Répétez des expressions de salutation et de politesse utilisées au quotidien.",
+      "levelCode": "A1",
+      "type": "TALK"
+    },
+    {
+      "key": 146,
+      "title": "Les couleurs",
+      "description": "Apprenez à répéter les noms des couleurs.",
+      "levelCode": "A1",
+      "type": "TALK"
+    },
+    {
+      "key": 147,
+      "title": "Les objets de la maison",
+      "description": "Répétez les noms des objets courants que l'on trouve dans la maison.",
+      "levelCode": "A1",
+      "type": "TALK"
+    },
+    {
+      "key": 148,
+      "title": "Parler de la météo",
+      "description": "Répétez des phrases et des mots pour décrire la météo.",
+      "levelCode": "A2",
+      "type": "TALK"
+    },
+    {
+      "key": 149,
+      "title": "Activités quotidiennes",
+      "description": "Répétez des phrases qui décrivent des actions courantes dans la vie de tous les jours.",
+      "levelCode": "A2",
+      "type": "TALK"
+    },
+    {
+      "key": 150,
+      "title": "Expressions pour les voyages",
+      "description": "Répétez des phrases utiles pour les voyages et les déplacements.",
+      "levelCode": "A2",
+      "type": "TALK"
+    },
+    {
+      "key": 151,
+      "title": "Parler de ses préférences",
+      "description": "Répétez des phrases pour exprimer vos préférences et choix personnels.",
+      "levelCode": "B1",
+      "type": "TALK"
+    },
+    {
+      "key": 152,
+      "title": "Parler d'un événement passé",
+      "description": "Répétez des phrases pour décrire un événement ou une expérience passée.",
+      "levelCode": "B1",
+      "type": "TALK"
+    },
+    {
+      "key": 153,
+      "title": "Parler de ses projets futurs",
+      "description": "Répétez des phrases pour parler de vos projets à venir.",
+      "levelCode": "B1",
+      "type": "TALK"
+    },
+    {
+      "key": 154,
+      "title": "Donner son avis",
+      "description": "Répétez des phrases pour donner et justifier votre opinion sur divers sujets.",
+      "levelCode": "B1",
+      "type": "TALK"
+    },
+    {
+      "key": 155,
+      "title": "Décrire un problème et proposer des solutions",
+      "description": "Répétez des phrases pour exprimer un problème et proposer des solutions possibles.",
+      "levelCode": "B1",
+      "type": "TALK"
+    },
+    {
+      "key": 156,
+      "title": "Exprimer un désaccord et proposer une alternative",
+      "description": "Répétez des phrases pour exprimer un désaccord et suggérer une autre solution ou opinion.",
+      "levelCode": "B1",
+      "type": "TALK"
+    },
+    {
+      "key": 157,
+      "title": "Analyser un dilemme éthique",
+      "description": "Répétez des phrases pour discuter d'un dilemme éthique et présenter vos arguments de manière nuancée.",
+      "levelCode": "B1",
+      "type": "TALK"
+    },
+    {
+      "key": 158,
+      "title": "Discuter des implications d'une décision politique",
+      "description": "Répétez des phrases pour exprimer des opinions sur les décisions politiques et analyser leurs conséquences.",
+      "levelCode": "B1",
+      "type": "TALK"
+    },
+    {
+      "key": 159,
+      "title": "Discuter d'un phénomène culturel global",
+      "description": "Répétez des phrases pour exprimer des opinions sur l'impact des phénomènes culturels mondiaux.",
+      "levelCode": "B1",
+      "type": "TALK"
+    },
+    {
+      "key": 160,
+      "title": "Phrases à compléter",
+      "description": "Trous à remplir, mots à remettre dans l’ordre et dictées pour ancrer les bases.",
+      "levelCode": "A1",
+      "type": "DEFAULT"
+    },
+    {
+      "key": 161,
+      "title": "Au restaurant, en pratique",
+      "description": "Commander, demander l’addition, remercier : à compléter, ordonner et écrire sous la dictée.",
+      "levelCode": "A2",
+      "type": "DEFAULT"
+    }
+  ],
+  "exercises": [
+    {
+      "seriesKey": 96,
+      "question": "How do you say 'Bonjour' in English?",
+      "answer": "hello",
+      "type": "MULTIPLE_CHOICE",
+      "choices": [
+        "Hello",
+        "Goodbye",
+        "Thank you",
+        "Sorry"
+      ]
+    },
+    {
+      "seriesKey": 96,
+      "question": "Traduisez : 'Je m'appelle Paul.'",
+      "answer": "my name is paul",
+      "type": "TRANSLATION",
+      "choices": []
+    },
+    {
+      "seriesKey": 96,
+      "question": "Is the following statement true or false? 'The English word for 'merci' is 'Sorry''.",
+      "answer": "false",
+      "type": "TRUE_FALSE",
+      "choices": []
+    },
+    {
+      "seriesKey": 96,
+      "question": "How do you say 'Merci' in English?",
+      "answer": "thank you",
+      "type": "MULTIPLE_CHOICE",
+      "choices": [
+        "Please",
+        "Thank you",
+        "You're welcome",
+        "Sorry"
+      ]
+    },
+    {
+      "seriesKey": 96,
+      "question": "Traduisez : 'J'habite à Paris.'",
+      "answer": "i live in paris",
+      "type": "TRANSLATION",
+      "choices": []
+    },
+    {
+      "seriesKey": 96,
+      "question": "Is the following statement true or false? 'In English, ‘Good morning’ means ‘Bonsoir’.'",
+      "answer": "false",
+      "type": "TRUE_FALSE",
+      "choices": []
+    },
+    {
+      "seriesKey": 97,
+      "question": "How do you say '10' in English?",
+      "answer": "ten",
+      "type": "MULTIPLE_CHOICE",
+      "choices": [
+        "Ten",
+        "Twenty",
+        "Thirty",
+        "Five"
+      ]
+    },
+    {
+      "seriesKey": 97,
+      "question": "Traduisez : 'Il est trois heures.'",
+      "answer": "it is three oclock",
+      "type": "TRANSLATION",
+      "choices": []
+    },
+    {
+      "seriesKey": 97,
+      "question": "Is the following statement true or false? 'The number 15 in English is 'Fifty''.",
+      "answer": "false",
+      "type": "TRUE_FALSE",
+      "choices": []
+    },
+    {
+      "seriesKey": 97,
+      "question": "How do you say 'Mercredi' in English?",
+      "answer": "wednesday",
+      "type": "MULTIPLE_CHOICE",
+      "choices": [
+        "Monday",
+        "Tuesday",
+        "Wednesday",
+        "Thursday"
+      ]
+    },
+    {
+      "seriesKey": 97,
+      "question": "Traduisez : 'Nous sommes le 5 avril.'",
+      "answer": "it is april 5th",
+      "type": "TRANSLATION",
+      "choices": []
+    },
+    {
+      "seriesKey": 97,
+      "question": "Is the following statement true or false? 'In English, 'December' is a summer month.'",
+      "answer": "false",
+      "type": "TRUE_FALSE",
+      "choices": []
+    },
+    {
+      "seriesKey": 98,
+      "question": "How do you say 'Rouge' in English?",
+      "answer": "red",
+      "type": "MULTIPLE_CHOICE",
+      "choices": [
+        "Red",
+        "Blue",
+        "Green",
+        "Yellow"
+      ]
+    },
+    {
+      "seriesKey": 98,
+      "question": "Traduisez : 'La table est marron.'",
+      "answer": "the table is brown",
+      "type": "TRANSLATION",
+      "choices": []
+    },
+    {
+      "seriesKey": 98,
+      "question": "Is the following statement true or false? 'The English word for 'bleu' is 'Green''.",
+      "answer": "false",
+      "type": "TRUE_FALSE",
+      "choices": []
+    },
+    {
+      "seriesKey": 98,
+      "question": "How do you say 'Chaise' in English?",
+      "answer": "chair",
+      "type": "MULTIPLE_CHOICE",
+      "choices": [
+        "Table",
+        "Chair",
+        "Door",
+        "Window"
+      ]
+    },
+    {
+      "seriesKey": 98,
+      "question": "Traduisez : 'Le ciel est bleu.'",
+      "answer": "the sky is blue",
+      "type": "TRANSLATION",
+      "choices": []
+    },
+    {
+      "seriesKey": 98,
+      "question": "Is the following statement true or false? 'In English, 'black' means 'noir''.",
+      "answer": "true",
+      "type": "TRUE_FALSE",
+      "choices": []
+    },
+    {
+      "seriesKey": 99,
+      "question": "How do you say 'Manger' in English?",
+      "answer": "eat",
+      "type": "MULTIPLE_CHOICE",
+      "choices": [
+        "Eat",
+        "Sleep",
+        "Run",
+        "Drink"
+      ]
+    },
+    {
+      "seriesKey": 99,
+      "question": "Traduisez : 'Je bois de l'eau.'",
+      "answer": "i drink water",
+      "type": "TRANSLATION",
+      "choices": []
+    },
+    {
+      "seriesKey": 99,
+      "question": "Is the following statement true or false? 'The verb 'to sleep' means 'dormir' in French.'",
+      "answer": "true",
+      "type": "TRUE_FALSE",
+      "choices": []
+    },
+    {
+      "seriesKey": 99,
+      "question": "How do you say 'Courir' in English?",
+      "answer": "run",
+      "type": "MULTIPLE_CHOICE",
+      "choices": [
+        "Jump",
+        "Walk",
+        "Run",
+        "Sing"
+      ]
+    },
+    {
+      "seriesKey": 99,
+      "question": "Traduisez : 'Il lit un livre.'",
+      "answer": "he reads a book",
+      "type": "TRANSLATION",
+      "choices": []
+    },
+    {
+      "seriesKey": 99,
+      "question": "Is the following statement true or false? 'In English, ‘to write’ means ‘écrire’.'",
+      "answer": "true",
+      "type": "TRUE_FALSE",
+      "choices": []
+    },
+    {
+      "seriesKey": 100,
+      "question": "How do you say 'Je m'appelle' in English?",
+      "answer": "my name is",
+      "type": "MULTIPLE_CHOICE",
+      "choices": [
+        "My name is",
+        "I have",
+        "I live in",
+        "I am"
+      ]
+    },
+    {
+      "seriesKey": 100,
+      "question": "Traduisez : 'J'ai 25 ans.'",
+      "answer": "i am 25 years old",
+      "type": "TRANSLATION",
+      "choices": []
+    },
+    {
+      "seriesKey": 100,
+      "question": "Is the following statement true or false? 'In English, ‘I am from France’ means ‘Je viens de France’.'",
+      "answer": "true",
+      "type": "TRUE_FALSE",
+      "choices": []
+    },
+    {
+      "seriesKey": 100,
+      "question": "How do you say 'J'habite à Londres' in English?",
+      "answer": "i live in london",
+      "type": "MULTIPLE_CHOICE",
+      "choices": [
+        "I live in London",
+        "I am from London",
+        "I go to London",
+        "I stay in London"
+      ]
+    },
+    {
+      "seriesKey": 100,
+      "question": "Traduisez : 'Je suis étudiant.'",
+      "answer": "i am a student",
+      "type": "TRANSLATION",
+      "choices": []
+    },
+    {
+      "seriesKey": 100,
+      "question": "Is the following statement true or false? 'In English, ‘I have 20 years’ is correct to say your age.'",
+      "answer": "false",
+      "type": "TRUE_FALSE",
+      "choices": []
+    },
+    {
+      "seriesKey": 101,
+      "question": "How do you say 'Bonjour' in English?",
+      "answer": "hello",
+      "type": "MULTIPLE_CHOICE",
+      "choices": [
+        "Hello",
+        "Goodbye",
+        "Please",
+        "Thank you"
+      ]
+    },
+    {
+      "seriesKey": 101,
+      "question": "Traduisez : 'Merci beaucoup.'",
+      "answer": "thank you very much",
+      "type": "TRANSLATION",
+      "choices": []
+    },
+    {
+      "seriesKey": 101,
+      "question": "Is the following statement true or false? 'In English, ‘Good night’ is used to greet someone in the morning.'",
+      "answer": "false",
+      "type": "TRUE_FALSE",
+      "choices": []
+    },
+    {
+      "seriesKey": 101,
+      "question": "How do you say 'Au revoir' in English?",
+      "answer": "goodbye",
+      "type": "MULTIPLE_CHOICE",
+      "choices": [
+        "Hello",
+        "Goodbye",
+        "Thanks",
+        "Sorry"
+      ]
+    },
+    {
+      "seriesKey": 101,
+      "question": "Traduisez : 'Excusez-moi, où sont les toilettes ?'",
+      "answer": "excuse me where are the restrooms",
+      "type": "TRANSLATION",
+      "choices": []
+    },
+    {
+      "seriesKey": 101,
+      "question": "Is the following statement true or false? 'In English, ‘Please’ is used to make a request more polite.'",
+      "answer": "true",
+      "type": "TRUE_FALSE",
+      "choices": []
+    },
+    {
+      "seriesKey": 102,
+      "question": "How do you say 'Mère' in English?",
+      "answer": "mother",
+      "type": "MULTIPLE_CHOICE",
+      "choices": [
+        "Mother",
+        "Father",
+        "Brother",
+        "Sister"
+      ]
+    },
+    {
+      "seriesKey": 102,
+      "question": "Traduisez : 'Mon père s'appelle Jean.'",
+      "answer": "my father’s name is jean",
+      "type": "TRANSLATION",
+      "choices": []
+    },
+    {
+      "seriesKey": 102,
+      "question": "Is the following statement true or false? 'The English word for 'frère' is 'Brother''.",
+      "answer": "true",
+      "type": "TRUE_FALSE",
+      "choices": []
+    },
+    {
+      "seriesKey": 102,
+      "question": "How do you say 'Soeur' in English?",
+      "answer": "sister",
+      "type": "MULTIPLE_CHOICE",
+      "choices": [
+        "Mother",
+        "Father",
+        "Sister",
+        "Uncle"
+      ]
+    },
+    {
+      "seriesKey": 102,
+      "question": "Traduisez : 'J’ai un oncle et une tante.'",
+      "answer": "i have an uncle and an aunt",
+      "type": "TRANSLATION",
+      "choices": []
+    },
+    {
+      "seriesKey": 102,
+      "question": "Is the following statement true or false? 'In English, ‘uncle’ means ‘cousin’.'",
+      "answer": "false",
+      "type": "TRUE_FALSE",
+      "choices": []
+    },
+    {
+      "seriesKey": 103,
+      "question": "How do you say 'Chat' in English?",
+      "answer": "cat",
+      "type": "MULTIPLE_CHOICE",
+      "choices": [
+        "Cat",
+        "Dog",
+        "Horse",
+        "Rabbit"
+      ]
+    },
+    {
+      "seriesKey": 103,
+      "question": "Traduisez : 'Un lion est un animal sauvage.'",
+      "answer": "a lion is a wild animal",
+      "type": "TRANSLATION",
+      "choices": []
+    },
+    {
+      "seriesKey": 103,
+      "question": "Is the following statement true or false? 'The English word for 'chien' is 'Cat''.",
+      "answer": "false",
+      "type": "TRUE_FALSE",
+      "choices": []
+    },
+    {
+      "seriesKey": 103,
+      "question": "How do you say 'Cheval' in English?",
+      "answer": "horse",
+      "type": "MULTIPLE_CHOICE",
+      "choices": [
+        "Horse",
+        "Duck",
+        "Cow",
+        "Elephant"
+      ]
+    },
+    {
+      "seriesKey": 103,
+      "question": "Traduisez : 'J’ai un poisson rouge.'",
+      "answer": "i have a goldfish",
+      "type": "TRANSLATION",
+      "choices": []
+    },
+    {
+      "seriesKey": 103,
+      "question": "Is the following statement true or false? 'In English, ‘Tiger’ is a type of bird.'",
+      "answer": "false",
+      "type": "TRUE_FALSE",
+      "choices": []
+    },
+    {
+      "seriesKey": 104,
+      "question": "How do you say 'Pain' in English?",
+      "answer": "bread",
+      "type": "MULTIPLE_CHOICE",
+      "choices": [
+        "Bread",
+        "Cheese",
+        "Fruit",
+        "Meat"
+      ]
+    },
+    {
+      "seriesKey": 104,
+      "question": "Traduisez : 'Je voudrais un café.'",
+      "answer": "i would like a coffee",
+      "type": "TRANSLATION",
+      "choices": []
+    },
+    {
+      "seriesKey": 104,
+      "question": "Is the following statement true or false? 'In English, 'water' means 'eau'.'",
+      "answer": "true",
+      "type": "TRUE_FALSE",
+      "choices": []
+    },
+    {
+      "seriesKey": 104,
+      "question": "How do you say 'Jus d’orange' in English?",
+      "answer": "orange juice",
+      "type": "MULTIPLE_CHOICE",
+      "choices": [
+        "Orange juice",
+        "Apple juice",
+        "Lemonade",
+        "Milk"
+      ]
+    },
+    {
+      "seriesKey": 104,
+      "question": "Traduisez : 'Je mange une pomme.'",
+      "answer": "i am eating an apple",
+      "type": "TRANSLATION",
+      "choices": []
+    },
+    {
+      "seriesKey": 104,
+      "question": "Is the following statement true or false? 'In English, ‘wine’ means ‘vin’.'",
+      "answer": "true",
+      "type": "TRUE_FALSE",
+      "choices": []
+    },
+    {
+      "seriesKey": 105,
+      "question": "How do you say 'École' in English?",
+      "answer": "school",
+      "type": "MULTIPLE_CHOICE",
+      "choices": [
+        "School",
+        "Hospital",
+        "Shop",
+        "Restaurant"
+      ]
+    },
+    {
+      "seriesKey": 105,
+      "question": "Traduisez : 'Où est la gare ?'",
+      "answer": "where is the train station",
+      "type": "TRANSLATION",
+      "choices": []
+    },
+    {
+      "seriesKey": 105,
+      "question": "Is the following statement true or false? 'In English, ‘library’ means ‘bibliothèque’.'",
+      "answer": "true",
+      "type": "TRUE_FALSE",
+      "choices": []
+    },
+    {
+      "seriesKey": 105,
+      "question": "How do you say 'Boulangerie' in English?",
+      "answer": "bakery",
+      "type": "MULTIPLE_CHOICE",
+      "choices": [
+        "Bakery",
+        "Supermarket",
+        "Pharmacy",
+        "Cafe"
+      ]
+    },
+    {
+      "seriesKey": 105,
+      "question": "Traduisez : 'Je cherche la poste.'",
+      "answer": "i am looking for the post office",
+      "type": "TRANSLATION",
+      "choices": []
+    },
+    {
+      "seriesKey": 105,
+      "question": "Is the following statement true or false? 'In English, ‘museum’ means ‘musée’.'",
+      "answer": "true",
+      "type": "TRUE_FALSE",
+      "choices": []
+    },
+    {
+      "seriesKey": 106,
+      "question": "How do you say 'Se réveiller' in English?",
+      "answer": "wake up",
+      "type": "MULTIPLE_CHOICE",
+      "choices": [
+        "Wake up",
+        "Go to sleep",
+        "Take a shower",
+        "Eat breakfast"
+      ]
+    },
+    {
+      "seriesKey": 106,
+      "question": "Traduisez : 'Je vais au travail à 8h.'",
+      "answer": "i go to work at 8 o’clock",
+      "type": "TRANSLATION",
+      "choices": []
+    },
+    {
+      "seriesKey": 106,
+      "question": "Is the following statement true or false? 'In English, ‘take a shower’ means ‘prendre une douche’.'",
+      "answer": "true",
+      "type": "TRUE_FALSE",
+      "choices": []
+    },
+    {
+      "seriesKey": 106,
+      "question": "How do you say 'Dîner' in English?",
+      "answer": "dinner",
+      "type": "MULTIPLE_CHOICE",
+      "choices": [
+        "Lunch",
+        "Dinner",
+        "Snack",
+        "Breakfast"
+      ]
+    },
+    {
+      "seriesKey": 106,
+      "question": "Traduisez : 'Je fais du sport après le travail.'",
+      "answer": "i exercise after work",
+      "type": "TRANSLATION",
+      "choices": []
+    },
+    {
+      "seriesKey": 106,
+      "question": "Is the following statement true or false? 'In English, ‘I get up’ means ‘je m’habille’.'",
+      "answer": "false",
+      "type": "TRUE_FALSE",
+      "choices": []
+    },
+    {
+      "seriesKey": 107,
+      "question": "How do you say 'Combien ça coûte ?' in English?",
+      "answer": "how much is it",
+      "type": "MULTIPLE_CHOICE",
+      "choices": [
+        "How much is it?",
+        "What is the price?",
+        "How much are they?",
+        "Where is the shop?"
+      ]
+    },
+    {
+      "seriesKey": 107,
+      "question": "Traduisez : 'Je voudrais acheter ce t-shirt.'",
+      "answer": "i would like to buy this t-shirt",
+      "type": "TRANSLATION",
+      "choices": []
+    },
+    {
+      "seriesKey": 107,
+      "question": "Is the following statement true or false? 'In English, ‘expensive’ means ‘bon marché’.'",
+      "answer": "false",
+      "type": "TRUE_FALSE",
+      "choices": []
+    },
+    {
+      "seriesKey": 107,
+      "question": "How do you say 'C'est trop cher' in English?",
+      "answer": "it’s too expensive",
+      "type": "MULTIPLE_CHOICE",
+      "choices": [
+        "It’s too expensive",
+        "It’s too cheap",
+        "It’s not expensive",
+        "It’s very cheap"
+      ]
+    },
+    {
+      "seriesKey": 107,
+      "question": "Traduisez : 'Est-ce que vous avez des réductions ?'",
+      "answer": "do you have any discounts",
+      "type": "TRANSLATION",
+      "choices": []
+    },
+    {
+      "seriesKey": 107,
+      "question": "Is the following statement true or false? 'In English, ‘bargain’ means ‘affaire’.'",
+      "answer": "true",
+      "type": "TRUE_FALSE",
+      "choices": []
+    },
+    {
+      "seriesKey": 108,
+      "question": "How do you say 'Où est l’aéroport ?' in English?",
+      "answer": "where is the airport",
+      "type": "MULTIPLE_CHOICE",
+      "choices": [
+        "Where is the airport?",
+        "Where is the hotel?",
+        "Where is the train station?",
+        "How much is the flight?"
+      ]
+    },
+    {
+      "seriesKey": 108,
+      "question": "Traduisez : 'Je voudrais une chambre pour deux nuits.'",
+      "answer": "i would like a room for two nights",
+      "type": "TRANSLATION",
+      "choices": []
+    },
+    {
+      "seriesKey": 108,
+      "question": "Is the following statement true or false? 'In English, ‘taxi’ means ‘avion’.'",
+      "answer": "false",
+      "type": "TRUE_FALSE",
+      "choices": []
+    },
+    {
+      "seriesKey": 108,
+      "question": "How do you say 'Billet de train' in English?",
+      "answer": "train ticket",
+      "type": "MULTIPLE_CHOICE",
+      "choices": [
+        "Train ticket",
+        "Flight ticket",
+        "Bus ticket",
+        "Hotel reservation"
+      ]
+    },
+    {
+      "seriesKey": 108,
+      "question": "Traduisez : 'Comment puis-je me rendre à la gare ?'",
+      "answer": "how can i get to the train station",
+      "type": "TRANSLATION",
+      "choices": []
+    },
+    {
+      "seriesKey": 108,
+      "question": "Is the following statement true or false? 'In English, ‘boarding pass’ means ‘carte d'embarquement’.'",
+      "answer": "true",
+      "type": "TRUE_FALSE",
+      "choices": []
+    },
+    {
+      "seriesKey": 109,
+      "question": "How do you say 'Jouer au foot' in English?",
+      "answer": "play soccer",
+      "type": "MULTIPLE_CHOICE",
+      "choices": [
+        "Play soccer",
+        "Play tennis",
+        "Do yoga",
+        "Go swimming"
+      ]
+    },
+    {
+      "seriesKey": 109,
+      "question": "Traduisez : 'J'aime lire des livres.'",
+      "answer": "i like to read books",
+      "type": "TRANSLATION",
+      "choices": []
+    },
+    {
+      "seriesKey": 109,
+      "question": "Is the following statement true or false? 'In English, ‘watch a movie’ means ‘regarder un film’.'",
+      "answer": "true",
+      "type": "TRUE_FALSE",
+      "choices": []
+    },
+    {
+      "seriesKey": 109,
+      "question": "How do you say 'Faire du shopping' in English?",
+      "answer": "go shopping",
+      "type": "MULTIPLE_CHOICE",
+      "choices": [
+        "Go shopping",
+        "Do gardening",
+        "Go hiking",
+        "Play chess"
+      ]
+    },
+    {
+      "seriesKey": 109,
+      "question": "Traduisez : 'Je fais de la randonnée le week-end.'",
+      "answer": "i go hiking on the weekend",
+      "type": "TRANSLATION",
+      "choices": []
+    },
+    {
+      "seriesKey": 109,
+      "question": "Is the following statement true or false? 'In English, ‘cook dinner’ means ‘préparer le dîner’.'",
+      "answer": "true",
+      "type": "TRUE_FALSE",
+      "choices": []
+    },
+    {
+      "seriesKey": 110,
+      "question": "How do you say 'Il pleut' in English?",
+      "answer": "it is raining",
+      "type": "MULTIPLE_CHOICE",
+      "choices": [
+        "It is raining",
+        "It is snowing",
+        "It is sunny",
+        "It is windy"
+      ]
+    },
+    {
+      "seriesKey": 110,
+      "question": "Traduisez : 'En été, il fait chaud.'",
+      "answer": "in summer it is hot",
+      "type": "TRANSLATION",
+      "choices": []
+    },
+    {
+      "seriesKey": 110,
+      "question": "Is the following statement true or false? 'In English, ‘snow’ means ‘neige’.'",
+      "answer": "true",
+      "type": "TRUE_FALSE",
+      "choices": []
+    },
+    {
+      "seriesKey": 110,
+      "question": "How do you say 'Le temps est nuageux' in English?",
+      "answer": "the weather is cloudy",
+      "type": "MULTIPLE_CHOICE",
+      "choices": [
+        "The weather is cloudy",
+        "The weather is rainy",
+        "The weather is sunny",
+        "The weather is windy"
+      ]
+    },
+    {
+      "seriesKey": 110,
+      "question": "Traduisez : 'Au printemps, les fleurs commencent à pousser.'",
+      "answer": "in spring the flowers start to grow",
+      "type": "TRANSLATION",
+      "choices": []
+    },
+    {
+      "seriesKey": 110,
+      "question": "Is the following statement true or false? 'In English, ‘autumn’ means ‘été’.'",
+      "answer": "false",
+      "type": "TRUE_FALSE",
+      "choices": []
+    },
+    {
+      "seriesKey": 111,
+      "question": "How do you say 'Elle porte une robe rouge' in English?",
+      "answer": "she is wearing a red dress",
+      "type": "MULTIPLE_CHOICE",
+      "choices": [
+        "She is wearing a red dress",
+        "She wears a red dress",
+        "She is in a red dress",
+        "She has a red dress"
+      ]
+    },
+    {
+      "seriesKey": 111,
+      "question": "Traduisez : 'Il a les cheveux courts et bruns.'",
+      "answer": "he has short brown hair",
+      "type": "TRANSLATION",
+      "choices": []
+    },
+    {
+      "seriesKey": 111,
+      "question": "Is the following statement true or false? 'In English, ‘tall’ means ‘grand’.'",
+      "answer": "true",
+      "type": "TRUE_FALSE",
+      "choices": []
+    },
+    {
+      "seriesKey": 111,
+      "question": "How do you say 'Il porte un jean bleu' in English?",
+      "answer": "he is wearing blue jeans",
+      "type": "MULTIPLE_CHOICE",
+      "choices": [
+        "He is wearing blue jeans",
+        "He wears blue jeans",
+        "He has blue jeans on",
+        "He is in blue jeans"
+      ]
+    },
+    {
+      "seriesKey": 111,
+      "question": "Traduisez : 'Elle est grande et a les yeux verts.'",
+      "answer": "she is tall and has green eyes",
+      "type": "TRANSLATION",
+      "choices": []
+    },
+    {
+      "seriesKey": 111,
+      "question": "Is the following statement true or false? 'In English, ‘short’ means ‘court’.'",
+      "answer": "true",
+      "type": "TRUE_FALSE",
+      "choices": []
+    },
+    {
+      "seriesKey": 112,
+      "question": "How do you say 'Je me sens triste' in English?",
+      "answer": "i feel sad",
+      "type": "MULTIPLE_CHOICE",
+      "choices": [
+        "I feel sad",
+        "I am happy",
+        "I feel angry",
+        "I am tired"
+      ]
+    },
+    {
+      "seriesKey": 112,
+      "question": "Traduisez : 'Elle est très excitée pour le voyage.'",
+      "answer": "she is very excited for the trip",
+      "type": "TRANSLATION",
+      "choices": []
+    },
+    {
+      "seriesKey": 112,
+      "question": "Is the following statement true or false? 'In English, ‘nervous’ means ‘calme’.'",
+      "answer": "false",
+      "type": "TRUE_FALSE",
+      "choices": []
+    },
+    {
+      "seriesKey": 112,
+      "question": "How do you say 'Je suis fatigué' in English?",
+      "answer": "i am tired",
+      "type": "MULTIPLE_CHOICE",
+      "choices": [
+        "I am tired",
+        "I feel happy",
+        "I am sad",
+        "I feel nervous"
+      ]
+    },
+    {
+      "seriesKey": 112,
+      "question": "Traduisez : 'Il a peur des araignées.'",
+      "answer": "he is afraid of spiders",
+      "type": "TRANSLATION",
+      "choices": []
+    },
+    {
+      "seriesKey": 112,
+      "question": "Is the following statement true or false? 'In English, ‘joyful’ means ‘joyeux’.'",
+      "answer": "true",
+      "type": "TRUE_FALSE",
+      "choices": []
+    },
+    {
+      "seriesKey": 113,
+      "question": "How do you say 'Je voudrais une table pour deux, s'il vous plaît.' in English?",
+      "answer": "i would like a table for two please",
+      "type": "MULTIPLE_CHOICE",
+      "choices": [
+        "I would like a table for two, please.",
+        "I would like a menu, please.",
+        "Can I have the bill, please?",
+        "I want a table for two."
+      ]
+    },
+    {
+      "seriesKey": 113,
+      "question": "Traduisez : 'Pouvez-vous me donner l'addition, s'il vous plaît ?'",
+      "answer": "can you give me the bill please",
+      "type": "TRANSLATION",
+      "choices": []
+    },
+    {
+      "seriesKey": 113,
+      "question": "Is the following statement true or false? 'In English, ‘menu’ means ‘carte’.'",
+      "answer": "true",
+      "type": "TRUE_FALSE",
+      "choices": []
+    },
+    {
+      "seriesKey": 113,
+      "question": "How do you say 'Je voudrais de l'eau, s'il vous plaît.' in English?",
+      "answer": "i would like some water please",
+      "type": "MULTIPLE_CHOICE",
+      "choices": [
+        "I would like some water, please.",
+        "I want some water.",
+        "Can I have some water, please?",
+        "I would like a drink, please."
+      ]
+    },
+    {
+      "seriesKey": 113,
+      "question": "Traduisez : 'Est-ce que vous avez des desserts ?'",
+      "answer": "do you have any desserts",
+      "type": "TRANSLATION",
+      "choices": []
+    },
+    {
+      "seriesKey": 113,
+      "question": "Is the following statement true or false? 'In English, ‘waiter’ means ‘serveur’.'",
+      "answer": "true",
+      "type": "TRUE_FALSE",
+      "choices": []
+    },
+    {
+      "seriesKey": 114,
+      "question": "How do you say 'Où est la gare ?' in English?",
+      "answer": "where is the train station",
+      "type": "MULTIPLE_CHOICE",
+      "choices": [
+        "Where is the train station?",
+        "Where is the bus stop?",
+        "Where is the airport?",
+        "Where is the subway?"
+      ]
+    },
+    {
+      "seriesKey": 114,
+      "question": "Traduisez : 'Je voudrais un ticket pour Paris.'",
+      "answer": "i would like a ticket to paris",
+      "type": "TRANSLATION",
+      "choices": []
+    },
+    {
+      "seriesKey": 114,
+      "question": "Is the following statement true or false? 'In English, ‘subway’ means ‘métro’.'",
+      "answer": "true",
+      "type": "TRUE_FALSE",
+      "choices": []
+    },
+    {
+      "seriesKey": 114,
+      "question": "How do you say 'Prendre le bus' in English?",
+      "answer": "take the bus",
+      "type": "MULTIPLE_CHOICE",
+      "choices": [
+        "Take the bus",
+        "Take the train",
+        "Take the taxi",
+        "Take the metro"
+      ]
+    },
+    {
+      "seriesKey": 114,
+      "question": "Traduisez : 'Comment puis-je me rendre à la station de métro ?'",
+      "answer": "how can i get to the subway station",
+      "type": "TRANSLATION",
+      "choices": []
+    },
+    {
+      "seriesKey": 114,
+      "question": "Is the following statement true or false? 'In English, ‘taxi’ means ‘voiture’.'",
+      "answer": "false",
+      "type": "TRUE_FALSE",
+      "choices": []
+    },
+    {
+      "seriesKey": 115,
+      "question": "How do you say 'J'ai mangé une pizza hier soir.' in English?",
+      "answer": "i ate a pizza last night",
+      "type": "MULTIPLE_CHOICE",
+      "choices": [
+        "I ate a pizza last night.",
+        "I eat a pizza last night.",
+        "I have eaten a pizza last night.",
+        "I will eat a pizza last night."
+      ]
+    },
+    {
+      "seriesKey": 115,
+      "question": "Traduisez : 'Il a visité le musée la semaine dernière.'",
+      "answer": "he visited the museum last week",
+      "type": "TRANSLATION",
+      "choices": []
+    },
+    {
+      "seriesKey": 115,
+      "question": "Is the following statement true or false? 'In English, ‘watched’ is the past simple form of ‘watch’.'",
+      "answer": "true",
+      "type": "TRUE_FALSE",
+      "choices": []
+    },
+    {
+      "seriesKey": 115,
+      "question": "How do you say 'Nous avons joué au football hier.' in English?",
+      "answer": "we played football yesterday",
+      "type": "MULTIPLE_CHOICE",
+      "choices": [
+        "We played football yesterday.",
+        "We play football yesterday.",
+        "We have played football yesterday.",
+        "We will play football yesterday."
+      ]
+    },
+    {
+      "seriesKey": 115,
+      "question": "Traduisez : 'Elle a étudié toute la journée.'",
+      "answer": "she studied all day",
+      "type": "TRANSLATION",
+      "choices": []
+    },
+    {
+      "seriesKey": 115,
+      "question": "Is the following statement true or false? 'In English, ‘went’ is the past simple form of ‘go’.'",
+      "answer": "true",
+      "type": "TRUE_FALSE",
+      "choices": []
+    },
+    {
+      "seriesKey": 116,
+      "question": "How do you say 'L'année dernière, je suis allé en Espagne pendant les vacances.' in English?",
+      "answer": "last year i went to spain during the holidays",
+      "type": "MULTIPLE_CHOICE",
+      "choices": [
+        "Last year, I went to Spain during the holidays.",
+        "Last year, I go to Spain during the holidays.",
+        "I went to Spain last year during the holidays.",
+        "I am going to Spain last year during the holidays."
+      ]
+    },
+    {
+      "seriesKey": 116,
+      "question": "Traduisez : 'Nous avons passé une excellente journée à la plage.'",
+      "answer": "we had a great day at the beach",
+      "type": "TRANSLATION",
+      "choices": []
+    },
+    {
+      "seriesKey": 116,
+      "question": "Is the following statement true or false? 'In English, ‘visited’ is the past simple form of ‘visit’.'",
+      "answer": "true",
+      "type": "TRUE_FALSE",
+      "choices": []
+    },
+    {
+      "seriesKey": 116,
+      "question": "How do you say 'Je me souviens du moment où j'ai appris à faire du ski.' in English?",
+      "answer": "i remember the moment when i learned how to ski",
+      "type": "MULTIPLE_CHOICE",
+      "choices": [
+        "I remember the moment when I learned how to ski.",
+        "I remember the moment I learned how to ski.",
+        "I remembered the moment when I learned how to ski.",
+        "I am remembering the moment when I learned how to ski."
+      ]
+    },
+    {
+      "seriesKey": 116,
+      "question": "Traduisez : 'Il a raconté son expérience de voyage en détail.'",
+      "answer": "he told his travel experience in detail",
+      "type": "TRANSLATION",
+      "choices": []
+    },
+    {
+      "seriesKey": 116,
+      "question": "Is the following statement true or false? 'In English, ‘did’ is the past simple form of ‘do’.'",
+      "answer": "true",
+      "type": "TRUE_FALSE",
+      "choices": []
+    },
+    {
+      "seriesKey": 117,
+      "question": "How do you say 'Je pense que les films sont importants dans notre culture.' in English?",
+      "answer": "i think movies are important in our culture",
+      "type": "MULTIPLE_CHOICE",
+      "choices": [
+        "I think movies are important in our culture.",
+        "I think the movies are important in our culture.",
+        "I think film is important in our culture.",
+        "I think movies are important of our culture."
+      ]
+    },
+    {
+      "seriesKey": 117,
+      "question": "Traduisez : 'À mon avis, c'est une mauvaise idée.'",
+      "answer": "in my opinion its a bad idea",
+      "type": "TRANSLATION",
+      "choices": []
+    },
+    {
+      "seriesKey": 117,
+      "question": "Is the following statement true or false? 'In English, ‘I believe’ and ‘I think’ can be used to express an opinion.'",
+      "answer": "true",
+      "type": "TRUE_FALSE",
+      "choices": []
+    },
+    {
+      "seriesKey": 117,
+      "question": "How do you say 'Je suis d'accord avec toi sur ce point.' in English?",
+      "answer": "i agree with you on this point",
+      "type": "MULTIPLE_CHOICE",
+      "choices": [
+        "I agree with you on this point.",
+        "I am agree with you on this point.",
+        "I agree with you on this topic.",
+        "I agree on you with this point."
+      ]
+    },
+    {
+      "seriesKey": 117,
+      "question": "Traduisez : 'Je ne suis pas d'accord avec cette décision.'",
+      "answer": "i disagree with this decision",
+      "type": "TRANSLATION",
+      "choices": []
+    },
+    {
+      "seriesKey": 117,
+      "question": "Is the following statement true or false? 'In English, ‘opinion’ means ‘idée’ in French.'",
+      "answer": "true",
+      "type": "TRUE_FALSE",
+      "choices": []
+    },
+    {
+      "seriesKey": 118,
+      "question": "How do you say 'Je vous écris pour demander des informations sur votre programme.' in English?",
+      "answer": "i am writing to ask for information about your program",
+      "type": "MULTIPLE_CHOICE",
+      "choices": [
+        "I write you to ask for information about your program.",
+        "I am writing to ask for information about your program.",
+        "I write to ask you for information about your program.",
+        "I write you asking for information about your program."
+      ]
+    },
+    {
+      "seriesKey": 118,
+      "question": "Traduisez : 'Je vous prie d'agréer, Madame, l'expression de mes salutations distinguées.'",
+      "answer": "yours sincerely madam",
+      "type": "TRANSLATION",
+      "choices": []
+    },
+    {
+      "seriesKey": 118,
+      "question": "Is the following statement true or false? 'In English, “Dear Sir” is used at the beginning of a formal email.'",
+      "answer": "true",
+      "type": "TRUE_FALSE",
+      "choices": []
+    },
+    {
+      "seriesKey": 118,
+      "question": "How do you say 'Je vous remercie de votre réponse.' in English?",
+      "answer": "thank you for your answer",
+      "type": "MULTIPLE_CHOICE",
+      "choices": [
+        "Thank you for your answer.",
+        "I thank you for your answer.",
+        "I thank you for your response.",
+        "Thanks for your answer."
+      ]
+    },
+    {
+      "seriesKey": 118,
+      "question": "Traduisez : 'Je suis à votre disposition pour toute information complémentaire.'",
+      "answer": "i am available for any further information",
+      "type": "TRANSLATION",
+      "choices": []
+    },
+    {
+      "seriesKey": 118,
+      "question": "Is the following statement true or false? 'In a formal email, you should avoid using contractions like 'I'm' or 'can't.'",
+      "answer": "true",
+      "type": "TRUE_FALSE",
+      "choices": []
+    },
+    {
+      "seriesKey": 119,
+      "question": "How do you say 'C'est la goutte d'eau qui fait déborder le vase.' in English?",
+      "answer": "its the straw that broke the camels back",
+      "type": "MULTIPLE_CHOICE",
+      "choices": [
+        "It's the straw that broke the camel's back.",
+        "It's the last drop.",
+        "It's the last straw that broke the camel's back.",
+        "It's the last drop that broke the cup."
+      ]
+    },
+    {
+      "seriesKey": 119,
+      "question": "Traduisez : 'Il pleut des cordes.'",
+      "answer": "its raining cats and dogs",
+      "type": "TRANSLATION",
+      "choices": []
+    },
+    {
+      "seriesKey": 119,
+      "question": "Is the following statement true or false? 'In English, 'break the ice' means to make people feel more comfortable in a social situation.'",
+      "answer": "true",
+      "type": "TRUE_FALSE",
+      "choices": []
+    },
+    {
+      "seriesKey": 119,
+      "question": "How do you say 'C'est du gâteau.' in English?",
+      "answer": "its a piece of cake",
+      "type": "MULTIPLE_CHOICE",
+      "choices": [
+        "It's a piece of cake.",
+        "It's a cake.",
+        "It's easy as pie.",
+        "It's a piece of pie."
+      ]
+    },
+    {
+      "seriesKey": 119,
+      "question": "Traduisez : 'Quand les poules auront des dents.'",
+      "answer": "when pigs fly",
+      "type": "TRANSLATION",
+      "choices": []
+    },
+    {
+      "seriesKey": 119,
+      "question": "Is the following statement true or false? 'In English, ‘to kill two birds with one stone’ means to achieve two things at the same time.'",
+      "answer": "true",
+      "type": "TRUE_FALSE",
+      "choices": []
+    },
+    {
+      "seriesKey": 120,
+      "question": "How do you say 'Les Anglais prennent souvent le thé l'après-midi.' in English?",
+      "answer": "the english often have tea in the afternoon",
+      "type": "MULTIPLE_CHOICE",
+      "choices": [
+        "The English often have tea in the afternoon.",
+        "The English often take tea in the afternoon.",
+        "English people often drink tea in the afternoon.",
+        "English people often have tea in the afternoon."
+      ]
+    },
+    {
+      "seriesKey": 120,
+      "question": "Traduisez : 'Aux États-Unis, les repas sont souvent plus copieux qu'en Europe.'",
+      "answer": "in the united states meals are often bigger than in europe",
+      "type": "TRANSLATION",
+      "choices": []
+    },
+    {
+      "seriesKey": 120,
+      "question": "Is the following statement true or false? 'In many English-speaking countries, tipping in restaurants is customary.'",
+      "answer": "true",
+      "type": "TRUE_FALSE",
+      "choices": []
+    },
+    {
+      "seriesKey": 120,
+      "question": "How do you say 'Les Canadiens célèbrent le Jour de la Confédération le 1er juillet.' in English?",
+      "answer": "canadians celebrate confederation day on july 1st",
+      "type": "MULTIPLE_CHOICE",
+      "choices": [
+        "Canadians celebrate Confederation Day on July 1st.",
+        "Canadians celebrate the Day of Confederation on July 1st.",
+        "Canadians celebrate the Day of Confederation on July 1.",
+        "Canadians celebrate the Confederation Day on July 1st."
+      ]
+    },
+    {
+      "seriesKey": 120,
+      "question": "Traduisez : 'En Australie, le Noël se célèbre pendant l'été.'",
+      "answer": "in australia christmas is celebrated during the summer",
+      "type": "TRANSLATION",
+      "choices": []
+    },
+    {
+      "seriesKey": 120,
+      "question": "Is the following statement true or false? 'In many English-speaking countries, Halloween is celebrated on October 31st.'",
+      "answer": "true",
+      "type": "TRUE_FALSE",
+      "choices": []
+    },
+    {
+      "seriesKey": 121,
+      "question": "How do you say 'Je suis ingénieur et je travaille dans une entreprise de technologie.' in English?",
+      "answer": "i am an engineer and i work in a technology company",
+      "type": "MULTIPLE_CHOICE",
+      "choices": [
+        "I am an engineer and I work in a technology company.",
+        "I am an engineer and I work in a company of technology.",
+        "I am engineer and I work in a technology company.",
+        "I am an engineer and I work at a technology company."
+      ]
+    },
+    {
+      "seriesKey": 121,
+      "question": "Traduisez : 'Elle est médecin et travaille dans un hôpital.'",
+      "answer": "she is a doctor and works in a hospital",
+      "type": "TRANSLATION",
+      "choices": []
+    },
+    {
+      "seriesKey": 121,
+      "question": "Is the following statement true or false? 'In many English-speaking countries, people say ‘job’ when referring to an occupation or profession.'",
+      "answer": "true",
+      "type": "TRUE_FALSE",
+      "choices": []
+    },
+    {
+      "seriesKey": 121,
+      "question": "How do you say 'Il cherche un emploi dans la finance.' in English?",
+      "answer": "he is looking for a job in finance",
+      "type": "MULTIPLE_CHOICE",
+      "choices": [
+        "He is looking for a job in finance.",
+        "He is looking for a job in the finance.",
+        "He is searching a job in finance.",
+        "He is looking for a work in finance."
+      ]
+    },
+    {
+      "seriesKey": 121,
+      "question": "Traduisez : 'Je travaille à temps plein dans une banque.'",
+      "answer": "i work full-time in a bank",
+      "type": "TRANSLATION",
+      "choices": []
+    },
+    {
+      "seriesKey": 121,
+      "question": "Is the following statement true or false? 'In the UK, people often say ‘CV’ to refer to a résumé.'",
+      "answer": "true",
+      "type": "TRUE_FALSE",
+      "choices": []
+    },
+    {
+      "seriesKey": 122,
+      "question": "How do you say 'Les informations sont diffusées à la télévision chaque soir.' in English?",
+      "answer": "the news is broadcasted on tv every evening",
+      "type": "MULTIPLE_CHOICE",
+      "choices": [
+        "The news are broadcasted on TV every evening.",
+        "The news is broadcasted on TV every evening.",
+        "The news is aired on TV every evening.",
+        "The news is shown on TV every evening."
+      ]
+    },
+    {
+      "seriesKey": 122,
+      "question": "Traduisez : 'J'écoute souvent la radio pour connaître les dernières nouvelles.'",
+      "answer": "i often listen to the radio to hear the latest news",
+      "type": "TRANSLATION",
+      "choices": []
+    },
+    {
+      "seriesKey": 122,
+      "question": "Is the following statement true or false? 'In English, “headline” refers to the most important story in the news.'",
+      "answer": "true",
+      "type": "TRUE_FALSE",
+      "choices": []
+    },
+    {
+      "seriesKey": 122,
+      "question": "How do you say 'Le journaliste a interviewé le président.' in English?",
+      "answer": "the journalist interviewed the president",
+      "type": "MULTIPLE_CHOICE",
+      "choices": [
+        "The journalist interviewed the president.",
+        "The journalist has interviewed the president.",
+        "The journalist is interviewing the president.",
+        "The journalist interviewed the president at last."
+      ]
+    },
+    {
+      "seriesKey": 122,
+      "question": "Traduisez : 'Les réseaux sociaux sont devenus très influents dans le monde moderne.'",
+      "answer": "social media has become very influential in the modern world",
+      "type": "TRANSLATION",
+      "choices": []
+    },
+    {
+      "seriesKey": 122,
+      "question": "Is the following statement true or false? 'A ‘reporter’ is someone who writes and reports the news.'",
+      "answer": "true",
+      "type": "TRUE_FALSE",
+      "choices": []
+    },
+    {
+      "seriesKey": 123,
+      "question": "How do you say 'Allô, ici John. Je vous appelle concernant notre rendez-vous.' in English?",
+      "answer": "hello this is john im calling about our meeting",
+      "type": "MULTIPLE_CHOICE",
+      "choices": [
+        "Hello, this is John. I'm calling about our meeting.",
+        "Hello, John here. I am calling regarding our meeting.",
+        "Hi, this is John. I'm calling about our meeting.",
+        "Hello, this is John. I call about our meeting."
+      ]
+    },
+    {
+      "seriesKey": 123,
+      "question": "Traduisez : 'Puis-je parler à M. Smith, s'il vous plaît ?'",
+      "answer": "can i speak to mr smith please",
+      "type": "TRANSLATION",
+      "choices": []
+    },
+    {
+      "seriesKey": 123,
+      "question": "Is the following statement true or false? 'In English, when leaving a voicemail, it’s common to leave your name and phone number.'",
+      "answer": "true",
+      "type": "TRUE_FALSE",
+      "choices": []
+    },
+    {
+      "seriesKey": 123,
+      "question": "How do you say 'Je vous appelle pour confirmer notre réunion de demain.' in English?",
+      "answer": "im calling to confirm our meeting tomorrow",
+      "type": "MULTIPLE_CHOICE",
+      "choices": [
+        "I'm calling to confirm our meeting tomorrow.",
+        "I call to confirm our meeting tomorrow.",
+        "I'm calling for confirm our meeting tomorrow.",
+        "I am calling to confirm our meeting tomorrow."
+      ]
+    },
+    {
+      "seriesKey": 123,
+      "question": "Traduisez : 'Je suis désolé, il est en réunion en ce moment.'",
+      "answer": "im sorry he is in a meeting right now",
+      "type": "TRANSLATION",
+      "choices": []
+    },
+    {
+      "seriesKey": 123,
+      "question": "Is the following statement true or false? 'When answering the phone, people in English-speaking countries usually start with a greeting followed by their name.'",
+      "answer": "true",
+      "type": "TRUE_FALSE",
+      "choices": []
+    },
+    {
+      "seriesKey": 124,
+      "question": "How do you say 'J'ai voyagé à Paris l'année dernière et c'était incroyable.' in English?",
+      "answer": "i traveled to paris last year and it was amazing",
+      "type": "MULTIPLE_CHOICE",
+      "choices": [
+        "I traveled to Paris last year and it was amazing.",
+        "I have traveled to Paris last year and it was amazing.",
+        "I have traveled to Paris last year and it was incredible.",
+        "I traveled to Paris last year and it was incredible."
+      ]
+    },
+    {
+      "seriesKey": 124,
+      "question": "Traduisez : 'Je voudrais visiter l'Australie un jour.'",
+      "answer": "i would like to visit australia one day",
+      "type": "TRANSLATION",
+      "choices": []
+    },
+    {
+      "seriesKey": 124,
+      "question": "Is the following statement true or false? 'In English, the word ‘adventure’ refers to an exciting or unusual experience, often involving travel.'",
+      "answer": "true",
+      "type": "TRUE_FALSE",
+      "choices": []
+    },
+    {
+      "seriesKey": 124,
+      "question": "How do you say 'Nous avons fait un voyage en train à travers l'Europe.' in English?",
+      "answer": "we took a train trip across europe",
+      "type": "MULTIPLE_CHOICE",
+      "choices": [
+        "We took a train trip across Europe.",
+        "We made a train journey across Europe.",
+        "We did a train trip across Europe.",
+        "We made a train trip across Europe."
+      ]
+    },
+    {
+      "seriesKey": 124,
+      "question": "Traduisez : 'Mon rêve est de faire un safari en Afrique.'",
+      "answer": "my dream is to go on a safari in africa",
+      "type": "TRANSLATION",
+      "choices": []
+    },
+    {
+      "seriesKey": 124,
+      "question": "Is the following statement true or false? 'When talking about a trip, the word ‘journey’ refers to the entire travel experience.'",
+      "answer": "true",
+      "type": "TRUE_FALSE",
+      "choices": []
+    },
+    {
+      "seriesKey": 125,
+      "question": "How do you say 'Je pense que l'éducation est la clé du succès.' in English?",
+      "answer": "i think education is the key to success",
+      "type": "MULTIPLE_CHOICE",
+      "choices": [
+        "I think education is the key to success.",
+        "I believe education is the key of success.",
+        "I think the education is the key to success.",
+        "I think the education is the key of success."
+      ]
+    },
+    {
+      "seriesKey": 125,
+      "question": "Traduisez : 'Je ne suis pas d'accord avec cette opinion.'",
+      "answer": "i disagree with this opinion",
+      "type": "TRANSLATION",
+      "choices": []
+    },
+    {
+      "seriesKey": 125,
+      "question": "Is the following statement true or false? 'In a debate, a counterargument is used to challenge the opposing side’s point of view.'",
+      "answer": "true",
+      "type": "TRUE_FALSE",
+      "choices": []
+    },
+    {
+      "seriesKey": 125,
+      "question": "How do you say 'Pourtant, il y a des preuves qui montrent que l'éducation n'est pas toujours la clé du succès.' in English?",
+      "answer": "however there is evidence showing that education is not always the key to success",
+      "type": "MULTIPLE_CHOICE",
+      "choices": [
+        "However, there are evidence showing that education is not always the key to success.",
+        "However, there is evidence showing that education is not always the key to success.",
+        "However, there is proof that shows education is not always the key to success.",
+        "However, there are proofs showing that education is not always the key to success."
+      ]
+    },
+    {
+      "seriesKey": 125,
+      "question": "Traduisez : 'Je comprends ton point de vue, mais je pense qu'il y a des exceptions.'",
+      "answer": "i understand your point of view but i think there are exceptions",
+      "type": "TRANSLATION",
+      "choices": []
+    },
+    {
+      "seriesKey": 125,
+      "question": "Is the following statement true or false? 'In a formal debate, it is important to remain respectful and avoid personal attacks.'",
+      "answer": "true",
+      "type": "TRUE_FALSE",
+      "choices": []
+    },
+    {
+      "seriesKey": 126,
+      "question": "How do you say 'Je suis responsable de la gestion des projets au sein de l'équipe.' in English?",
+      "answer": "i am responsible for managing projects within the team",
+      "type": "MULTIPLE_CHOICE",
+      "choices": [
+        "I am in charge of managing projects within the team.",
+        "I am responsible for managing projects within the team.",
+        "I manage projects within the team.",
+        "I am responsible to manage projects within the team."
+      ]
+    },
+    {
+      "seriesKey": 126,
+      "question": "Traduisez : 'J'ai besoin de plus d'informations avant de prendre une décision.'",
+      "answer": "i need more information before making a decision",
+      "type": "TRANSLATION",
+      "choices": []
+    },
+    {
+      "seriesKey": 126,
+      "question": "Is the following statement true or false? 'In business English, 'ASAP' stands for 'as soon as possible' and is commonly used to request urgent action.'",
+      "answer": "true",
+      "type": "TRUE_FALSE",
+      "choices": []
+    },
+    {
+      "seriesKey": 126,
+      "question": "How do you say 'Nous avons prévu une réunion pour discuter des objectifs du projet.' in English?",
+      "answer": "we have scheduled a meeting to discuss the project goals",
+      "type": "MULTIPLE_CHOICE",
+      "choices": [
+        "We have scheduled a meeting to discuss the project goals.",
+        "We have planned a meeting to discuss the project goals.",
+        "We scheduled a meeting to discuss the project objectives.",
+        "We have arranged a meeting to discuss the goals of the project."
+      ]
+    },
+    {
+      "seriesKey": 126,
+      "question": "Traduisez : 'Le rapport doit être envoyé avant la fin de la journée.'",
+      "answer": "the report must be sent by the end of the day",
+      "type": "TRANSLATION",
+      "choices": []
+    },
+    {
+      "seriesKey": 126,
+      "question": "Is the following statement true or false? 'In a professional email, it is common to start with a formal greeting and end with a polite closing phrase.'",
+      "answer": "true",
+      "type": "TRUE_FALSE",
+      "choices": []
+    },
+    {
+      "seriesKey": 127,
+      "question": "How do you say 'Il a expliqué clairement les enjeux du projet lors de la conférence.' in English?",
+      "answer": "he clearly explained the issues of the project during the conference",
+      "type": "MULTIPLE_CHOICE",
+      "choices": [
+        "He clearly explained the issues of the project during the conference.",
+        "He explained clearly the issues of the project during the conference.",
+        "He clearly explained the project issues at the conference.",
+        "He explained the issues clearly of the project at the conference."
+      ]
+    },
+    {
+      "seriesKey": 127,
+      "question": "Traduisez : 'Il est important de bien structurer son discours pour captiver l'attention de l'audience.'",
+      "answer": "it is important to structure your speech well to capture the audiences attention",
+      "type": "TRANSLATION",
+      "choices": []
+    },
+    {
+      "seriesKey": 127,
+      "question": "Is the following statement true or false? 'When analyzing a speech, it is crucial to focus on the speaker’s tone and body language to fully understand the message.'",
+      "answer": "true",
+      "type": "TRUE_FALSE",
+      "choices": []
+    },
+    {
+      "seriesKey": 127,
+      "question": "How do you say 'Lors de la conférence, le conférencier a utilisé des exemples concrets pour illustrer ses propos.' in English?",
+      "answer": "during the conference the speaker used concrete examples to illustrate his points",
+      "type": "MULTIPLE_CHOICE",
+      "choices": [
+        "During the conference, the speaker used concrete examples to illustrate his points.",
+        "At the conference, the speaker used concrete examples to illustrate his ideas.",
+        "During the conference, the speaker used real-life examples to illustrate his points.",
+        "At the conference, the speaker used real-life examples to illustrate his ideas."
+      ]
+    },
+    {
+      "seriesKey": 127,
+      "question": "Traduisez : 'Le discours était très inspirant et a motivé l'audience à agir.'",
+      "answer": "the speech was very inspiring and motivated the audience to take action",
+      "type": "TRANSLATION",
+      "choices": []
+    },
+    {
+      "seriesKey": 127,
+      "question": "Is the following statement true or false? 'In a professional speech, it’s common to include statistics and data to support your arguments.'",
+      "answer": "true",
+      "type": "TRUE_FALSE",
+      "choices": []
+    },
+    {
+      "seriesKey": 128,
+      "question": "How do you say 'Il est actuellement en train de travailler sur le projet.' in English? (Attention à ne pas confondre 'actuellement' et 'actually')",
+      "answer": "he is currently working on the project",
+      "type": "MULTIPLE_CHOICE",
+      "choices": [
+        "He is actually working on the project.",
+        "He is currently working on the project.",
+        "He is at present working on the project.",
+        "He is presently working on the project."
+      ]
+    },
+    {
+      "seriesKey": 128,
+      "question": "Traduisez : 'La bibliothèque de l'université est ouverte tous les jours.' (Attention à 'library' et 'librairie')",
+      "answer": "the university library is open every day",
+      "type": "TRANSLATION",
+      "choices": []
+    },
+    {
+      "seriesKey": 128,
+      "question": "Is the following statement true or false? 'In English, 'sympathy' refers to feeling sorry for someone, while 'empathy' refers to understanding their feelings.'",
+      "answer": "true",
+      "type": "TRUE_FALSE",
+      "choices": []
+    },
+    {
+      "seriesKey": 128,
+      "question": "How do you say 'Il a fait une proposition intéressante lors de la réunion.' in English? (Attention à ne pas confondre 'proposition' et 'proposal')",
+      "answer": "he made an interesting proposal at the meeting",
+      "type": "MULTIPLE_CHOICE",
+      "choices": [
+        "He made an interesting proposal at the meeting.",
+        "He made an interesting proposition at the meeting.",
+        "He made an interesting suggestion at the meeting.",
+        "He made an interesting offer at the meeting."
+      ]
+    },
+    {
+      "seriesKey": 128,
+      "question": "Traduisez : 'Elle a une attitude positive.' (Attention à 'attitude' et 'aptitude')",
+      "answer": "she has a positive attitude",
+      "type": "TRANSLATION",
+      "choices": []
+    },
+    {
+      "seriesKey": 128,
+      "question": "Is the following statement true or false? 'In English, the word ‘eventually’ means 'finalement' in French, not ‘actuellement’.'",
+      "answer": "true",
+      "type": "TRUE_FALSE",
+      "choices": []
+    },
+    {
+      "seriesKey": 129,
+      "question": "How do you say 'Il est essentiel d'avoir une introduction claire dans un essai.' in English?",
+      "answer": "it is essential to have a clear introduction in an essay",
+      "type": "MULTIPLE_CHOICE",
+      "choices": [
+        "It is essential to have a clear introduction in an essay.",
+        "It is essential having a clear introduction in an essay.",
+        "A clear introduction is essential in an essay.",
+        "It is essential of having a clear introduction in an essay."
+      ]
+    },
+    {
+      "seriesKey": 129,
+      "question": "Traduisez : 'Il faut toujours conclure son essai en récapitulant les points clés.'",
+      "answer": "you should always conclude your essay by summarizing the key points",
+      "type": "TRANSLATION",
+      "choices": []
+    },
+    {
+      "seriesKey": 129,
+      "question": "Is the following statement true or false? 'In an essay, it is important to provide clear arguments supported by evidence in each body paragraph.'",
+      "answer": "true",
+      "type": "TRUE_FALSE",
+      "choices": []
+    },
+    {
+      "seriesKey": 129,
+      "question": "How do you say 'Dans le corps de l’essai, chaque paragraphe doit développer un argument différent.' in English?",
+      "answer": "in the body of the essay each paragraph must develop a different argument",
+      "type": "MULTIPLE_CHOICE",
+      "choices": [
+        "In the body of the essay, each paragraph must develop a different argument.",
+        "In the body of the essay, each paragraph should develop a different argument.",
+        "In the body of the essay, every paragraph must develop a different argument.",
+        "In the body of the essay, each paragraph has to develop a different argument."
+      ]
+    },
+    {
+      "seriesKey": 129,
+      "question": "Traduisez : 'Il est important d'introduire les contre-arguments pour renforcer votre position.'",
+      "answer": "it is important to introduce counterarguments to strengthen your position",
+      "type": "TRANSLATION",
+      "choices": []
+    },
+    {
+      "seriesKey": 129,
+      "question": "Is the following statement true or false? 'In an essay conclusion, you should introduce new ideas or arguments.'",
+      "answer": "false",
+      "type": "TRUE_FALSE",
+      "choices": []
+    },
+    {
+      "seriesKey": 130,
+      "question": "How do you say 'Il est important de résumer les points principaux d'un article de presse.' in English?",
+      "answer": "it is important to summarize the main points of a newspaper article",
+      "type": "MULTIPLE_CHOICE",
+      "choices": [
+        "It is important to summarize the main points of a newspaper article.",
+        "It is important summarizing the main points of a newspaper article.",
+        "It is important to summarize the main points in a newspaper article.",
+        "It is important summarizing the main points in a newspaper article."
+      ]
+    },
+    {
+      "seriesKey": 130,
+      "question": "Traduisez : 'L'article aborde les causes de la crise économique actuelle.'",
+      "answer": "the article discusses the causes of the current economic crisis",
+      "type": "TRANSLATION",
+      "choices": []
+    },
+    {
+      "seriesKey": 130,
+      "question": "Is the following statement true or false? 'When analyzing a newspaper article, it is important to focus on the title, the introduction, and the conclusion to understand the main message.'",
+      "answer": "true",
+      "type": "TRUE_FALSE",
+      "choices": []
+    },
+    {
+      "seriesKey": 130,
+      "question": "How do you say 'L'auteur présente des arguments solides pour étayer ses propos.' in English?",
+      "answer": "the author presents strong arguments to support his claims",
+      "type": "MULTIPLE_CHOICE",
+      "choices": [
+        "The author presents strong arguments to support his claims.",
+        "The author presents solid arguments to support his points.",
+        "The author provides strong arguments to back up his views.",
+        "The author presents solid arguments to back up his statements."
+      ]
+    },
+    {
+      "seriesKey": 130,
+      "question": "Traduisez : 'Il est crucial de comprendre le contexte pour bien interpréter l'article.'",
+      "answer": "it is crucial to understand the context in order to properly interpret the article",
+      "type": "TRANSLATION",
+      "choices": []
+    },
+    {
+      "seriesKey": 130,
+      "question": "Is the following statement true or false? 'When analyzing a complex article, it is useful to take notes and highlight key information to aid understanding.'",
+      "answer": "true",
+      "type": "TRUE_FALSE",
+      "choices": []
+    },
+    {
+      "seriesKey": 131,
+      "question": "How do you say 'Si j'avais su, j'aurais agi différemment.' in English? (Attention aux structures conditionnelles !) ",
+      "answer": "if i had known i would have acted differently",
+      "type": "MULTIPLE_CHOICE",
+      "choices": [
+        "If I had known, I would act differently.",
+        "If I knew, I would have acted differently.",
+        "If I had known, I would have acted differently.",
+        "If I have known, I would have acted differently."
+      ]
+    },
+    {
+      "seriesKey": 131,
+      "question": "Traduisez : 'Elle se serait bien préparée si elle avait eu plus de temps.' (Utilisation du conditionnel passé)",
+      "answer": "she would have prepared well if she had had more time",
+      "type": "TRANSLATION",
+      "choices": []
+    },
+    {
+      "seriesKey": 131,
+      "question": "Is the following statement true or false? 'The past perfect is used to talk about an action that happened before another action in the past.'",
+      "answer": "true",
+      "type": "TRUE_FALSE",
+      "choices": []
+    },
+    {
+      "seriesKey": 131,
+      "question": "How do you say 'Nous avions déjà mangé quand il est arrivé.' in English? (Attention à l'utilisation du past perfect !) ",
+      "answer": "we had already eaten when he arrived",
+      "type": "MULTIPLE_CHOICE",
+      "choices": [
+        "We already ate when he arrived.",
+        "We had already eaten when he arrived.",
+        "We were already eating when he arrived.",
+        "We had already eat when he arrived."
+      ]
+    },
+    {
+      "seriesKey": 131,
+      "question": "Traduisez : 'Il aurait pu réussir s'il avait étudié davantage.' (Attention à l'utilisation du conditionnel passé)",
+      "answer": "he could have succeeded if he had studied more",
+      "type": "TRANSLATION",
+      "choices": []
+    },
+    {
+      "seriesKey": 131,
+      "question": "Is the following statement true or false? 'In English, the future perfect tense is used to describe actions that will be completed before a specific point in the future.'",
+      "answer": "true",
+      "type": "TRUE_FALSE",
+      "choices": []
+    },
+    {
+      "seriesKey": 132,
+      "question": "How do you say 'C'est une blague typiquement anglaise, il faut connaître la culture pour la comprendre.' in English?",
+      "answer": "it’s a typically english joke you need to know the culture to understand it",
+      "type": "MULTIPLE_CHOICE",
+      "choices": [
+        "It’s a typically English joke, you need to know the culture to understand it.",
+        "It’s a typical English joke, you need to know the culture to understand it.",
+        "It’s a typically English joke, you must know the culture to understand it.",
+        "It’s an English joke, you need to know the culture to understand it."
+      ]
+    },
+    {
+      "seriesKey": 132,
+      "question": "Traduisez : 'Il a dit qu'il ne pleuvait pas alors que le temps était complètement gris. C'était une blague sur le temps typiquement britannique.'",
+      "answer": "he said it wasn’t raining even though the weather was completely grey it was a typically british joke about the weather",
+      "type": "TRANSLATION",
+      "choices": []
+    },
+    {
+      "seriesKey": 132,
+      "question": "Is the following statement true or false? 'In British humor, wordplay often involves puns or double meanings, and is usually not meant to be taken seriously.'",
+      "answer": "true",
+      "type": "TRUE_FALSE",
+      "choices": []
+    },
+    {
+      "seriesKey": 132,
+      "question": "Which of these sentences is an example of a pun? 'Time flies like an arrow; fruit flies like a banana.'",
+      "answer": "it’s an example of a wordplay using flies and fruit",
+      "type": "MULTIPLE_CHOICE",
+      "choices": [
+        "It’s a joke about time and fruit.",
+        "It’s an example of a wordplay using 'flies' and 'fruit'.",
+        "It’s a metaphor for how time passes.",
+        "It’s a sentence that makes no sense."
+      ]
+    },
+    {
+      "seriesKey": 132,
+      "question": "Traduisez : 'Les Anglais aiment faire des jeux de mots autour de la langue, souvent à des fins humoristiques.'",
+      "answer": "the british love to play with words often for humorous purposes",
+      "type": "TRANSLATION",
+      "choices": []
+    },
+    {
+      "seriesKey": 132,
+      "question": "Is the following statement true or false? 'A joke that involves irony can be understood the same way by everyone, regardless of their background.'",
+      "answer": "false",
+      "type": "TRUE_FALSE",
+      "choices": []
+    },
+    {
+      "seriesKey": 133,
+      "question": "How do you say 'L’auteur utilise des métaphores pour exprimer des émotions complexes dans ce passage.' in English?",
+      "answer": "the author uses metaphors to express complex emotions in this passage",
+      "type": "MULTIPLE_CHOICE",
+      "choices": [
+        "The author uses metaphors to express complex emotions in this passage.",
+        "The author used metaphors to express complex emotions in this passage.",
+        "The author is using metaphors to express complex emotions in this passage.",
+        "The author was using metaphors to express complex emotions in this passage."
+      ]
+    },
+    {
+      "seriesKey": 133,
+      "question": "Traduisez : 'Ce passage illustre la lutte intérieure du personnage principal entre le désir et la responsabilité.'",
+      "answer": "this passage illustrates the main character’s inner struggle between desire and responsibility",
+      "type": "TRANSLATION",
+      "choices": []
+    },
+    {
+      "seriesKey": 133,
+      "question": "Is the following statement true or false? 'When analyzing a literary text, it's essential to consider the historical context to fully understand the author’s intentions.'",
+      "answer": "true",
+      "type": "TRUE_FALSE",
+      "choices": []
+    },
+    {
+      "seriesKey": 133,
+      "question": "How do you interpret the following passage from Shakespeare’s Hamlet: 'To be, or not to be, that is the question'? What does it symbolize?",
+      "answer": "a moral dilemma about life and death",
+      "type": "MULTIPLE_CHOICE",
+      "choices": [
+        "A moral dilemma about life and death.",
+        "A simple rhetorical question.",
+        "An expression of Shakespeare's view on life.",
+        "A trivial thought about existence."
+      ]
+    },
+    {
+      "seriesKey": 133,
+      "question": "Traduisez : 'L’ambiguïté du personnage reflète les contradictions de la société dans laquelle il évolue.'",
+      "answer": "the ambiguity of the character reflects the contradictions of the society in which he evolves",
+      "type": "TRANSLATION",
+      "choices": []
+    },
+    {
+      "seriesKey": 133,
+      "question": "Is the following statement true or false? 'In literary analysis, identifying themes and motifs helps in understanding the deeper meanings of a text.'",
+      "answer": "true",
+      "type": "TRUE_FALSE",
+      "choices": []
+    },
+    {
+      "seriesKey": 134,
+      "question": "How do you say 'L'argumentation dans cet essai repose sur une analyse détaillée des données.' in English?",
+      "answer": "the argument in this essay relies on a detailed analysis of the data",
+      "type": "MULTIPLE_CHOICE",
+      "choices": [
+        "The argument in this essay relies on a detailed analysis of the data.",
+        "The argument in this essay is based on a detailed analysis of the data.",
+        "The argumentation in this essay depends on a detailed analysis of the data.",
+        "The argumentation in this essay is based on detailed data analysis."
+      ]
+    },
+    {
+      "seriesKey": 134,
+      "question": "Traduisez : 'La méthodologie utilisée dans cette recherche est rigoureuse et bien définie.'",
+      "answer": "the methodology used in this research is rigorous and well-defined",
+      "type": "TRANSLATION",
+      "choices": []
+    },
+    {
+      "seriesKey": 134,
+      "question": "Is the following statement true or false? 'In academic writing, it is important to use formal language and avoid contractions.'",
+      "answer": "true",
+      "type": "TRUE_FALSE",
+      "choices": []
+    },
+    {
+      "seriesKey": 134,
+      "question": "Which of the following sentences best exemplifies a formal tone used in academic writing?",
+      "answer": "the subject under discussion has significant implications for various groups",
+      "type": "MULTIPLE_CHOICE",
+      "choices": [
+        "I think this topic is important because it impacts a lot of people.",
+        "The subject under discussion has significant implications for various groups.",
+        "This issue is really important for everyone.",
+        "This problem needs to be dealt with immediately."
+      ]
+    },
+    {
+      "seriesKey": 134,
+      "question": "Traduisez : 'Les résultats de cette étude corroborent les hypothèses formulées au début de la recherche.'",
+      "answer": "the results of this study corroborate the hypotheses formulated at the beginning of the research",
+      "type": "TRANSLATION",
+      "choices": []
+    },
+    {
+      "seriesKey": 134,
+      "question": "Is the following statement true or false? 'In academic papers, citations and references are crucial for supporting your arguments and giving credit to original sources.'",
+      "answer": "true",
+      "type": "TRUE_FALSE",
+      "choices": []
+    },
+    {
+      "seriesKey": 135,
+      "question": "How do you say 'Il est essentiel de structurer un essai de manière logique et fluide.' in English?",
+      "answer": "it is essential to structure an essay logically and fluently",
+      "type": "MULTIPLE_CHOICE",
+      "choices": [
+        "It is essential to structure an essay logically and fluently.",
+        "It is essential to structure an essay in a logical and fluid manner.",
+        "It is essential to structure an essay in a logical and fluent way.",
+        "It is essential to structure an essay logically and fluently."
+      ]
+    },
+    {
+      "seriesKey": 135,
+      "question": "Traduisez : 'L'introduction doit présenter clairement le sujet et la thèse de l'essai.'",
+      "answer": "the introduction should clearly present the topic and the thesis of the essay",
+      "type": "TRANSLATION",
+      "choices": []
+    },
+    {
+      "seriesKey": 135,
+      "question": "Is the following statement true or false? 'In advanced essay writing, it is important to support your arguments with relevant evidence and examples.'",
+      "answer": "true",
+      "type": "TRUE_FALSE",
+      "choices": []
+    },
+    {
+      "seriesKey": 135,
+      "question": "Which of the following sentences best shows a counterargument in an essay?",
+      "answer": "while some argue that economic growth leads to environmental degradation others believe that it is possible to achieve both simultaneously",
+      "type": "MULTIPLE_CHOICE",
+      "choices": [
+        "While some argue that economic growth leads to environmental degradation, others believe that it is possible to achieve both simultaneously.",
+        "Economic growth has undoubtedly caused harm to the environment, but there are ways to address these issues.",
+        "The economic growth of a nation should be prioritized above all other concerns.",
+        "Despite the challenges, many experts argue that it is essential to focus on sustainable development."
+      ]
+    },
+    {
+      "seriesKey": 135,
+      "question": "Traduisez : 'L'argumentation de cet essai repose sur une analyse critique des données et des perspectives opposées.'",
+      "answer": "the argument of this essay relies on a critical analysis of data and opposing perspectives",
+      "type": "TRANSLATION",
+      "choices": []
+    },
+    {
+      "seriesKey": 135,
+      "question": "Is the following statement true or false? 'In advanced academic writing, the conclusion should summarize the main points without introducing new arguments.'",
+      "answer": "true",
+      "type": "TRUE_FALSE",
+      "choices": []
+    },
+    {
+      "seriesKey": 136,
+      "question": "How do you say 'Un bon discours doit capter l'attention de l'audience dès le début.' in English?",
+      "answer": "a good speech should capture the audiences attention from the start",
+      "type": "MULTIPLE_CHOICE",
+      "choices": [
+        "A good speech should capture the audience's attention from the start.",
+        "A good speech must grab the audience's attention from the beginning.",
+        "A good speech should seize the audience’s attention from the beginning.",
+        "A good speech must capture the attention of the audience from the start."
+      ]
+    },
+    {
+      "seriesKey": 136,
+      "question": "Traduisez : 'Il est crucial d'utiliser des exemples pertinents pour soutenir tes arguments lors d'une présentation.'",
+      "answer": "it is crucial to use relevant examples to support your arguments during a presentation",
+      "type": "TRANSLATION",
+      "choices": []
+    },
+    {
+      "seriesKey": 136,
+      "question": "Is the following statement true or false? 'In public speaking, the conclusion should summarize the main points and leave the audience with something to think about.'",
+      "answer": "true",
+      "type": "TRUE_FALSE",
+      "choices": []
+    },
+    {
+      "seriesKey": 136,
+      "question": "Which of the following strategies is most effective for engaging your audience during a presentation?",
+      "answer": "starting with a compelling story or an interesting fact",
+      "type": "MULTIPLE_CHOICE",
+      "choices": [
+        "Reading from the slides throughout the entire presentation.",
+        "Starting with a compelling story or an interesting fact.",
+        "Avoiding any interaction with the audience.",
+        "Speaking in a monotone voice to maintain professionalism."
+      ]
+    },
+    {
+      "seriesKey": 136,
+      "question": "Traduisez : 'Un bon orateur utilise un langage corporel adapté pour renforcer ses propos.'",
+      "answer": "a good speaker uses appropriate body language to reinforce their message",
+      "type": "TRANSLATION",
+      "choices": []
+    },
+    {
+      "seriesKey": 136,
+      "question": "Is the following statement true or false? 'In an effective presentation, it is important to maintain eye contact with the audience to establish connection and credibility.'",
+      "answer": "true",
+      "type": "TRUE_FALSE",
+      "choices": []
+    },
+    {
+      "seriesKey": 137,
+      "question": "How do you say 'Oh, great, another Monday!' in a sarcastic tone in English?",
+      "answer": "oh great another monday",
+      "type": "MULTIPLE_CHOICE",
+      "choices": [
+        "Oh, fantastic, another Monday!",
+        "Oh, wonderful, another Monday!",
+        "Oh, great, another Monday!",
+        "Oh, perfect, another Monday!"
+      ]
+    },
+    {
+      "seriesKey": 137,
+      "question": "Traduisez : 'Bien sûr, j'adore attendre sous la pluie pendant des heures.'",
+      "answer": "of course i love waiting in the rain for hours",
+      "type": "TRANSLATION",
+      "choices": []
+    },
+    {
+      "seriesKey": 137,
+      "question": "Is the following statement sarcastic? 'Oh, I’m sure you’ll do a great job with that project, just like last time.'",
+      "answer": "true",
+      "type": "TRUE_FALSE",
+      "choices": []
+    },
+    {
+      "seriesKey": 137,
+      "question": "Which of the following sentences best expresses sarcasm?",
+      "answer": "i’m so excited for this meeting i’ve been waiting all day",
+      "type": "MULTIPLE_CHOICE",
+      "choices": [
+        "I’m so excited for this meeting, I’ve been waiting all day!",
+        "I can't wait for this meeting, it's going to be so much fun.",
+        "This meeting is the best part of my day, obviously.",
+        "I am thrilled for this meeting, it’s going to be amazing!"
+      ]
+    },
+    {
+      "seriesKey": 137,
+      "question": "Traduisez : 'Oh, bien sûr, c’est exactement ce dont j'avais besoin.'",
+      "answer": "oh of course that’s exactly what i needed",
+      "type": "TRANSLATION",
+      "choices": []
+    },
+    {
+      "seriesKey": 137,
+      "question": "Is the following statement sarcastic? 'Oh, you did such a wonderful job, I couldn't have done it better myself.'",
+      "answer": "true",
+      "type": "TRUE_FALSE",
+      "choices": []
+    },
+    {
+      "seriesKey": 138,
+      "question": "How do you say 'L'entreprise a connu une croissance significative au cours des dernières années.' in English?",
+      "answer": "the company has experienced significant growth over the last few years",
+      "type": "MULTIPLE_CHOICE",
+      "choices": [
+        "The company has experienced significant growth over the last few years.",
+        "The business has seen significant growth during the past years.",
+        "The company has grown significantly over the last years.",
+        "The firm experienced a significant increase over the last few years."
+      ]
+    },
+    {
+      "seriesKey": 138,
+      "question": "Traduisez : 'Les fluctuations du marché peuvent avoir un impact direct sur les décisions d'investissement.'",
+      "answer": "market fluctuations can have a direct impact on investment decisions",
+      "type": "TRANSLATION",
+      "choices": []
+    },
+    {
+      "seriesKey": 138,
+      "question": "Is the following statement true or false? 'In business, ROI stands for Return on Investment, which is used to measure the profitability of an investment.'",
+      "answer": "true",
+      "type": "TRUE_FALSE",
+      "choices": []
+    },
+    {
+      "seriesKey": 138,
+      "question": "Which of the following terms refers to the process of evaluating the financial health of a company?",
+      "answer": "financial auditing",
+      "type": "MULTIPLE_CHOICE",
+      "choices": [
+        "Market analysis",
+        "Financial auditing",
+        "Business forecasting",
+        "Risk management"
+      ]
+    },
+    {
+      "seriesKey": 138,
+      "question": "Traduisez : 'Les décisions stratégiques doivent être basées sur des données financières précises.'",
+      "answer": "strategic decisions must be based on accurate financial data",
+      "type": "TRANSLATION",
+      "choices": []
+    },
+    {
+      "seriesKey": 138,
+      "question": "Is the following statement true or false? 'In finance, a hedge fund is an investment fund that uses advanced strategies to generate returns for its investors.'",
+      "answer": "true",
+      "type": "TRUE_FALSE",
+      "choices": []
+    },
+    {
+      "seriesKey": 139,
+      "question": "How do you say 'L’interprète doit être capable de traduire rapidement et de manière fluide.' in English?",
+      "answer": "the interpreter must be able to translate quickly and smoothly",
+      "type": "MULTIPLE_CHOICE",
+      "choices": [
+        "The interpreter must be able to translate quickly and smoothly.",
+        "The translator must be able to interpret quickly and fluently.",
+        "The interpreter must translate swiftly and smoothly.",
+        "The translator must be capable of interpreting quickly and smoothly."
+      ]
+    },
+    {
+      "seriesKey": 139,
+      "question": "Traduisez : 'La traduction littérale n'est pas toujours la meilleure solution.'",
+      "answer": "literal translation is not always the best solution",
+      "type": "TRANSLATION",
+      "choices": []
+    },
+    {
+      "seriesKey": 139,
+      "question": "Is the following statement true or false? 'In interpretation, it is crucial to convey the speaker's tone and intention, not just the words.'",
+      "answer": "true",
+      "type": "TRUE_FALSE",
+      "choices": []
+    },
+    {
+      "seriesKey": 139,
+      "question": "Which of the following is an essential skill for a translator?",
+      "answer": "fluency in both the source and target languages",
+      "type": "MULTIPLE_CHOICE",
+      "choices": [
+        "Fluency in both the source and target languages.",
+        "The ability to speak several languages fluently.",
+        "Knowledge of the technical jargon in all fields.",
+        "Speed and accuracy in speaking."
+      ]
+    },
+    {
+      "seriesKey": 139,
+      "question": "Traduisez : 'L'interprétation simultanée nécessite une grande concentration et des compétences linguistiques avancées.'",
+      "answer": "simultaneous interpretation requires high concentration and advanced linguistic skills",
+      "type": "TRANSLATION",
+      "choices": []
+    },
+    {
+      "seriesKey": 139,
+      "question": "Is the following statement true or false? 'A translator should always try to maintain the same word order as the original text.'",
+      "answer": "false",
+      "type": "TRUE_FALSE",
+      "choices": []
+    },
+    {
+      "seriesKey": 140,
+      "question": "Which of the following sentences is in a formal register?",
+      "answer": "would you be so kind as to send me the report",
+      "type": "MULTIPLE_CHOICE",
+      "choices": [
+        "Hey, can you send me that report?",
+        "Would you be so kind as to send me the report?",
+        "Could you please send me that report?",
+        "Send me that report now!"
+      ]
+    },
+    {
+      "seriesKey": 140,
+      "question": "Traduisez : 'Ce n’est pas possible, tu vois bien qu’on a un problème ici.' (registre familier)",
+      "answer": "this isn’t possible you can clearly see we have a problem here",
+      "type": "TRANSLATION",
+      "choices": []
+    },
+    {
+      "seriesKey": 140,
+      "question": "Is the following sentence in a formal or informal register? 'Could you provide me with further details about the matter at hand?'",
+      "answer": "formal",
+      "type": "TRUE_FALSE",
+      "choices": []
+    },
+    {
+      "seriesKey": 140,
+      "question": "Which of the following sentences is in a more informal register?",
+      "answer": "could you help me out with this please",
+      "type": "MULTIPLE_CHOICE",
+      "choices": [
+        "I would appreciate it if you could help me with this matter.",
+        "Could you help me out with this, please?",
+        "Would you mind assisting me with this?",
+        "I require your help with this matter."
+      ]
+    },
+    {
+      "seriesKey": 140,
+      "question": "Traduisez : 'Je suis ravi que vous soyez d'accord avec cette proposition.' (registre soutenu)",
+      "answer": "i am delighted that you agree with this proposal",
+      "type": "TRANSLATION",
+      "choices": []
+    },
+    {
+      "seriesKey": 140,
+      "question": "Is the following sentence formal or informal? 'Can you send me the files by the end of the day?'",
+      "answer": "informal",
+      "type": "TRUE_FALSE",
+      "choices": []
+    },
+    {
+      "seriesKey": 141,
+      "question": "In the film 'The Social Network', how does Mark Zuckerberg’s language reflect his character?",
+      "answer": "his language is fast-paced sharp and often dismissive showing his ambition and social disconnect",
+      "type": "MULTIPLE_CHOICE",
+      "choices": [
+        "He uses formal and polite language to maintain professionalism.",
+        "His language is fast-paced, sharp, and often dismissive, showing his ambition and social disconnect.",
+        "He speaks with a lot of humor, which shows his friendliness and openness.",
+        "His language is casual and relaxed, highlighting his easy-going nature."
+      ]
+    },
+    {
+      "seriesKey": 141,
+      "question": "Traduisez : 'This is a classic case of irony in sitcoms. The more they try to solve the problem, the worse it gets.' (Référence à des séries comiques)",
+      "answer": "cest un cas classique dironie dans les sitcoms plus ils essaient de résoudre le problème plus ça empire",
+      "type": "TRANSLATION",
+      "choices": []
+    },
+    {
+      "seriesKey": 141,
+      "question": "Is the following statement true or false? 'In 'Friends', Chandler’s humor is often used to mask his insecurities and discomfort in social situations.'",
+      "answer": "true",
+      "type": "TRUE_FALSE",
+      "choices": []
+    },
+    {
+      "seriesKey": 141,
+      "question": "Which of the following phrases from 'Game of Thrones' best reflects the themes of power and politics in the series?",
+      "answer": "when you play the game of thrones you win or you die",
+      "type": "MULTIPLE_CHOICE",
+      "choices": [
+        "'When you play the game of thrones, you win or you die.'",
+        "'Winter is coming.'",
+        "'Valar Morghulis.'",
+        "'I drink and I know things.'"
+      ]
+    },
+    {
+      "seriesKey": 141,
+      "question": "Traduisez : 'The use of sarcasm in 'The Office' highlights the awkwardness of everyday office life.'",
+      "answer": "lutilisation du sarcasme dans the office met en évidence lawkwardness de la vie quotidienne au bureau",
+      "type": "TRANSLATION",
+      "choices": []
+    },
+    {
+      "seriesKey": 141,
+      "question": "Is the following statement true or false? 'In 'Sherlock', the character of Sherlock Holmes often uses language to assert his intelligence and superiority over others.'",
+      "answer": "true",
+      "type": "TRUE_FALSE",
+      "choices": []
+    },
+    {
+      "seriesKey": 142,
+      "question": "In a political debate, what is the main purpose of using rhetorical questions?",
+      "answer": "to strengthen an argument by encouraging the audience to think about the issue critically",
+      "type": "MULTIPLE_CHOICE",
+      "choices": [
+        "To confuse the audience by introducing complex concepts.",
+        "To strengthen an argument by encouraging the audience to think about the issue critically.",
+        "To summarize the main points of the debate.",
+        "To undermine the credibility of the opposing speaker."
+      ]
+    },
+    {
+      "seriesKey": 142,
+      "question": "Traduisez : 'Lors d’un débat politique, il est important de comprendre les sous-entendus derrière chaque argument.'",
+      "answer": "in a political debate it is important to understand the implications behind each argument",
+      "type": "TRANSLATION",
+      "choices": []
+    },
+    {
+      "seriesKey": 142,
+      "question": "Is the following statement true or false? 'In a television debate, candidates often use emotional appeals (pathos) to connect with the audience rather than focusing solely on logic.'",
+      "answer": "true",
+      "type": "TRUE_FALSE",
+      "choices": []
+    },
+    {
+      "seriesKey": 142,
+      "question": "Which of the following strategies is commonly used in political debates to discredit an opponent?",
+      "answer": "using the ad hominem attack where the focus shifts to personal characteristics rather than the argument",
+      "type": "MULTIPLE_CHOICE",
+      "choices": [
+        "Presenting irrefutable facts.",
+        "Using the ad hominem attack, where the focus shifts to personal characteristics rather than the argument.",
+        "Acknowledging and addressing the opponent’s argument with respect.",
+        "Building consensus by agreeing on points of common interest."
+      ]
+    },
+    {
+      "seriesKey": 142,
+      "question": "Traduisez : 'Les politiciens doivent être capables de répondre aux critiques de manière stratégique pour maintenir leur image.'",
+      "answer": "politicians must be able to respond to criticism strategically in order to maintain their image",
+      "type": "TRANSLATION",
+      "choices": []
+    },
+    {
+      "seriesKey": 142,
+      "question": "Is the following statement true or false? 'In televised political debates, candidates often rely on logical reasoning and factual evidence to win the audience's trust.'",
+      "answer": "false",
+      "type": "TRUE_FALSE",
+      "choices": []
+    },
+    {
+      "seriesKey": 143,
+      "question": "cow",
+      "answer": "cow",
+      "type": "TALK",
+      "choices": []
+    },
+    {
+      "seriesKey": 143,
+      "question": "dog",
+      "answer": "dog",
+      "type": "TALK",
+      "choices": []
+    },
+    {
+      "seriesKey": 143,
+      "question": "cat",
+      "answer": "cat",
+      "type": "TALK",
+      "choices": []
+    },
+    {
+      "seriesKey": 143,
+      "question": "house",
+      "answer": "house",
+      "type": "TALK",
+      "choices": []
+    },
+    {
+      "seriesKey": 143,
+      "question": "car",
+      "answer": "car",
+      "type": "TALK",
+      "choices": []
+    },
+    {
+      "seriesKey": 143,
+      "question": "apple",
+      "answer": "apple",
+      "type": "TALK",
+      "choices": []
+    },
+    {
+      "seriesKey": 143,
+      "question": "book",
+      "answer": "book",
+      "type": "TALK",
+      "choices": []
+    },
+    {
+      "seriesKey": 143,
+      "question": "pen",
+      "answer": "pen",
+      "type": "TALK",
+      "choices": []
+    },
+    {
+      "seriesKey": 143,
+      "question": "table",
+      "answer": "table",
+      "type": "TALK",
+      "choices": []
+    },
+    {
+      "seriesKey": 143,
+      "question": "friend",
+      "answer": "friend",
+      "type": "TALK",
+      "choices": []
+    },
+    {
+      "seriesKey": 144,
+      "question": "My name is John",
+      "answer": "my name is john",
+      "type": "TALK",
+      "choices": []
+    },
+    {
+      "seriesKey": 144,
+      "question": "I am twenty years old",
+      "answer": "i am twenty years old",
+      "type": "TALK",
+      "choices": []
+    },
+    {
+      "seriesKey": 144,
+      "question": "I am from Paris",
+      "answer": "i am from paris",
+      "type": "TALK",
+      "choices": []
+    },
+    {
+      "seriesKey": 144,
+      "question": "I live in London",
+      "answer": "i live in london",
+      "type": "TALK",
+      "choices": []
+    },
+    {
+      "seriesKey": 144,
+      "question": "I have a brother",
+      "answer": "i have a brother",
+      "type": "TALK",
+      "choices": []
+    },
+    {
+      "seriesKey": 144,
+      "question": "I like music",
+      "answer": "i like music",
+      "type": "TALK",
+      "choices": []
+    },
+    {
+      "seriesKey": 144,
+      "question": "I am a student",
+      "answer": "i am a student",
+      "type": "TALK",
+      "choices": []
+    },
+    {
+      "seriesKey": 144,
+      "question": "I work in a shop",
+      "answer": "i work in a shop",
+      "type": "TALK",
+      "choices": []
+    },
+    {
+      "seriesKey": 144,
+      "question": "My favorite color is blue",
+      "answer": "my favorite color is blue",
+      "type": "TALK",
+      "choices": []
+    },
+    {
+      "seriesKey": 144,
+      "question": "I speak French and English",
+      "answer": "i speak french and english",
+      "type": "TALK",
+      "choices": []
+    },
+    {
+      "seriesKey": 145,
+      "question": "Hello",
+      "answer": "hello",
+      "type": "TALK",
+      "choices": []
+    },
+    {
+      "seriesKey": 145,
+      "question": "Good morning",
+      "answer": "good morning",
+      "type": "TALK",
+      "choices": []
+    },
+    {
+      "seriesKey": 145,
+      "question": "Good afternoon",
+      "answer": "good afternoon",
+      "type": "TALK",
+      "choices": []
+    },
+    {
+      "seriesKey": 145,
+      "question": "Good evening",
+      "answer": "good evening",
+      "type": "TALK",
+      "choices": []
+    },
+    {
+      "seriesKey": 145,
+      "question": "How are you ?",
+      "answer": "how are you",
+      "type": "TALK",
+      "choices": []
+    },
+    {
+      "seriesKey": 145,
+      "question": "I’m fine, thank you.",
+      "answer": "i’m fine thank you",
+      "type": "TALK",
+      "choices": []
+    },
+    {
+      "seriesKey": 145,
+      "question": "Please",
+      "answer": "please",
+      "type": "TALK",
+      "choices": []
+    },
+    {
+      "seriesKey": 145,
+      "question": "Thank you.",
+      "answer": "thank you",
+      "type": "TALK",
+      "choices": []
+    },
+    {
+      "seriesKey": 145,
+      "question": "You’re welcome.",
+      "answer": "you’re welcome",
+      "type": "TALK",
+      "choices": []
+    },
+    {
+      "seriesKey": 145,
+      "question": "Excuse me.",
+      "answer": "excuse me",
+      "type": "TALK",
+      "choices": []
+    },
+    {
+      "seriesKey": 146,
+      "question": "red",
+      "answer": "red",
+      "type": "TALK",
+      "choices": []
+    },
+    {
+      "seriesKey": 146,
+      "question": "blue",
+      "answer": "blue",
+      "type": "TALK",
+      "choices": []
+    },
+    {
+      "seriesKey": 146,
+      "question": "green",
+      "answer": "green",
+      "type": "TALK",
+      "choices": []
+    },
+    {
+      "seriesKey": 146,
+      "question": "yellow",
+      "answer": "yellow",
+      "type": "TALK",
+      "choices": []
+    },
+    {
+      "seriesKey": 146,
+      "question": "black",
+      "answer": "black",
+      "type": "TALK",
+      "choices": []
+    },
+    {
+      "seriesKey": 146,
+      "question": "white",
+      "answer": "white",
+      "type": "TALK",
+      "choices": []
+    },
+    {
+      "seriesKey": 146,
+      "question": "orange",
+      "answer": "orange",
+      "type": "TALK",
+      "choices": []
+    },
+    {
+      "seriesKey": 146,
+      "question": "pink",
+      "answer": "pink",
+      "type": "TALK",
+      "choices": []
+    },
+    {
+      "seriesKey": 146,
+      "question": "purple",
+      "answer": "purple",
+      "type": "TALK",
+      "choices": []
+    },
+    {
+      "seriesKey": 146,
+      "question": "brown",
+      "answer": "brown",
+      "type": "TALK",
+      "choices": []
+    },
+    {
+      "seriesKey": 147,
+      "question": "table",
+      "answer": "table",
+      "type": "TALK",
+      "choices": []
+    },
+    {
+      "seriesKey": 147,
+      "question": "chair",
+      "answer": "chair",
+      "type": "TALK",
+      "choices": []
+    },
+    {
+      "seriesKey": 147,
+      "question": "bed",
+      "answer": "bed",
+      "type": "TALK",
+      "choices": []
+    },
+    {
+      "seriesKey": 147,
+      "question": "lamp",
+      "answer": "lamp",
+      "type": "TALK",
+      "choices": []
+    },
+    {
+      "seriesKey": 147,
+      "question": "sofa",
+      "answer": "sofa",
+      "type": "TALK",
+      "choices": []
+    },
+    {
+      "seriesKey": 147,
+      "question": "kitchen",
+      "answer": "kitchen",
+      "type": "TALK",
+      "choices": []
+    },
+    {
+      "seriesKey": 147,
+      "question": "door",
+      "answer": "door",
+      "type": "TALK",
+      "choices": []
+    },
+    {
+      "seriesKey": 147,
+      "question": "window",
+      "answer": "window",
+      "type": "TALK",
+      "choices": []
+    },
+    {
+      "seriesKey": 147,
+      "question": "mirror",
+      "answer": "mirror",
+      "type": "TALK",
+      "choices": []
+    },
+    {
+      "seriesKey": 147,
+      "question": "television",
+      "answer": "television",
+      "type": "TALK",
+      "choices": []
+    },
+    {
+      "seriesKey": 148,
+      "question": "It’s sunny.",
+      "answer": "it’s sunny",
+      "type": "TALK",
+      "choices": []
+    },
+    {
+      "seriesKey": 148,
+      "question": "It’s cloudy.",
+      "answer": "it’s cloudy",
+      "type": "TALK",
+      "choices": []
+    },
+    {
+      "seriesKey": 148,
+      "question": "It’s raining.",
+      "answer": "it’s raining",
+      "type": "TALK",
+      "choices": []
+    },
+    {
+      "seriesKey": 148,
+      "question": "It’s windy.",
+      "answer": "it’s windy",
+      "type": "TALK",
+      "choices": []
+    },
+    {
+      "seriesKey": 148,
+      "question": "It’s snowing.",
+      "answer": "it’s snowing",
+      "type": "TALK",
+      "choices": []
+    },
+    {
+      "seriesKey": 148,
+      "question": "It’s hot today.",
+      "answer": "it’s hot today",
+      "type": "TALK",
+      "choices": []
+    },
+    {
+      "seriesKey": 148,
+      "question": "It’s cold outside.",
+      "answer": "it’s cold outside",
+      "type": "TALK",
+      "choices": []
+    },
+    {
+      "seriesKey": 148,
+      "question": "The weather is nice.",
+      "answer": "the weather is nice",
+      "type": "TALK",
+      "choices": []
+    },
+    {
+      "seriesKey": 149,
+      "question": "I wake up at 7 o'clock.",
+      "answer": "i wake up at seven oclock",
+      "type": "TALK",
+      "choices": []
+    },
+    {
+      "seriesKey": 149,
+      "question": "I have breakfast at 8 a.m.",
+      "answer": "i have breakfast at eight am",
+      "type": "TALK",
+      "choices": []
+    },
+    {
+      "seriesKey": 149,
+      "question": "I go to work by bus.",
+      "answer": "i go to work by bus",
+      "type": "TALK",
+      "choices": []
+    },
+    {
+      "seriesKey": 149,
+      "question": "I take the train to the office.",
+      "answer": "i take the train to the office",
+      "type": "TALK",
+      "choices": []
+    },
+    {
+      "seriesKey": 149,
+      "question": "I have lunch at 12 p.m.",
+      "answer": "i have lunch at twelve pm",
+      "type": "TALK",
+      "choices": []
+    },
+    {
+      "seriesKey": 149,
+      "question": "I go to the gym after work.",
+      "answer": "i go to the gym after work",
+      "type": "TALK",
+      "choices": []
+    },
+    {
+      "seriesKey": 150,
+      "question": "Where is the train station ?",
+      "answer": "where is the train station",
+      "type": "TALK",
+      "choices": []
+    },
+    {
+      "seriesKey": 150,
+      "question": "How much is a ticket to Paris ?",
+      "answer": "how much is a ticket to paris",
+      "type": "TALK",
+      "choices": []
+    },
+    {
+      "seriesKey": 150,
+      "question": "I would like a single ticket, please ?",
+      "answer": "i would like a single ticket please",
+      "type": "TALK",
+      "choices": []
+    },
+    {
+      "seriesKey": 150,
+      "question": "What time does the bus leave ?",
+      "answer": "what time does the bus leave",
+      "type": "TALK",
+      "choices": []
+    },
+    {
+      "seriesKey": 150,
+      "question": "Can you help me find my way ?",
+      "answer": "can you help me find my way",
+      "type": "TALK",
+      "choices": []
+    },
+    {
+      "seriesKey": 150,
+      "question": "I am going to the airport.",
+      "answer": "i am going to the airport",
+      "type": "TALK",
+      "choices": []
+    },
+    {
+      "seriesKey": 150,
+      "question": "Is there a hotel nearby ?",
+      "answer": "is there a hotel nearby",
+      "type": "TALK",
+      "choices": []
+    },
+    {
+      "seriesKey": 151,
+      "question": "I prefer tea to coffee.",
+      "answer": "i prefer tea to coffee",
+      "type": "TALK",
+      "choices": []
+    },
+    {
+      "seriesKey": 151,
+      "question": "My favorite hobby is playing football.",
+      "answer": "my favorite hobby is playing football",
+      "type": "TALK",
+      "choices": []
+    },
+    {
+      "seriesKey": 151,
+      "question": "I like to read books in my free time.",
+      "answer": "i like to read books in my free time",
+      "type": "TALK",
+      "choices": []
+    },
+    {
+      "seriesKey": 151,
+      "question": "I don’t enjoy watching horror films.",
+      "answer": "i don’t enjoy watching horror films",
+      "type": "TALK",
+      "choices": []
+    },
+    {
+      "seriesKey": 152,
+      "question": "Last weekend, I went to the cinema.",
+      "answer": "last weekend i went to the cinema",
+      "type": "TALK",
+      "choices": []
+    },
+    {
+      "seriesKey": 152,
+      "question": "I visited London last summer.",
+      "answer": "i visited london last summer",
+      "type": "TALK",
+      "choices": []
+    },
+    {
+      "seriesKey": 152,
+      "question": "I met my friends at the park yesterday.",
+      "answer": "i met my friends at the park yesterday",
+      "type": "TALK",
+      "choices": []
+    },
+    {
+      "seriesKey": 152,
+      "question": "I travelled to Italy last year.",
+      "answer": "i travelled to italy last year",
+      "type": "TALK",
+      "choices": []
+    },
+    {
+      "seriesKey": 152,
+      "question": "I was really happy to see my family last week.",
+      "answer": "i was really happy to see my family last week",
+      "type": "TALK",
+      "choices": []
+    },
+    {
+      "seriesKey": 152,
+      "question": "We had a great time at the concert.",
+      "answer": "we had a great time at the concert",
+      "type": "TALK",
+      "choices": []
+    },
+    {
+      "seriesKey": 153,
+      "question": "Next summer, I will travel to Japan.",
+      "answer": "next summer i will travel to japan",
+      "type": "TALK",
+      "choices": []
+    },
+    {
+      "seriesKey": 153,
+      "question": "I am going to start a new job next month.",
+      "answer": "i am going to start a new job next month",
+      "type": "TALK",
+      "choices": []
+    },
+    {
+      "seriesKey": 153,
+      "question": "I plan to study abroad next year.",
+      "answer": "i plan to study abroad next year",
+      "type": "TALK",
+      "choices": []
+    },
+    {
+      "seriesKey": 153,
+      "question": "I am visiting my grandparents next weekend.",
+      "answer": "i am visiting my grandparents next weekend",
+      "type": "TALK",
+      "choices": []
+    },
+    {
+      "seriesKey": 153,
+      "question": "I will see my friends tomorrow evening.",
+      "answer": "i will see my friends tomorrow evening",
+      "type": "TALK",
+      "choices": []
+    },
+    {
+      "seriesKey": 153,
+      "question": "I’m thinking about learning a new language.",
+      "answer": "i’m thinking about learning a new language",
+      "type": "TALK",
+      "choices": []
+    },
+    {
+      "seriesKey": 154,
+      "question": "I think this movie is really interesting.",
+      "answer": "i think this movie is really interesting",
+      "type": "TALK",
+      "choices": []
+    },
+    {
+      "seriesKey": 154,
+      "question": "In my opinion, it’s important to exercise every day.",
+      "answer": "in my opinion it’s important to exercise every day",
+      "type": "TALK",
+      "choices": []
+    },
+    {
+      "seriesKey": 154,
+      "question": "I believe we should protect the environment.",
+      "answer": "i believe we should protect the environment",
+      "type": "TALK",
+      "choices": []
+    },
+    {
+      "seriesKey": 154,
+      "question": "I agree with you on this topic.",
+      "answer": "i agree with you on this topic",
+      "type": "TALK",
+      "choices": []
+    },
+    {
+      "seriesKey": 154,
+      "question": "I don’t think that’s a good idea.",
+      "answer": "i don’t think that’s a good idea",
+      "type": "TALK",
+      "choices": []
+    },
+    {
+      "seriesKey": 155,
+      "question": "We are facing a serious environmental issue.",
+      "answer": "we are facing a serious environmental issue",
+      "type": "TALK",
+      "choices": []
+    },
+    {
+      "seriesKey": 155,
+      "question": "The main problem is the lack of resources.",
+      "answer": "the main problem is the lack of resources",
+      "type": "TALK",
+      "choices": []
+    },
+    {
+      "seriesKey": 155,
+      "question": "One possible solution could be to reduce waste.",
+      "answer": "one possible solution could be to reduce waste",
+      "type": "TALK",
+      "choices": []
+    },
+    {
+      "seriesKey": 155,
+      "question": "I think we should invest more in renewable energy.",
+      "answer": "i think we should invest more in renewable energy",
+      "type": "TALK",
+      "choices": []
+    },
+    {
+      "seriesKey": 155,
+      "question": "We could start recycling more in our community.",
+      "answer": "we could start recycling more in our community",
+      "type": "TALK",
+      "choices": []
+    },
+    {
+      "seriesKey": 155,
+      "question": "The government should do more to protect wildlife.",
+      "answer": "the government should do more to protect wildlife",
+      "type": "TALK",
+      "choices": []
+    },
+    {
+      "seriesKey": 155,
+      "question": "Another solution might be to promote public transportation.",
+      "answer": "another solution might be to promote public transportation",
+      "type": "TALK",
+      "choices": []
+    },
+    {
+      "seriesKey": 156,
+      "question": "I don’t agree with this approach.",
+      "answer": "i don’t agree with this approach",
+      "type": "TALK",
+      "choices": []
+    },
+    {
+      "seriesKey": 156,
+      "question": "I think there’s a better way to solve this issue.",
+      "answer": "i think there’s a better way to solve this issue",
+      "type": "TALK",
+      "choices": []
+    },
+    {
+      "seriesKey": 156,
+      "question": "In my opinion, we should look for a different solution.",
+      "answer": "in my opinion we should look for a different solution",
+      "type": "TALK",
+      "choices": []
+    },
+    {
+      "seriesKey": 156,
+      "question": "I’m not convinced that this is the best option.",
+      "answer": "i’m not convinced that this is the best option",
+      "type": "TALK",
+      "choices": []
+    },
+    {
+      "seriesKey": 156,
+      "question": "I disagree because it doesn’t take all factors into account.",
+      "answer": "i disagree because it doesn’t take all factors into account",
+      "type": "TALK",
+      "choices": []
+    },
+    {
+      "seriesKey": 157,
+      "question": "In this situation, we must weigh the consequences of each action.",
+      "answer": "in this situation we must weigh the consequences of each action",
+      "type": "TALK",
+      "choices": []
+    },
+    {
+      "seriesKey": 157,
+      "question": "On one hand, we could argue that the benefits outweigh the risks.",
+      "answer": "on one hand we could argue that the benefits outweigh the risks",
+      "type": "TALK",
+      "choices": []
+    },
+    {
+      "seriesKey": 157,
+      "question": "However, there is a moral responsibility to consider the rights of others.",
+      "answer": "however there is a moral responsibility to consider the rights of others",
+      "type": "TALK",
+      "choices": []
+    },
+    {
+      "seriesKey": 157,
+      "question": "I believe that the ethical implications should be carefully examined before making a decision.",
+      "answer": "i believe that the ethical implications should be carefully examined before making a decision",
+      "type": "TALK",
+      "choices": []
+    },
+    {
+      "seriesKey": 157,
+      "question": "It is essential to consider all perspectives before forming an opinion on this matter.",
+      "answer": "it is essential to consider all perspectives before forming an opinion on this matter",
+      "type": "TALK",
+      "choices": []
+    },
+    {
+      "seriesKey": 157,
+      "question": "The dilemma here is whether we prioritize individual rights or the greater good.",
+      "answer": "the dilemma here is whether we prioritize individual rights or the greater good",
+      "type": "TALK",
+      "choices": []
+    },
+    {
+      "seriesKey": 158,
+      "question": "The government’s decision to implement this policy has far-reaching consequences.",
+      "answer": "the government’s decision to implement this policy has far-reaching consequences",
+      "type": "TALK",
+      "choices": []
+    },
+    {
+      "seriesKey": 158,
+      "question": "While the policy aims to address economic inequality, it could also lead to unintended side effects.",
+      "answer": "while the policy aims to address economic inequality it could also lead to unintended side effects",
+      "type": "TALK",
+      "choices": []
+    },
+    {
+      "seriesKey": 158,
+      "question": "One possible outcome of this decision is a shift in public opinion.",
+      "answer": "one possible outcome of this decision is a shift in public opinion",
+      "type": "TALK",
+      "choices": []
+    },
+    {
+      "seriesKey": 158,
+      "question": "It’s important to consider both the immediate and long-term effects of such a move.",
+      "answer": "it’s important to consider both the immediate and long-term effects of such a move",
+      "type": "TALK",
+      "choices": []
+    },
+    {
+      "seriesKey": 158,
+      "question": "I think the government is overlooking some of the potential risks involved.",
+      "answer": "i think the government is overlooking some of the potential risks involved",
+      "type": "TALK",
+      "choices": []
+    },
+    {
+      "seriesKey": 159,
+      "question": "Globalization has had a profound impact on cultural identity.",
+      "answer": "globalization has had a profound impact on cultural identity",
+      "type": "TALK",
+      "choices": []
+    },
+    {
+      "seriesKey": 159,
+      "question": "On the one hand, it has promoted cultural exchange, but on the other hand, it has led to cultural homogenization.",
+      "answer": "on the one hand it has promoted cultural exchange but on the other hand it has led to cultural homogenization",
+      "type": "TALK",
+      "choices": []
+    },
+    {
+      "seriesKey": 159,
+      "question": "In many ways, this phenomenon has both positive and negative implications for local traditions.",
+      "answer": "in many ways this phenomenon has both positive and negative implications for local traditions",
+      "type": "TALK",
+      "choices": []
+    },
+    {
+      "seriesKey": 159,
+      "question": "The rise of social media has accelerated the spread of global culture, but it also threatens local customs.",
+      "answer": "the rise of social media has accelerated the spread of global culture but it also threatens local customs",
+      "type": "TALK",
+      "choices": []
+    },
+    {
+      "seriesKey": 159,
+      "question": "One of the key issues here is whether global culture is replacing local cultures.",
+      "answer": "one of the key issues here is whether global culture is replacing local cultures",
+      "type": "TALK",
+      "choices": []
+    },
+    {
+      "seriesKey": 159,
+      "question": "While some argue that globalization enriches our cultural landscape, others believe it dilutes it.",
+      "answer": "while some argue that globalization enriches our cultural landscape others believe it dilutes it",
+      "type": "TALK",
+      "choices": []
+    },
+    {
+      "seriesKey": 159,
+      "question": "This has sparked a debate over whether cultural diversity can be preserved in a globalized world.",
+      "answer": "this has sparked a debate over whether cultural diversity can be preserved in a globalized world",
+      "type": "TALK",
+      "choices": []
+    },
+    {
+      "seriesKey": 159,
+      "question": "It’s important to strike a balance between embracing global trends and maintaining cultural heritage.",
+      "answer": "it’s important to strike a balance between embracing global trends and maintaining cultural heritage",
+      "type": "TALK",
+      "choices": []
+    },
+    {
+      "seriesKey": 159,
+      "question": "The influence of global culture is evident in fashion, music, and even language.",
+      "answer": "the influence of global culture is evident in fashion music and even language",
+      "type": "TALK",
+      "choices": []
+    },
+    {
+      "seriesKey": 160,
+      "question": "Complete: I ___ a student.",
+      "answer": "am",
+      "type": "FILL_BLANK",
+      "choices": []
+    },
+    {
+      "seriesKey": 160,
+      "question": "Complete: She ___ from Spain.",
+      "answer": "is",
+      "type": "FILL_BLANK",
+      "choices": []
+    },
+    {
+      "seriesKey": 160,
+      "question": "Mettez dans l’ordre : « Je suis étudiant »",
+      "answer": "i am a student",
+      "type": "ORDER",
+      "choices": []
+    },
+    {
+      "seriesKey": 160,
+      "question": "Mettez dans l’ordre : « Elle a un chat »",
+      "answer": "she has a cat",
+      "type": "ORDER",
+      "choices": []
+    },
+    {
+      "seriesKey": 160,
+      "question": "Écoutez et écrivez la phrase",
+      "answer": "good morning",
+      "type": "DICTATION",
+      "choices": []
+    },
+    {
+      "seriesKey": 160,
+      "question": "Écoutez et écrivez la phrase",
+      "answer": "see you tomorrow",
+      "type": "DICTATION",
+      "choices": []
+    },
+    {
+      "seriesKey": 161,
+      "question": "Complete: Could I have the ___, please?",
+      "answer": "bill",
+      "type": "FILL_BLANK",
+      "choices": []
+    },
+    {
+      "seriesKey": 161,
+      "question": "Complete: I would ___ a coffee, please.",
+      "answer": "like",
+      "type": "FILL_BLANK",
+      "choices": []
+    },
+    {
+      "seriesKey": 161,
+      "question": "Mettez dans l’ordre : « Avez-vous une table pour deux ? »",
+      "answer": "do you have a table for two",
+      "type": "ORDER",
+      "choices": []
+    },
+    {
+      "seriesKey": 161,
+      "question": "Mettez dans l’ordre : « Je vais prendre le poulet »",
+      "answer": "i will have the chicken",
+      "type": "ORDER",
+      "choices": []
+    },
+    {
+      "seriesKey": 161,
+      "question": "Écoutez et écrivez la phrase",
+      "answer": "the soup is delicious",
+      "type": "DICTATION",
+      "choices": []
+    },
+    {
+      "seriesKey": 161,
+      "question": "Écoutez et écrivez la phrase",
+      "answer": "can we order now",
+      "type": "DICTATION",
+      "choices": []
+    }
+  ],
+  "avatars": [
+    {
+      "svg": "<svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 80 80\" width=\"512\" height=\"512\"><circle cx=\"40\" cy=\"40\" r=\"40\" fill=\"#dbeafe\"/><path d=\"M18 30l6-18 12 10z\" fill=\"#fb923c\"/><path d=\"M62 30l-6-18-12 10z\" fill=\"#fb923c\"/><path d=\"M22 28l4-10 7 6z\" fill=\"#fef3c7\"/><path d=\"M58 28l-4-10-7 6z\" fill=\"#fef3c7\"/><ellipse cx=\"40\" cy=\"46\" rx=\"24\" ry=\"22\" fill=\"#fb923c\"/><path d=\"M40 70c-12 0-22-8-24-18 6 4 14 6 24 6s18-2 24-6c-2 10-12 18-24 18z\" fill=\"#fef3c7\"/><ellipse cx=\"40\" cy=\"56\" rx=\"5\" ry=\"3.5\" fill=\"#0f172a\"/><circle cx=\"31\" cy=\"44\" r=\"4\" fill=\"#0f172a\"/><circle cx=\"49\" cy=\"44\" r=\"4\" fill=\"#0f172a\"/><circle cx=\"32.3\" cy=\"42.7\" r=\"1.4\" fill=\"#ffffff\"/><circle cx=\"50.3\" cy=\"42.7\" r=\"1.4\" fill=\"#ffffff\"/><ellipse cx=\"24\" cy=\"52\" rx=\"4\" ry=\"2.4\" fill=\"#fb7185\" opacity=\"0.55\"/><ellipse cx=\"56\" cy=\"52\" rx=\"4\" ry=\"2.4\" fill=\"#fb7185\" opacity=\"0.55\"/><path d=\"M36.5 61q3.5 4.8999999999999995 7 0\" fill=\"none\" stroke=\"#0f172a\" stroke-width=\"2.2\" stroke-linecap=\"round\"/></svg>"
+    },
+    {
+      "svg": "<svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 80 80\" width=\"512\" height=\"512\"><circle cx=\"40\" cy=\"40\" r=\"40\" fill=\"#fef3c7\"/><path d=\"M20 34l2-20 14 12z\" fill=\"#3b82f6\"/><path d=\"M60 34l-2-20-14 12z\" fill=\"#3b82f6\"/><path d=\"M24 32l1-11 8 7z\" fill=\"#fb7185\"/><path d=\"M56 32l-1-11-8 7z\" fill=\"#fb7185\"/><ellipse cx=\"40\" cy=\"46\" rx=\"24\" ry=\"21\" fill=\"#3b82f6\"/><ellipse cx=\"40\" cy=\"54\" rx=\"13\" ry=\"9\" fill=\"#dbeafe\"/><path d=\"M37 52h6l-3 3z\" fill=\"#fb7185\"/><path d=\"M18 52h12M18 56h12M50 52h12M50 56h12\" stroke=\"#1e3a8a\" stroke-width=\"1.6\" stroke-linecap=\"round\"/><circle cx=\"31\" cy=\"44\" r=\"4\" fill=\"#0f172a\"/><circle cx=\"49\" cy=\"44\" r=\"4\" fill=\"#0f172a\"/><circle cx=\"32.3\" cy=\"42.7\" r=\"1.4\" fill=\"#ffffff\"/><circle cx=\"50.3\" cy=\"42.7\" r=\"1.4\" fill=\"#ffffff\"/><path d=\"M37 58q3 4.199999999999999 6 0\" fill=\"none\" stroke=\"#0f172a\" stroke-width=\"2.2\" stroke-linecap=\"round\"/></svg>"
+    },
+    {
+      "svg": "<svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 80 80\" width=\"512\" height=\"512\"><circle cx=\"40\" cy=\"40\" r=\"40\" fill=\"#dbeafe\"/><path d=\"M22 28l-4-12 12 6z\" fill=\"#f59e0b\"/><path d=\"M58 28l4-12-12 6z\" fill=\"#f59e0b\"/><ellipse cx=\"40\" cy=\"46\" rx=\"24\" ry=\"24\" fill=\"#f59e0b\"/><ellipse cx=\"40\" cy=\"54\" rx=\"16\" ry=\"14\" fill=\"#fef3c7\"/><circle cx=\"31\" cy=\"44\" r=\"9\" fill=\"#ffffff\"/><circle cx=\"49\" cy=\"44\" r=\"9\" fill=\"#ffffff\"/><circle cx=\"31\" cy=\"45\" r=\"4.5\" fill=\"#0f172a\"/><circle cx=\"49\" cy=\"45\" r=\"4.5\" fill=\"#0f172a\"/><circle cx=\"32.3\" cy=\"43.7\" r=\"1.575\" fill=\"#ffffff\"/><circle cx=\"50.3\" cy=\"43.7\" r=\"1.575\" fill=\"#ffffff\"/><path d=\"M36 52l4 6 4-6z\" fill=\"#fb923c\"/><path d=\"M24 36q7-5 14 0M42 36q7-5 14 0\" fill=\"none\" stroke=\"#1e3a8a\" stroke-width=\"2.4\" stroke-linecap=\"round\"/></svg>"
+    },
+    {
+      "svg": "<svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 80 80\" width=\"512\" height=\"512\"><circle cx=\"40\" cy=\"40\" r=\"40\" fill=\"#fef3c7\"/><circle cx=\"22\" cy=\"28\" r=\"9\" fill=\"#a855f7\"/><circle cx=\"58\" cy=\"28\" r=\"9\" fill=\"#a855f7\"/><circle cx=\"22\" cy=\"28\" r=\"4.5\" fill=\"#e9d5ff\"/><circle cx=\"58\" cy=\"28\" r=\"4.5\" fill=\"#e9d5ff\"/><ellipse cx=\"40\" cy=\"46\" rx=\"24\" ry=\"22\" fill=\"#a855f7\"/><ellipse cx=\"40\" cy=\"55\" rx=\"11\" ry=\"8\" fill=\"#e9d5ff\"/><ellipse cx=\"40\" cy=\"52\" rx=\"4\" ry=\"3\" fill=\"#0f172a\"/><circle cx=\"31\" cy=\"44\" r=\"4\" fill=\"#0f172a\"/><circle cx=\"48\" cy=\"44\" r=\"4\" fill=\"#0f172a\"/><circle cx=\"32.3\" cy=\"42.7\" r=\"1.4\" fill=\"#ffffff\"/><circle cx=\"49.3\" cy=\"42.7\" r=\"1.4\" fill=\"#ffffff\"/><ellipse cx=\"24\" cy=\"52\" rx=\"4\" ry=\"2.4\" fill=\"#fb7185\" opacity=\"0.55\"/><ellipse cx=\"56\" cy=\"52\" rx=\"4\" ry=\"2.4\" fill=\"#fb7185\" opacity=\"0.55\"/><path d=\"M37 59q3 4.199999999999999 6 0\" fill=\"none\" stroke=\"#0f172a\" stroke-width=\"2.2\" stroke-linecap=\"round\"/></svg>"
+    },
+    {
+      "svg": "<svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 80 80\" width=\"512\" height=\"512\"><circle cx=\"40\" cy=\"40\" r=\"40\" fill=\"#dbeafe\"/><ellipse cx=\"40\" cy=\"48\" rx=\"22\" ry=\"24\" fill=\"#0f172a\"/><ellipse cx=\"40\" cy=\"52\" rx=\"16\" ry=\"17\" fill=\"#ffffff\"/><path d=\"M22 36q8-8 18-6 10-2 18 6-8-4-18-4-10 0-18 4z\" fill=\"#0f172a\"/><path d=\"M36 50l4 7 4-7z\" fill=\"#f59e0b\"/><path d=\"M14 50q4-10 10-8M66 50q-4-10-10-8\" fill=\"none\" stroke=\"#0f172a\" stroke-width=\"5\" stroke-linecap=\"round\"/><circle cx=\"33\" cy=\"44\" r=\"4\" fill=\"#0f172a\"/><circle cx=\"47\" cy=\"44\" r=\"4\" fill=\"#0f172a\"/><circle cx=\"34.3\" cy=\"42.7\" r=\"1.4\" fill=\"#ffffff\"/><circle cx=\"48.3\" cy=\"42.7\" r=\"1.4\" fill=\"#ffffff\"/><ellipse cx=\"27\" cy=\"50\" rx=\"4\" ry=\"2.4\" fill=\"#fb7185\" opacity=\"0.55\"/><ellipse cx=\"53\" cy=\"50\" rx=\"4\" ry=\"2.4\" fill=\"#fb7185\" opacity=\"0.55\"/></svg>"
+    },
+    {
+      "svg": "<svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 80 80\" width=\"512\" height=\"512\"><circle cx=\"40\" cy=\"40\" r=\"40\" fill=\"#fef3c7\"/><ellipse cx=\"30\" cy=\"20\" rx=\"6\" ry=\"14\" fill=\"#e2e8f0\"/><ellipse cx=\"50\" cy=\"20\" rx=\"6\" ry=\"14\" fill=\"#e2e8f0\"/><ellipse cx=\"30\" cy=\"21\" rx=\"3\" ry=\"10\" fill=\"#fb7185\"/><ellipse cx=\"50\" cy=\"21\" rx=\"3\" ry=\"10\" fill=\"#fb7185\"/><ellipse cx=\"40\" cy=\"48\" rx=\"23\" ry=\"21\" fill=\"#e2e8f0\"/><ellipse cx=\"40\" cy=\"56\" rx=\"10\" ry=\"7\" fill=\"#ffffff\"/><ellipse cx=\"40\" cy=\"53\" rx=\"3\" ry=\"2.2\" fill=\"#fb7185\"/><path d=\"M40 55v4M37 59h6\" stroke=\"#0f172a\" stroke-width=\"1.8\" stroke-linecap=\"round\"/><circle cx=\"31\" cy=\"46\" r=\"4\" fill=\"#0f172a\"/><circle cx=\"49\" cy=\"46\" r=\"4\" fill=\"#0f172a\"/><circle cx=\"32.3\" cy=\"44.7\" r=\"1.4\" fill=\"#ffffff\"/><circle cx=\"50.3\" cy=\"44.7\" r=\"1.4\" fill=\"#ffffff\"/><ellipse cx=\"24\" cy=\"54\" rx=\"4\" ry=\"2.4\" fill=\"#fb7185\" opacity=\"0.55\"/><ellipse cx=\"56\" cy=\"54\" rx=\"4\" ry=\"2.4\" fill=\"#fb7185\" opacity=\"0.55\"/></svg>"
+    },
+    {
+      "svg": "<svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 80 80\" width=\"512\" height=\"512\"><circle cx=\"40\" cy=\"40\" r=\"40\" fill=\"#dbeafe\"/><ellipse cx=\"40\" cy=\"46\" rx=\"24\" ry=\"22\" fill=\"#22c55e\"/><circle cx=\"29\" cy=\"28\" r=\"9\" fill=\"#22c55e\"/><circle cx=\"51\" cy=\"28\" r=\"9\" fill=\"#22c55e\"/><circle cx=\"29\" cy=\"28\" r=\"6\" fill=\"#ffffff\"/><circle cx=\"51\" cy=\"28\" r=\"6\" fill=\"#ffffff\"/><circle cx=\"30\" cy=\"29\" r=\"3.2\" fill=\"#0f172a\"/><circle cx=\"52\" cy=\"29\" r=\"3.2\" fill=\"#0f172a\"/><circle cx=\"31\" cy=\"28\" r=\"1\" fill=\"#ffffff\"/><circle cx=\"53\" cy=\"28\" r=\"1\" fill=\"#ffffff\"/><ellipse cx=\"40\" cy=\"56\" rx=\"14\" ry=\"8\" fill=\"#bbf7d0\"/><ellipse cx=\"24\" cy=\"48\" rx=\"4\" ry=\"2.4\" fill=\"#fb7185\" opacity=\"0.55\"/><ellipse cx=\"56\" cy=\"48\" rx=\"4\" ry=\"2.4\" fill=\"#fb7185\" opacity=\"0.55\"/><path d=\"M32 52q8 11.2 16 0\" fill=\"none\" stroke=\"#0f172a\" stroke-width=\"2.2\" stroke-linecap=\"round\"/></svg>"
+    },
+    {
+      "svg": "<svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 80 80\" width=\"512\" height=\"512\"><circle cx=\"40\" cy=\"40\" r=\"40\" fill=\"#fef3c7\"/><circle cx=\"22\" cy=\"26\" r=\"8\" fill=\"#f59e0b\"/><circle cx=\"58\" cy=\"26\" r=\"8\" fill=\"#f59e0b\"/><circle cx=\"22\" cy=\"26\" r=\"4\" fill=\"#fef3c7\"/><circle cx=\"58\" cy=\"26\" r=\"4\" fill=\"#fef3c7\"/><ellipse cx=\"40\" cy=\"46\" rx=\"24\" ry=\"22\" fill=\"#f59e0b\"/><ellipse cx=\"40\" cy=\"55\" rx=\"12\" ry=\"9\" fill=\"#fef3c7\"/><ellipse cx=\"40\" cy=\"52\" rx=\"4.5\" ry=\"3.2\" fill=\"#0f172a\"/><circle cx=\"31\" cy=\"44\" r=\"4\" fill=\"#0f172a\"/><circle cx=\"49\" cy=\"44\" r=\"4\" fill=\"#0f172a\"/><circle cx=\"32.3\" cy=\"42.7\" r=\"1.4\" fill=\"#ffffff\"/><circle cx=\"50.3\" cy=\"42.7\" r=\"1.4\" fill=\"#ffffff\"/><ellipse cx=\"24\" cy=\"52\" rx=\"4\" ry=\"2.4\" fill=\"#fb7185\" opacity=\"0.55\"/><ellipse cx=\"56\" cy=\"52\" rx=\"4\" ry=\"2.4\" fill=\"#fb7185\" opacity=\"0.55\"/><path d=\"M37 59q3 4.199999999999999 6 0\" fill=\"none\" stroke=\"#0f172a\" stroke-width=\"2.2\" stroke-linecap=\"round\"/></svg>"
+    }
+  ]
+}

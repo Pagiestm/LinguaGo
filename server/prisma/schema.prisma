@@ -1,151 +1,11 @@
 generator client {
-  provider = "prisma-client-js"
+  provider     = "prisma-client"
+  output       = "../src/generated/prisma"
+  moduleFormat = "cjs"
 }
 
 datasource db {
   provider = "postgresql"
-  url      = env("DATABASE_URL")
-}
-
-model User {
-  id                  String                        @id @default(uuid())
-  pseudo              String
-  email               String                        @unique
-  password            String
-  role                Role                          @default(USER)
-  createdAt           DateTime                      @default(now())
-  avatarId            Int?
-  firstTimeConnection Boolean                       @default(true)
-  refreshTokens       RefreshToken[]
-  avatar              Avatar?                       @relation(fields: [avatarId], references: [id])
-  completedExercises  UserCompletedExercise[]
-  completedSeries     UserCompletedExercisesSerie[]
-  favoriteSeries      UserFavoriteSerie[]
-  stats               UserStats?
-  notification        Notification?
-}
-
-model Notification {
-  id               Int                   @id @default(autoincrement())
-  userId           String                @unique
-  user             User                  @relation(fields: [userId], references: [id])
-  isActivate       Boolean               @default(true)
-  subscription     String                @db.Text
-  frequency        FrequencyNotification @default(ONE_DAY)
-  notificationTime String                @default("17:00")
-  nextNotifyAt     DateTime
-}
-
-model Avatar {
-  id    Int    @id @default(autoincrement())
-  svg   String @db.Text
-  users User[]
-}
-
-model SiteStats {
-  id             Int @id @default(1)
-  totalUsers     Int @default(0)
-  totalExercises Int @default(0)
-  totalSeries    Int @default(0)
-  totalPoints    Int @default(0)
-}
-
-model UserStats {
-  id                   Int       @id @default(autoincrement())
-  userId               String    @unique
-  points               Int       @default(0)
-  successfullExercises Int       @default(0)
-  failedExercises      Int       @default(0)
-  completedSeries      Int       @default(0)
-  timeSpentOnExercises Int       @default(0)
-  level                LevelEnum @default(A1)
-  user                 User      @relation(fields: [userId], references: [id])
-}
-
-model RefreshToken {
-  id        String   @id @default(uuid())
-  token     String   @db.Text
-  userId    String
-  createdAt DateTime @default(now())
-  expiresAt DateTime
-  user      User     @relation(fields: [userId], references: [id])
-}
-
-model Level {
-  id              Int              @id @default(autoincrement())
-  title           LevelEnum        @unique
-  subtitle        String
-  description     String?          @db.Text
-  winablePoints   Int              @default(0)
-  pointsPerExo    Int              @default(1)
-  exercisesSeries ExercisesSerie[]
-}
-
-model ExercisesSerie {
-  id             Int                           @id @default(autoincrement())
-  title          String
-  description    String?                       @db.Text
-  createdAt      DateTime                      @default(now())
-  levelId        Int
-  exercises      Exercise[]
-  level          Level                         @relation(fields: [levelId], references: [id])
-  completedUsers UserCompletedExercisesSerie[]
-  favoriteUsers  UserFavoriteSerie[]
-  type           ExercisesSerieType           @default(DEFAULT)
-}
-
-model Exercise {
-  id             Int                     @id @default(autoincrement())
-  question       String                  @db.Text
-  answer         String                  @db.Text
-  choices        Json
-  type           ExerciseType
-  serieId        Int
-  serie          ExercisesSerie          @relation(fields: [serieId], references: [id])
-  usersCompleted UserCompletedExercise[]
-}
-
-model UserCompletedExercise {
-  userId      String
-  exerciseId  Int
-  completedAt DateTime @default(now())
-  serieId     Int
-  pointsWon   Int      @default(1)
-  exercise    Exercise @relation(fields: [exerciseId], references: [id])
-  user        User     @relation(fields: [userId], references: [id])
-
-  @@id([userId, exerciseId], name: "idUserCompletedExercise")
-}
-
-model UserFavoriteSerie {
-  userId    String
-  serieId   Int
-  createdAt DateTime       @default(now())
-  serie     ExercisesSerie @relation(fields: [serieId], references: [id])
-  user      User           @relation(fields: [userId], references: [id])
-
-  @@id([userId, serieId], name: "idUserFavoriteSerie")
-}
-
-model UserCompletedExercisesSerie {
-  userId         String
-  serieId        Int
-  completedAt    DateTime       @default(now())
-  exercisesSerie ExercisesSerie @relation(fields: [serieId], references: [id])
-  user           User           @relation(fields: [userId], references: [id])
-
-  @@id([userId, serieId], name: "idUserCompletedExercisesSerie")
-}
-
-enum FrequencyNotification {
-  TODAY
-  ONE_DAY
-  TWO_DAYS
-  THREE_DAYS
-  FOUR_DAYS
-  FIVE_DAYS
-  SIX_DAYS
-  SEVEN_DAYS
 }
 
 enum Role {
@@ -153,7 +13,7 @@ enum Role {
   ADMIN
 }
 
-enum LevelEnum {
+enum LevelCode {
   A1
   A2
   B1
@@ -161,14 +21,196 @@ enum LevelEnum {
   C1
 }
 
+enum SeriesType {
+  DEFAULT
+  TALK
+}
+
 enum ExerciseType {
   MULTIPLE_CHOICE
   TRANSLATION
   TRUE_FALSE
   TALK
+  FILL_BLANK
+  ORDER
+  DICTATION
 }
 
-enum ExercisesSerieType {
-  DEFAULT
-  TALK
+model User {
+  id         String   @id @default(uuid())
+  pseudo     String   @db.VarChar(40)
+  email      String   @unique @db.VarChar(120)
+  password   String
+  role       Role     @default(USER)
+  firstLogin Boolean  @default(true)
+  dailyGoal  Int      @default(5)
+  leagueTier Int      @default(1)
+  googleId   String?  @unique @db.VarChar(64)
+  avatarId   Int?
+  avatar     Avatar?  @relation(fields: [avatarId], references: [id], onDelete: SetNull)
+  createdAt  DateTime @default(now())
+
+  refreshTokens      RefreshToken[]
+  stats              UserStats?
+  completedExercises CompletedExercise[]
+  completedSeries    CompletedSeries[]
+  favorites          FavoriteSeries[]
+  notification       Notification?
+  reviews            Review[]
+  achievements       UserAchievement[]
+  passwordResets     PasswordReset[]
+}
+
+model RefreshToken {
+  id        String    @id @default(uuid())
+  tokenHash String    @unique
+  userId    String
+  user      User      @relation(fields: [userId], references: [id], onDelete: Cascade)
+  createdAt DateTime  @default(now())
+  expiresAt DateTime
+  revokedAt DateTime?
+
+  @@index([userId])
+}
+
+model PasswordReset {
+  id        String    @id @default(uuid())
+  userId    String
+  user      User      @relation(fields: [userId], references: [id], onDelete: Cascade)
+  tokenHash String    @unique
+  expiresAt DateTime
+  usedAt    DateTime?
+  createdAt DateTime  @default(now())
+
+  @@index([userId])
+}
+
+model Avatar {
+  id    Int    @id @default(autoincrement())
+  svg   String
+  users User[]
+}
+
+model Level {
+  id                Int       @id @default(autoincrement())
+  code              LevelCode @unique
+  position          Int       @unique
+  title             String    @db.VarChar(60)
+  description       String
+  pointsPerExercise Int       @default(1)
+  series            Series[]
+}
+
+model Series {
+  id          Int        @id @default(autoincrement())
+  title       String     @db.VarChar(120)
+  description String?
+  type        SeriesType @default(DEFAULT)
+  levelId     Int
+  level       Level      @relation(fields: [levelId], references: [id], onDelete: Cascade)
+  createdAt   DateTime   @default(now())
+
+  exercises   Exercise[]
+  completions CompletedSeries[]
+  favorites   FavoriteSeries[]
+
+  @@index([levelId, type])
+}
+
+model Exercise {
+  id       Int          @id @default(autoincrement())
+  question String
+  answer   String
+  choices  Json         @default("[]")
+  type     ExerciseType
+  seriesId Int
+  series   Series       @relation(fields: [seriesId], references: [id], onDelete: Cascade)
+
+  completions CompletedExercise[]
+  reviews     Review[]
+
+  @@index([seriesId])
+}
+
+model UserStats {
+  userId              String @id
+  user                User   @relation(fields: [userId], references: [id], onDelete: Cascade)
+  points              Int    @default(0)
+  successfulExercises Int    @default(0)
+  failedExercises     Int    @default(0)
+  completedSeries     Int    @default(0)
+  timeSpentSeconds    Int    @default(0)
+}
+
+model CompletedExercise {
+  userId      String
+  exerciseId  Int
+  seriesId    Int
+  pointsWon   Int      @default(1)
+  completedAt DateTime @default(now())
+  user        User     @relation(fields: [userId], references: [id], onDelete: Cascade)
+  exercise    Exercise @relation(fields: [exerciseId], references: [id], onDelete: Cascade)
+
+  @@id([userId, exerciseId])
+  @@index([userId, completedAt])
+  @@index([completedAt])
+}
+
+model CompletedSeries {
+  userId      String
+  seriesId    Int
+  completedAt DateTime @default(now())
+  user        User     @relation(fields: [userId], references: [id], onDelete: Cascade)
+  series      Series   @relation(fields: [seriesId], references: [id], onDelete: Cascade)
+
+  @@id([userId, seriesId])
+}
+
+model FavoriteSeries {
+  userId    String
+  seriesId  Int
+  createdAt DateTime @default(now())
+  user      User     @relation(fields: [userId], references: [id], onDelete: Cascade)
+  series    Series   @relation(fields: [seriesId], references: [id], onDelete: Cascade)
+
+  @@id([userId, seriesId])
+}
+
+model Review {
+  userId       String
+  exerciseId   Int
+  dueAt        DateTime
+  intervalDays Int      @default(1)
+  lapses       Int      @default(0)
+  successes    Int      @default(0)
+  lastResult   Boolean  @default(false)
+  updatedAt    DateTime @updatedAt
+  user         User     @relation(fields: [userId], references: [id], onDelete: Cascade)
+  exercise     Exercise @relation(fields: [exerciseId], references: [id], onDelete: Cascade)
+
+  @@id([userId, exerciseId])
+  @@index([userId, dueAt])
+}
+
+model UserAchievement {
+  userId     String
+  code       String   @db.VarChar(40)
+  unlockedAt DateTime @default(now())
+  user       User     @relation(fields: [userId], references: [id], onDelete: Cascade)
+
+  @@id([userId, code])
+}
+
+model Notification {
+  userId        String   @id
+  user          User     @relation(fields: [userId], references: [id], onDelete: Cascade)
+  subscription  Json
+  enabled       Boolean  @default(true)
+  frequencyDays Int      @default(1)
+  time          String   @default("17:00") @db.VarChar(5)
+  timeZone      String   @default("Europe/Paris") @db.VarChar(64)
+  nextNotifyAt  DateTime
+  updatedAt     DateTime @updatedAt
+
+  @@index([enabled, nextNotifyAt])
 }

@@ -1,74 +1,127 @@
-import { VitePWA } from "vite-plugin-pwa";
-import { defineConfig } from "vite";
-import tailwindcss from "@tailwindcss/vite";
-import vue from "@vitejs/plugin-vue";
+import { fileURLToPath } from 'node:url';
+import ui from '@nuxt/ui/vite';
+import vue from '@vitejs/plugin-vue';
+import { VitePWA } from 'vite-plugin-pwa';
+import { loadEnv } from 'vite';
+import { defineConfig } from 'vitest/config';
+import { uiConfig } from './ui.config.ts';
 
-export default defineConfig({
-  server: {
-    host: true,
-  },
-  plugins: [
-    vue(),
-    tailwindcss(),
-    VitePWA({
-      registerType: "autoUpdate",
-      injectRegister: false,
-      strategies: "injectManifest",
-      srcDir: "src",
-      filename: "service-worker.js",
-      injectManifest: {
-        injectionPoint: 'self.__WB_MANIFEST',
-        swSrc: './src/service-worker.js',
-        swDest: 'dist/service-worker.js',
-        globDirectory: 'dist',
-        maximumFileSizeToCacheInBytes: 3000000,
+const rootDir = fileURLToPath(new URL('..', import.meta.url));
+
+export default defineConfig(({ mode }) => {
+  const env = loadEnv(mode, rootDir, '');
+  const apiTarget = env.VITE_PROXY_TARGET || `http://localhost:${env.PORT || 3000}`;
+  return {
+    plugins: [
+      vue(),
+      ui({
+        ui: uiConfig,
+        autoImport: false,
+        components: false,
+        colorMode: false,
+        icon: { clientBundle: { scan: { globInclude: ['src/**/*.{vue,ts}'], globExclude: [] } } },
+      }),
+      VitePWA({
+        strategies: 'injectManifest',
+        srcDir: 'src/pwa',
+        filename: 'service-worker.ts',
+        registerType: 'autoUpdate',
+        injectRegister: false,
+        injectManifest: {
+          globPatterns: ['**/*.{js,css,html,svg,png,ico,woff2,webmanifest}'],
+          globIgnores: ['**/screenshots/**'],
+          maximumFileSizeToCacheInBytes: 4 * 1024 * 1024,
+        },
+        manifest: {
+          id: '/',
+          name: 'LinguaGo',
+          short_name: 'LinguaGo',
+          description: "Apprenez l'anglais à votre rythme : exercices, prononciation, progression.",
+          lang: 'fr',
+          categories: ['education'],
+          theme_color: '#0f172a',
+          background_color: '#0f172a',
+          display: 'standalone',
+          display_override: ['window-controls-overlay', 'standalone'],
+          scope: '/',
+          start_url: '/dashboard',
+          icons: [
+            { src: '/pwa-64x64.png', sizes: '64x64', type: 'image/png' },
+            { src: '/pwa-192x192.png', sizes: '192x192', type: 'image/png' },
+            { src: '/pwa-512x512.png', sizes: '512x512', type: 'image/png' },
+            {
+              src: '/maskable-icon-512x512.png',
+              sizes: '512x512',
+              type: 'image/png',
+              purpose: 'maskable',
+            },
+          ],
+          shortcuts: [
+            {
+              name: 'Continuer à apprendre',
+              short_name: 'Apprendre',
+              url: '/dashboard/learn',
+              icons: [{ src: '/pwa-192x192.png', sizes: '192x192', type: 'image/png' }],
+            },
+            {
+              name: 'Mes favoris',
+              short_name: 'Favoris',
+              url: '/dashboard/favorites',
+              icons: [{ src: '/pwa-192x192.png', sizes: '192x192', type: 'image/png' }],
+            },
+            {
+              name: 'Parler',
+              short_name: 'Parler',
+              url: '/dashboard/learn?mode=talk',
+              icons: [{ src: '/pwa-192x192.png', sizes: '192x192', type: 'image/png' }],
+            },
+          ],
+          screenshots: [
+            {
+              src: '/screenshots/session-desktop.png',
+              sizes: '1440x900',
+              type: 'image/png',
+              form_factor: 'wide',
+              label: 'Une série d’exercices sur ordinateur',
+            },
+            {
+              src: '/screenshots/session-mobile.png',
+              sizes: '780x1688',
+              type: 'image/png',
+              form_factor: 'narrow',
+              label: 'Une série d’exercices sur mobile',
+            },
+          ],
+        },
+        devOptions: { enabled: true, type: 'module', navigateFallback: 'index.html' },
+      }),
+    ],
+    resolve: { alias: { '@': fileURLToPath(new URL('./src', import.meta.url)) } },
+    envDir: rootDir,
+    server: {
+      host: true,
+      proxy: {
+        '/api': {
+          target: apiTarget,
+          changeOrigin: true,
+          rewrite: (path) => path.replace(/^\/api/, ''),
+        },
       },
-      manifest: {
-        name: "Linguago",
-        short_name: "Linguago",
-        description: "Une application linguistique puissante",
-        theme_color: "#ffffff",
-        background_color: "#ffffff",
-        display: "standalone",
-        scope: "/",
-        start_url: "/",
-        icons: [
-          {
-            src: "/icons/icon-192x192.png",
-            sizes: "192x192",
-            type: "image/png",
-          },
-          {
-            src: "/icons/icon-256x256.png",
-            sizes: "256x256",
-            type: "image/png",
-          },
-          {
-            src: "/icons/icon-384x384.png",
-            sizes: "384x384",
-            type: "image/png",
-          },
-          {
-            src: "/icons/icon-512x512.png",
-            sizes: "512x512",
-            type: "image/png",
-          },
-        ],
+      watch: env.VITE_USE_POLLING === 'true' ? { usePolling: true } : undefined,
+    },
+    preview: {
+      proxy: {
+        '/api': {
+          target: apiTarget,
+          changeOrigin: true,
+          rewrite: (path) => path.replace(/^\/api/, ''),
+        },
       },
-      workbox: {
-        globPatterns: ["**/*.{js,css,html,svg,png,ico,json,vue,ts}"],
-        cleanupOutdatedCaches: true,
-        clientsClaim: true,
-        skipWaiting: true,
-      },
-      devOptions: {
-        enabled: true,
-        navigateFallback: "",
-        type: "module",
-      },
-    }),
-  ],
-  optimizeDeps: {
-    include: ["js-cookie"],
-  },
+    },
+    test: {
+      include: ['src/**/*.spec.ts'],
+      environment: 'jsdom',
+      setupFiles: ['./src/test/setup.ts'],
+    },
+  };
 });
