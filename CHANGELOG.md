@@ -1,3 +1,10 @@
+# [1.1.0](https://github.com/Pagiestm/LinguaGo/compare/v1.0.1...v1.1.0) (2026-10-10)
+
+
+### Features
+
+* **api:** lancer le seed au démarrage et créer l'administrateur depuis l'environnement ([e784417](https://github.com/Pagiestm/LinguaGo/commit/e784417efb7d28ddea39d35116a8672dd71bc4c9))
+
 ## [1.0.1](https://github.com/Pagiestm/LinguaGo/compare/v1.0.0...v1.0.1) (2026-10-10)
 
 
