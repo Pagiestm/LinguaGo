@@ -1,0 +1,10 @@
+.github
+.husky
+docs
+server/*
+!server/package.json
+client/tests
+client/playwright-report
+client/test-results
+client/dist
+client/dev-dist
