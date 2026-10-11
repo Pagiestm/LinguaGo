@@ -1,3 +1,10 @@
+# [1.3.0](https://github.com/Pagiestm/LinguaGo/compare/v1.2.1...v1.3.0) (2026-10-11)
+
+
+### Features
+
+* **api:** envoyer les emails par l'API HTTPS de Brevo ([048c32a](https://github.com/Pagiestm/LinguaGo/commit/048c32abce1871ce22ea64819b8e52cab2c36314))
+
 ## [1.2.1](https://github.com/Pagiestm/LinguaGo/compare/v1.2.0...v1.2.1) (2026-10-11)
 
 
