@@ -51,11 +51,14 @@ const schema = z.object({
   GOOGLE_CLIENT_SECRET: optional,
   GOOGLE_CALLBACK_URL: optional,
   SMTP_HOST: optional,
-  SMTP_PORT: z.coerce.number().int().positive().default(1025),
+  SMTP_PORT: z.preprocess(
+    (value) => (value === '' ? undefined : value),
+    z.coerce.number().int().positive().default(587),
+  ),
   SMTP_SECURE: z
     .string()
     .optional()
-    .transform((v) => v === 'true'),
+    .transform((v) => (v === undefined || v === '' ? undefined : v === 'true')),
   SMTP_USER: optional,
   SMTP_PASSWORD: optional,
   MAIL_FROM: z.string().default('LinguaGo <no-reply@linguago.test>'),

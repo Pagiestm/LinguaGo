@@ -32,10 +32,10 @@ export class PasswordResetService {
         expiresAt: new Date(Date.now() + TTL),
       },
     });
-    await this.mail.sendPasswordReset(
-      user.email,
-      user.pseudo,
-      `${env.CLIENT_URL}/reset?token=${token}`,
+    const link = `${env.CLIENT_URL}/reset?token=${token}`;
+    this.mail.deliver(
+      () => this.mail.sendPasswordReset(user.email, user.pseudo, link),
+      `Email de réinitialisation pour ${user.email}`,
     );
   }
 

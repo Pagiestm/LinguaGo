@@ -1,7 +1,6 @@
 import {
   ConflictException,
   Injectable,
-  Logger,
   UnauthorizedException,
 } from '@nestjs/common';
 import bcrypt from 'bcrypt';
@@ -27,8 +26,6 @@ export interface Session {
 
 @Injectable()
 export class AuthService {
-  private readonly logger = new Logger(AuthService.name);
-
   constructor(
     private readonly prisma: PrismaService,
     private readonly tokens: TokensService,
@@ -55,11 +52,10 @@ export class AuthService {
       ...userWithAvatar,
     });
 
-    this.mail
-      .sendWelcome(user.email, user.pseudo, env.CLIENT_URL)
-      .catch((error: unknown) =>
-        this.logger.warn(`Email de bienvenue non envoyé : ${String(error)}`),
-      );
+    this.mail.deliver(
+      () => this.mail.sendWelcome(user.email, user.pseudo, env.CLIENT_URL),
+      `Email de bienvenue pour ${user.email}`,
+    );
 
     return this.openSession(user);
   }

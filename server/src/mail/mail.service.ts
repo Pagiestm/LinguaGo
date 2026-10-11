@@ -1,4 +1,4 @@
-import { Injectable, Logger } from '@nestjs/common';
+import { Injectable, Logger, type OnModuleInit } from '@nestjs/common';
 import nodemailer, { type Transporter } from 'nodemailer';
 import { env } from '../config/env';
 import { renderMail, type MailTemplate } from './mail-renderer';
@@ -11,22 +11,47 @@ interface Outgoing {
   text: string;
 }
 
+const TIMEOUT = 10_000;
+
 @Injectable()
-export class MailService {
+export class MailService implements OnModuleInit {
   private readonly logger = new Logger(MailService.name);
   private readonly transporter: Transporter | null = env.SMTP_HOST
     ? nodemailer.createTransport({
         host: env.SMTP_HOST,
         port: env.SMTP_PORT,
-        secure: env.SMTP_SECURE,
+        secure: env.SMTP_SECURE ?? env.SMTP_PORT === 465,
         auth: env.SMTP_USER
           ? { user: env.SMTP_USER, pass: env.SMTP_PASSWORD ?? '' }
           : undefined,
+        connectionTimeout: TIMEOUT,
+        greetingTimeout: TIMEOUT,
+        socketTimeout: TIMEOUT * 2,
       })
     : null;
 
   get configured(): boolean {
     return this.transporter !== null;
+  }
+
+  onModuleInit() {
+    if (!this.transporter) {
+      this.logger.warn('SMTP non configuré : les emails seront journalisés.');
+      return;
+    }
+    this.transporter.verify().then(
+      () => this.logger.log(`SMTP prêt sur ${env.SMTP_HOST}:${env.SMTP_PORT}`),
+      (error: unknown) =>
+        this.logger.warn(
+          `SMTP injoignable sur ${env.SMTP_HOST}:${env.SMTP_PORT} : ${String(error)}`,
+        ),
+    );
+  }
+
+  deliver(send: () => Promise<void>, what: string) {
+    send().catch((error: unknown) =>
+      this.logger.warn(`${what} non envoyé : ${String(error)}`),
+    );
   }
 
   async sendPasswordReset(to: string, pseudo: string, link: string) {
