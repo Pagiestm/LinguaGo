@@ -1,3 +1,10 @@
+# [1.2.0](https://github.com/Pagiestm/LinguaGo/compare/v1.1.2...v1.2.0) (2026-10-11)
+
+
+### Features
+
+* **client:** menus mobiles animés et niveau visible sur téléphone ([2ffd9c2](https://github.com/Pagiestm/LinguaGo/commit/2ffd9c2b28b2456354b3b734352fb97cb4189731))
+
 ## [1.1.2](https://github.com/Pagiestm/LinguaGo/compare/v1.1.1...v1.1.2) (2026-10-10)
 
 
