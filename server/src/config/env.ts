@@ -50,6 +50,7 @@ const schema = z.object({
   GOOGLE_CLIENT_ID: optional,
   GOOGLE_CLIENT_SECRET: optional,
   GOOGLE_CALLBACK_URL: optional,
+  BREVO_API_KEY: optional,
   SMTP_HOST: optional,
   SMTP_PORT: z.preprocess(
     (value) => (value === '' ? undefined : value),

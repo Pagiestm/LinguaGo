@@ -59,12 +59,13 @@ Le seed charge le catalogue (niveaux, séries, exercices, avatars) et, hors prod
 
 Le `.env` à la racine sert aux deux applications. Les variables facultatives :
 
-| Variable                                   | Effet quand elle est renseignée                                    |
-| ------------------------------------------ | ------------------------------------------------------------------ |
-| `VAPID_PUBLIC_KEY`, `VAPID_PRIVATE_KEY`    | les rappels push sont activés (`npx web-push generate-vapid-keys`) |
-| `GOOGLE_CLIENT_ID`, `GOOGLE_CLIENT_SECRET` | le bouton « Continuer avec Google » apparaît sur la connexion      |
-| `SMTP_HOST`                                | les emails de mot de passe oublié partent (Mailpit en local)       |
-| `SWAGGER=true`                             | expose la documentation en production                              |
+| Variable                                   | Effet quand elle est renseignée                                                       |
+| ------------------------------------------ | ------------------------------------------------------------------------------------- |
+| `VAPID_PUBLIC_KEY`, `VAPID_PRIVATE_KEY`    | les rappels push sont activés (`npx web-push generate-vapid-keys`)                    |
+| `GOOGLE_CLIENT_ID`, `GOOGLE_CLIENT_SECRET` | le bouton « Continuer avec Google » apparaît sur la connexion                         |
+| `SMTP_HOST`                                | les emails de bienvenue et de mot de passe oublié partent par SMTP (Mailpit en local) |
+| `BREVO_API_KEY`                            | les mêmes emails partent par l’API HTTPS de Brevo, prioritaire sur SMTP               |
+| `SWAGGER=true`                             | expose la documentation en production                                                 |
 
 ## Scripts
 

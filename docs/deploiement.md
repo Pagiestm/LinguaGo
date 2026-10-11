@@ -15,6 +15,7 @@ Variables à renseigner dans le tableau de bord :
 | `DATABASE_URL`                                           | chaîne de connexion Neon avec `?sslmode=require`. L’API passe par le pooler ; pour les migrations, Prisma retire `-pooler` de l’hôte et se connecte en direct, car le pooler ne tient pas le verrou de session |
 | `VAPID_PUBLIC_KEY`, `VAPID_PRIVATE_KEY`, `VAPID_SUBJECT` | `npx web-push generate-vapid-keys`, facultatif                                                                                                                                                                 |
 | `ADMIN_EMAIL`, `ADMIN_PASSWORD`                          | le compte administrateur créé au premier démarrage                                                                                                                                                             |
+| `BREVO_API_KEY`, `MAIL_FROM`                             | la clé API Brevo (SMTP & API, onglet Clés API) et une adresse validée chez Brevo. Les services gratuits de Render bloquent les ports SMTP 25, 465 et 587 : les emails passent donc par l’API HTTPS de Brevo    |
 
 `JWT_SECRET` est généré par Render. Au démarrage, après les migrations, le seed charge le catalogue s’il est absent et crée l’administrateur défini par `ADMIN_EMAIL` et `ADMIN_PASSWORD` ; aucun compte de démonstration n’est créé en production.
 
