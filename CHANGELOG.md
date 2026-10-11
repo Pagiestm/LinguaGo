@@ -1,3 +1,10 @@
+## [1.2.1](https://github.com/Pagiestm/LinguaGo/compare/v1.2.0...v1.2.1) (2026-10-11)
+
+
+### Bug Fixes
+
+* **api:** ne plus bloquer la demande de mot de passe sur l'envoi SMTP ([ae6e289](https://github.com/Pagiestm/LinguaGo/commit/ae6e2897890d45211da6d6ea3e381789d3114876))
+
 # [1.2.0](https://github.com/Pagiestm/LinguaGo/compare/v1.1.2...v1.2.0) (2026-10-11)
 
 
