@@ -1,3 +1,10 @@
+## [1.3.1](https://github.com/Pagiestm/LinguaGo/compare/v1.3.0...v1.3.1) (2026-10-14)
+
+
+### Bug Fixes
+
+* **client:** lire l'adresse de l'API dans la variable API_URL ([95652e4](https://github.com/Pagiestm/LinguaGo/commit/95652e424901574656a98e9f24215c1c6da1f008))
+
 # [1.3.0](https://github.com/Pagiestm/LinguaGo/compare/v1.2.1...v1.3.0) (2026-10-11)
 
 
