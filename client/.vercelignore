@@ -1,0 +1,5 @@
+tests
+playwright-report
+test-results
+dist
+dev-dist

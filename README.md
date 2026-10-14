@@ -91,7 +91,9 @@ LinguaGo/
 │   ├── src/pwa/              service worker (injectManifest) et enregistrement
 │   ├── tests/                parcours Playwright avec une API simulée
 │   ├── Dockerfile            image de développement (Vite)
-│   └── Dockerfile.prod       build Vite puis nginx, qui réécrit /api vers l'API
+│   ├── Dockerfile.prod       build Vite puis nginx, qui réécrit /api vers l'API
+│   ├── vercel.json           déploiement du client sur Vercel
+│   └── middleware.ts         réécriture de /api vers l'API sur Vercel (API_URL)
 ├── server/                   NestJS + Prisma
 │   ├── src/auth/             sessions par cookies, jeton de rafraîchissement tourné
 │   ├── src/users/            profil, mot de passe, suppression de compte
@@ -109,8 +111,7 @@ LinguaGo/
 │   └── Dockerfile.prod       image de production, utilisée par Render
 ├── docker-compose.yml        développement : PostgreSQL, pgAdmin, API et client en watch
 ├── docker-compose.prod.yml   auto-hébergement : images compilées, nginx devant le client
-├── render.yaml               déploiement de l'API sur Render
-└── vercel.json               déploiement du client sur Vercel
+└── render.yaml               déploiement de l'API sur Render
 ```
 
 Le détail est dans [docs/architecture.md](docs/architecture.md) et le déploiement dans [docs/deploiement.md](docs/deploiement.md).

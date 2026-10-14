@@ -10,7 +10,7 @@ const rootDir = fileURLToPath(new URL('..', import.meta.url));
 
 export default defineConfig(({ mode }) => {
   const env = loadEnv(mode, rootDir, '');
-  const apiTarget = env.VITE_PROXY_TARGET || `http://localhost:${env.PORT || 3000}`;
+  const apiTarget = env.API_URL || `http://localhost:${env.PORT || 3000}`;
   return {
     plugins: [
       vue(),
