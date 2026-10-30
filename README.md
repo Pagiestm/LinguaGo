@@ -104,7 +104,7 @@ LinguaGo/
 │   ├── src/achievements/     succès
 │   ├── src/admin/            gestion des séries et des exercices
 │   ├── src/mail/             gabarits MJML et envoi SMTP
-│   ├── src/notifications/    abonnements push, planification, cron
+│   ├── src/notifications/    abonnements push, planification, envoi des rappels
 │   ├── prisma/               schéma, migrations, seed et catalogue
 │   ├── test/                 tests de bout en bout
 │   ├── Dockerfile            image de développement (nest --watch)

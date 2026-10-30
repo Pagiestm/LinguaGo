@@ -19,7 +19,7 @@ Variables à renseigner dans le tableau de bord :
 
 `JWT_SECRET` est généré par Render. Au démarrage, après les migrations, le seed charge le catalogue s’il est absent et crée l’administrateur défini par `ADMIN_EMAIL` et `ADMIN_PASSWORD` ; aucun compte de démonstration n’est créé en production.
 
-L'offre gratuite de Render endort le service après quinze minutes sans trafic : une sonde externe sur `/health` toutes les dix minutes l'évite.
+L'offre gratuite de Render endort le service après quinze minutes sans trafic : une sonde externe sur `/health` toutes les quatorze minutes l'évite. `/health` ne touche pas la base, et les rappels push ne l'interrogent qu'à leur échéance : la base Neon peut ainsi se mettre en veille et rester dans le quota gratuit.
 
 ## Le client sur Vercel
 

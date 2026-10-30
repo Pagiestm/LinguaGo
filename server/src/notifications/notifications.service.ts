@@ -3,9 +3,10 @@ import {
   Injectable,
   Logger,
   NotFoundException,
+  type OnApplicationBootstrap,
+  type OnModuleDestroy,
   ServiceUnavailableException,
 } from '@nestjs/common';
-import { Cron, CronExpression } from '@nestjs/schedule';
 import type { PushSubscription } from 'web-push';
 import type { Notification } from '../generated/prisma/client';
 import { PrismaService } from '../prisma/prisma.service';
@@ -43,14 +44,31 @@ const toSettings = (n: Notification): NotificationSettings => ({
 
 const plural = (n: number) => (n > 1 ? 's' : '');
 
+// Le minuteur est réarmé au moins une fois par jour, et une base injoignable est
+// réinterrogée au bout de cinq minutes.
+const MAX_DELAY_MS = 24 * 60 * 60_000;
+const RETRY_DELAY_MS = 5 * 60_000;
+
 @Injectable()
-export class NotificationsService {
+export class NotificationsService
+  implements OnApplicationBootstrap, OnModuleDestroy
+{
   private readonly logger = new Logger(NotificationsService.name);
+  private timer?: NodeJS.Timeout;
+  private sending = false;
 
   constructor(
     private readonly prisma: PrismaService,
     private readonly push: PushService,
   ) {}
+
+  async onApplicationBootstrap() {
+    await this.scheduleNextReminder();
+  }
+
+  onModuleDestroy() {
+    clearTimeout(this.timer);
+  }
 
   async get(userId: string): Promise<NotificationSettings | null> {
     const notification = await this.prisma.notification.findUnique({
@@ -99,6 +117,7 @@ export class NotificationsService {
         nextNotifyAt,
       },
     });
+    await this.scheduleNextReminder();
     return toSettings(saved);
   }
 
@@ -125,6 +144,7 @@ export class NotificationsService {
         nextNotifyAt: nextOccurrence(new Date(), time, timeZone, frequencyDays),
       },
     });
+    await this.scheduleNextReminder();
     return toSettings(saved);
   }
 
@@ -142,11 +162,13 @@ export class NotificationsService {
       where: { userId },
       data: { nextNotifyAt: new Date(Date.now() + minutes * 60_000) },
     });
+    await this.scheduleNextReminder();
     return toSettings(saved);
   }
 
   async remove(userId: string): Promise<void> {
     await this.prisma.notification.deleteMany({ where: { userId } });
+    await this.scheduleNextReminder();
   }
 
   async sendTest(userId: string): Promise<void> {
@@ -223,7 +245,49 @@ export class NotificationsService {
     };
   }
 
-  @Cron(CronExpression.EVERY_MINUTE, { name: 'reminders' })
+  /**
+   * Arme un minuteur sur le prochain rappel dû plutôt que d'interroger la base chaque
+   * minute : entre deux rappels, la base Neon peut se mettre en veille. Appelée au
+   * démarrage, après chaque envoi et à chaque modification d'un rappel ; ne lève jamais.
+   */
+  async scheduleNextReminder(): Promise<void> {
+    if (!this.push.configured || this.sending) return;
+    let delay: number | null;
+    try {
+      const next = await this.prisma.notification.findFirst({
+        where: { enabled: true },
+        orderBy: { nextNotifyAt: 'asc' },
+        select: { nextNotifyAt: true },
+      });
+      delay = next
+        ? Math.min(
+            Math.max(next.nextNotifyAt.getTime() - Date.now(), 0),
+            MAX_DELAY_MS,
+          )
+        : null;
+    } catch (error) {
+      this.logger.warn(`Prochain rappel introuvable : ${String(error)}`);
+      delay = RETRY_DELAY_MS;
+    }
+    clearTimeout(this.timer);
+    this.timer =
+      delay === null
+        ? undefined
+        : setTimeout(() => void this.sendAndReschedule(), delay);
+  }
+
+  private async sendAndReschedule(): Promise<void> {
+    this.sending = true;
+    try {
+      await this.sendDueReminders();
+    } catch (error) {
+      this.logger.error(`Envoi des rappels interrompu : ${String(error)}`);
+    } finally {
+      this.sending = false;
+    }
+    await this.scheduleNextReminder();
+  }
+
   async sendDueReminders(): Promise<number> {
     if (!this.push.configured) return 0;
     const now = new Date();

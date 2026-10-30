@@ -6,15 +6,15 @@ LinguaGo est un monorepo npm à deux applications qui ne partagent aucun code et
 
 Chaque module de `server/src` suit le même découpage : un contrôleur qui décrit les routes et valide les entrées avec des DTO `class-validator`, un service qui porte les règles et parle à Prisma.
 
-| Module          | Rôle                                                                              |
-| --------------- | --------------------------------------------------------------------------------- |
-| `auth`          | inscription, connexion, renouvellement, déconnexion, cookies et jetons            |
-| `users`         | profil, avatar, mot de passe, première connexion, suppression de compte           |
-| `avatars`       | la liste des avatars SVG                                                          |
-| `catalog`       | niveaux, séries et exercices vus par l'apprenant, et leur administration          |
-| `progress`      | validation des réponses, temps passé, favoris, statistiques, classement           |
-| `notifications` | abonnements push, calcul des prochaines occurrences, envoi par cron chaque minute |
-| `health`        | sondes de vie et de disponibilité de la base                                      |
+| Module          | Rôle                                                                             |
+| --------------- | -------------------------------------------------------------------------------- |
+| `auth`          | inscription, connexion, renouvellement, déconnexion, cookies et jetons           |
+| `users`         | profil, avatar, mot de passe, première connexion, suppression de compte          |
+| `avatars`       | la liste des avatars SVG                                                         |
+| `catalog`       | niveaux, séries et exercices vus par l'apprenant, et leur administration         |
+| `progress`      | validation des réponses, temps passé, favoris, statistiques, classement          |
+| `notifications` | abonnements push, calcul des prochaines occurrences, envoi au prochain rappel dû |
+| `health`        | sondes de vie et de disponibilité de la base                                     |
 
 Trois gardes sont globaux : le limiteur de débit, l'authentification par cookie (`@Public()` pour en sortir) et les rôles (`@Roles('ADMIN')`). La configuration est validée par zod au démarrage : une variable manquante arrête le serveur.
 
@@ -35,7 +35,7 @@ Le niveau se déduit des points : chaque niveau vaut la somme des points de ses 
 
 ### Notifications
 
-Un rappel porte une heure locale et un fuseau horaire. `notifications/schedule.ts` calcule la prochaine occurrence sans dépendance, heure d'été comprise. Le cron envoie les rappels échus, supprime les abonnements expirés (404 ou 410) et reprogramme la suite.
+Un rappel porte une heure locale et un fuseau horaire. `notifications/schedule.ts` calcule la prochaine occurrence sans dépendance, heure d'été comprise. Un minuteur est armé sur le prochain rappel dû, et réarmé au démarrage, après chaque envoi et à chaque modification d'un rappel : la base n'est interrogée qu'à l'échéance, ce qui laisse Neon se mettre en veille entre deux rappels. À l'échéance, les rappels échus partent, les abonnements expirés (404 ou 410) sont supprimés et la suite est reprogrammée.
 
 ## Le client
 
