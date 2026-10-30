@@ -1,3 +1,10 @@
+## [1.3.2](https://github.com/Pagiestm/LinguaGo/compare/v1.3.1...v1.3.2) (2026-10-30)
+
+
+### Bug Fixes
+
+* **api:** ne plus réveiller la base chaque minute pour les rappels ([49aa24d](https://github.com/Pagiestm/LinguaGo/commit/49aa24deb315f0b1049df990d1ed33222cd61721))
+
 ## [1.3.1](https://github.com/Pagiestm/LinguaGo/compare/v1.3.0...v1.3.1) (2026-10-14)
 
 
