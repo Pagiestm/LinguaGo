@@ -1,3 +1,10 @@
+## [1.3.6](https://github.com/Pagiestm/LinguaGo/compare/v1.3.5...v1.3.6) (2026-11-13)
+
+
+### Bug Fixes
+
+* **client:** indiquer que la ligue compte les points depuis lundi ([28e265d](https://github.com/Pagiestm/LinguaGo/commit/28e265dbdbc91d224984d117568c4c9911bf3212))
+
 ## [1.3.5](https://github.com/Pagiestm/LinguaGo/compare/v1.3.4...v1.3.5) (2026-11-13)
 
 
