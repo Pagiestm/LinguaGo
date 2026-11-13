@@ -1,3 +1,10 @@
+## [1.3.4](https://github.com/Pagiestm/LinguaGo/compare/v1.3.3...v1.3.4) (2026-11-13)
+
+
+### Bug Fixes
+
+* **deps:** update dependency web-push to v4 ([3e0696d](https://github.com/Pagiestm/LinguaGo/commit/3e0696dc4ee3dda43c480b6606ea46159cc5cb41))
+
 ## [1.3.3](https://github.com/Pagiestm/LinguaGo/compare/v1.3.2...v1.3.3) (2026-11-13)
 
 
