@@ -14,6 +14,7 @@ import {
 import type { AuthenticatedUser } from '../common/decorators/current-user.decorator';
 import { CurrentUser } from '../common/decorators/current-user.decorator';
 import { LeaderboardService } from './leaderboard.service';
+import { LeaguesService } from './leagues.service';
 import { StatsService } from './stats.service';
 
 @ApiTags('Statistiques')
@@ -23,6 +24,7 @@ export class StatsController {
   constructor(
     private readonly stats: StatsService,
     private readonly leaderboard: LeaderboardService,
+    private readonly leagues: LeaguesService,
   ) {}
 
   @Get('me/stats')
@@ -66,6 +68,6 @@ export class StatsController {
     summary: 'Ma ligue de la semaine, avec zones de montée et de descente',
   })
   league(@CurrentUser() user: AuthenticatedUser) {
-    return this.leaderboard.league(user.id);
+    return this.leagues.board(user.id);
   }
 }
