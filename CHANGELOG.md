@@ -1,3 +1,10 @@
+## [1.3.5](https://github.com/Pagiestm/LinguaGo/compare/v1.3.4...v1.3.5) (2026-11-13)
+
+
+### Bug Fixes
+
+* **docker:** monter PostgreSQL 18 à son nouvel emplacement de données ([1d26e4c](https://github.com/Pagiestm/LinguaGo/commit/1d26e4c37a5c39ad913d4a07386d7162640fd053))
+
 ## [1.3.4](https://github.com/Pagiestm/LinguaGo/compare/v1.3.3...v1.3.4) (2026-11-13)
 
 
