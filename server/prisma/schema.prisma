@@ -214,3 +214,10 @@ model Notification {
 
   @@index([enabled, nextNotifyAt])
 }
+
+model LeagueRotation {
+  week      DateTime @id
+  promoted  Int      @default(0)
+  relegated Int      @default(0)
+  createdAt DateTime @default(now())
+}

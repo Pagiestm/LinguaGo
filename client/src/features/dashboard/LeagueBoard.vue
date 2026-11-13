@@ -12,8 +12,10 @@ const colors: Record<number, string> = {
   4: 'bg-sky-950/40 text-sky-200',
 };
 
-const zone = (rank: number) => {
-  if (props.board.promote && rank <= props.board.promote) return 'up';
+type Entry = LeagueBoard['entries'][number];
+
+const zone = ({ rank, points }: Entry) => {
+  if (props.board.promote && rank <= props.board.promote && points > 0) return 'up';
   if (props.board.relegate && rank > props.board.entries.length - props.board.relegate)
     return 'down';
   return 'stay';
@@ -44,9 +46,9 @@ const endsIn = () => {
         :key="entry.rank"
         class="flex items-center gap-3 rounded-2xl border-2 px-3 py-2"
         :class="[
-          zone(entry.rank) === 'up'
+          zone(entry) === 'up'
             ? 'border-success/40 bg-green-950/20'
-            : zone(entry.rank) === 'down'
+            : zone(entry) === 'down'
               ? 'border-error/40 bg-red-950/20'
               : 'border-transparent',
           entry.isMe ? 'ring-2 ring-primary/50' : '',
@@ -56,12 +58,12 @@ const endsIn = () => {
           entry.rank
         }}</span>
         <span
-          v-if="zone(entry.rank) === 'up'"
+          v-if="zone(entry) === 'up'"
           class="i-lucide-chevron-up size-4 text-success"
           aria-label="Zone de montée"
         />
         <span
-          v-else-if="zone(entry.rank) === 'down'"
+          v-else-if="zone(entry) === 'down'"
           class="i-lucide-chevron-down size-4 text-error"
           aria-label="Zone de descente"
         />

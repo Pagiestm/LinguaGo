@@ -1,3 +1,10 @@
+## [1.3.3](https://github.com/Pagiestm/LinguaGo/compare/v1.3.2...v1.3.3) (2026-11-13)
+
+
+### Bug Fixes
+
+* **api:** faire monter les joueurs de ligue chaque semaine ([ece0f72](https://github.com/Pagiestm/LinguaGo/commit/ece0f72fb0828026bdc03bd6a66bcd22a3f27919))
+
 ## [1.3.2](https://github.com/Pagiestm/LinguaGo/compare/v1.3.1...v1.3.2) (2026-10-30)
 
 
