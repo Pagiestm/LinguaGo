@@ -2,14 +2,14 @@ name: linguago-prod
 
 services:
   db:
-    image: postgres:17-alpine
+    image: postgres:18-alpine
     restart: unless-stopped
     environment:
       POSTGRES_USER: ${DB_USERNAME:?}
       POSTGRES_PASSWORD: ${DB_PASSWORD:?}
       POSTGRES_DB: ${DB_DATABASE:?}
     volumes:
-      - db-data:/var/lib/postgresql/data
+      - db-data-18:/var/lib/postgresql
     healthcheck:
       test: ['CMD-SHELL', 'pg_isready -U $${POSTGRES_USER} -d $${POSTGRES_DB}']
       interval: 5s
@@ -59,4 +59,4 @@ services:
         condition: service_healthy
 
 volumes:
-  db-data:
+  db-data-18:
