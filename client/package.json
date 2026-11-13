@@ -40,7 +40,7 @@
     "@iconify/tailwind4": "^1.2.3",
     "@playwright/test": "^1.64.0",
     "@types/canvas-confetti": "^1.9.0",
-    "@types/node": "^24.0.0",
+    "@types/node": "^26.0.0",
     "@vercel/functions": "^3.10.1",
     "@vite-pwa/assets-generator": "^2.0.0",
     "@vitejs/plugin-vue": "^6.0.9",
