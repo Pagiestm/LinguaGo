@@ -167,7 +167,7 @@ const offline = computed(() => !stats.value && isNetworkError(error.value));
         <div class="flex items-start justify-between gap-4">
           <div>
             <h2 id="leaderboard-title" class="text-lg">Classement de la semaine</h2>
-            <p class="text-sm text-muted">Points gagnés ces sept derniers jours dans votre ligue</p>
+            <p class="text-sm text-muted">Points gagnés depuis lundi dans votre ligue</p>
           </div>
         </div>
         <div class="mt-4">
