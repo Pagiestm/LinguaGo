@@ -3,7 +3,7 @@ import { CatalogService } from '../catalog/catalog.service';
 import { computeLevelProgress } from '../catalog/level-progress';
 import type { LevelCode } from '../generated/prisma/enums';
 import { PrismaService } from '../prisma/prisma.service';
-import { LEAGUES } from './leaderboard.service';
+import { LEAGUES } from './leagues.constants';
 import { dateKey, safeTimeZone, streakFromActivity } from './streak';
 
 const DAY = 24 * 60 * 60_000;

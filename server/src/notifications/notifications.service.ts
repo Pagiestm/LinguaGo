@@ -44,8 +44,6 @@ const toSettings = (n: Notification): NotificationSettings => ({
 
 const plural = (n: number) => (n > 1 ? 's' : '');
 
-// Le minuteur est réarmé au moins une fois par jour, et une base injoignable est
-// réinterrogée au bout de cinq minutes.
 const MAX_DELAY_MS = 24 * 60 * 60_000;
 const RETRY_DELAY_MS = 5 * 60_000;
 
@@ -245,11 +243,6 @@ export class NotificationsService
     };
   }
 
-  /**
-   * Arme un minuteur sur le prochain rappel dû plutôt que d'interroger la base chaque
-   * minute : entre deux rappels, la base Neon peut se mettre en veille. Appelée au
-   * démarrage, après chaque envoi et à chaque modification d'un rappel ; ne lève jamais.
-   */
   async scheduleNextReminder(): Promise<void> {
     if (!this.push.configured || this.sending) return;
     let delay: number | null;
