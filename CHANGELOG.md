@@ -1,3 +1,9 @@
+## [1.3.7](https://github.com/Pagiestm/LinguaGo/compare/v1.3.6...v1.3.7) (2026-11-26)
+
+### Bug Fixes
+
+* **docker:** isoler les données de PostgreSQL 19 dans leur propre volume ([94c5958](https://github.com/Pagiestm/LinguaGo/commit/94c595852a54a21b2ee1ac7591828b348ac805c5))
+
 ## [1.3.6](https://github.com/Pagiestm/LinguaGo/compare/v1.3.5...v1.3.6) (2026-11-13)
 
 
