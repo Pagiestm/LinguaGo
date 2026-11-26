@@ -38,7 +38,7 @@
 
 ## Démarrage
 
-**Prérequis** : Node.js 24.9 ou plus, Docker.
+**Prérequis** : Node.js 26.13 ou plus, Docker.
 
 ```sh
 git clone https://github.com/Pagiestm/LinguaGo.git
